@@ -1,0 +1,4422 @@
+{
+  "analysis": {
+    "coverage_gaps": [],
+    "cycles": [
+      [
+        "anndata",
+        "anndata._core.aligned_df",
+        "anndata._core.aligned_mapping",
+        "anndata._core.anndata",
+        "anndata._core.extensions",
+        "anndata._core.file_backing",
+        "anndata._core.index",
+        "anndata._core.merge",
+        "anndata._core.raw",
+        "anndata._core.sparse_dataset",
+        "anndata._core.storage",
+        "anndata._core.views",
+        "anndata._core.xarray",
+        "anndata._io",
+        "anndata._io.h5ad",
+        "anndata._io.read",
+        "anndata._io.specs",
+        "anndata._io.specs.lazy_methods",
+        "anndata._io.specs.methods",
+        "anndata._io.specs.registry",
+        "anndata._io.utils",
+        "anndata._io.write",
+        "anndata._io.zarr",
+        "anndata._types",
+        "anndata.acc",
+        "anndata.acc._parse_json",
+        "anndata.acc._parse_str",
+        "anndata.compat",
+        "anndata.experimental",
+        "anndata.experimental._dispatch_io",
+        "anndata.experimental.backed",
+        "anndata.experimental.backed._compat",
+        "anndata.experimental.backed._io",
+        "anndata.experimental.backed._lazy_arrays",
+        "anndata.experimental.merge",
+        "anndata.experimental.multi_files",
+        "anndata.experimental.multi_files._anncollection",
+        "anndata.experimental.pytorch",
+        "anndata.experimental.pytorch._annloader",
+        "anndata.io",
+        "anndata.logging",
+        "anndata.types",
+        "anndata.typing",
+        "anndata.utils"
+      ]
+    ],
+    "edges": [
+      {
+        "import_type": "from",
+        "imported": [
+          "AnnData"
+        ],
+        "lazy_kind": "eager",
+        "line": 10,
+        "source": "anndata",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/__init__.py",
+        "target": "anndata._core.anndata"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "register_anndata_namespace"
+        ],
+        "lazy_kind": "eager",
+        "line": 11,
+        "source": "anndata",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/__init__.py",
+        "target": "anndata._core.extensions"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "concat"
+        ],
+        "lazy_kind": "eager",
+        "line": 12,
+        "source": "anndata",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/__init__.py",
+        "target": "anndata._core.merge"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Raw"
+        ],
+        "lazy_kind": "eager",
+        "line": 13,
+        "source": "anndata",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/__init__.py",
+        "target": "anndata._core.raw"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "settings"
+        ],
+        "lazy_kind": "eager",
+        "line": 14,
+        "source": "anndata",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/__init__.py",
+        "target": "anndata._settings"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "ExperimentalFeatureWarning",
+          "ImplicitModificationWarning",
+          "OldFormatWarning",
+          "WriteWarning"
+        ],
+        "lazy_kind": "eager",
+        "line": 15,
+        "source": "anndata",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/__init__.py",
+        "target": "anndata._warnings"
+      },
+      {
+        "import_type": "from",
+        "imported": [],
+        "lazy_kind": "eager",
+        "line": 25,
+        "source": "anndata",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/__init__.py",
+        "target": "anndata.abc"
+      },
+      {
+        "import_type": "from",
+        "imported": [],
+        "lazy_kind": "eager",
+        "line": 25,
+        "source": "anndata",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/__init__.py",
+        "target": "anndata.acc"
+      },
+      {
+        "import_type": "from",
+        "imported": [],
+        "lazy_kind": "eager",
+        "line": 25,
+        "source": "anndata",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/__init__.py",
+        "target": "anndata.experimental"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "read_h5ad",
+          "read_zarr"
+        ],
+        "lazy_kind": "eager",
+        "line": 21,
+        "source": "anndata",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/__init__.py",
+        "target": "anndata.io"
+      },
+      {
+        "import_type": "from",
+        "imported": [],
+        "lazy_kind": "eager",
+        "line": 25,
+        "source": "anndata",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/__init__.py",
+        "target": "anndata.io"
+      },
+      {
+        "import_type": "from",
+        "imported": [],
+        "lazy_kind": "eager",
+        "line": 28,
+        "source": "anndata",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/__init__.py",
+        "target": "anndata.logging"
+      },
+      {
+        "import_type": "from",
+        "imported": [],
+        "lazy_kind": "eager",
+        "line": 25,
+        "source": "anndata",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/__init__.py",
+        "target": "anndata.types"
+      },
+      {
+        "import_type": "from",
+        "imported": [],
+        "lazy_kind": "eager",
+        "line": 25,
+        "source": "anndata",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/__init__.py",
+        "target": "anndata.typing"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "module_get_attr_redirect",
+          "warn"
+        ],
+        "lazy_kind": "eager",
+        "line": 22,
+        "source": "anndata",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/__init__.py",
+        "target": "anndata.utils"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Dataset2D"
+        ],
+        "lazy_kind": "eager",
+        "line": 14,
+        "source": "anndata._core.aligned_df",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/aligned_df.py",
+        "target": "anndata._core.xarray"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "settings"
+        ],
+        "lazy_kind": "eager",
+        "line": 10,
+        "source": "anndata._core.aligned_df",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/aligned_df.py",
+        "target": "anndata._settings"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "ImplicitModificationWarning"
+        ],
+        "lazy_kind": "eager",
+        "line": 11,
+        "source": "anndata._core.aligned_df",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/aligned_df.py",
+        "target": "anndata._warnings"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "XDataset",
+          "pandas_as_str"
+        ],
+        "lazy_kind": "eager",
+        "line": 12,
+        "source": "anndata._core.aligned_df",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/aligned_df.py",
+        "target": "anndata.compat"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "warn"
+        ],
+        "lazy_kind": "eager",
+        "line": 13,
+        "source": "anndata._core.aligned_df",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/aligned_df.py",
+        "target": "anndata.utils"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "ElementRef"
+        ],
+        "lazy_kind": "eager",
+        "line": 26,
+        "source": "anndata._core.aligned_mapping",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/aligned_mapping.py",
+        "target": "anndata._core.access"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "_subset"
+        ],
+        "lazy_kind": "eager",
+        "line": 27,
+        "source": "anndata._core.aligned_mapping",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/aligned_mapping.py",
+        "target": "anndata._core.index"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "coerce_array"
+        ],
+        "lazy_kind": "eager",
+        "line": 28,
+        "source": "anndata._core.aligned_mapping",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/aligned_mapping.py",
+        "target": "anndata._core.storage"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "as_view",
+          "view_update"
+        ],
+        "lazy_kind": "eager",
+        "line": 29,
+        "source": "anndata._core.aligned_mapping",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/aligned_mapping.py",
+        "target": "anndata._core.views"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Dataset2D"
+        ],
+        "lazy_kind": "eager",
+        "line": 30,
+        "source": "anndata._core.aligned_mapping",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/aligned_mapping.py",
+        "target": "anndata._core.xarray"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "ExperimentalFeatureWarning",
+          "ImplicitModificationWarning"
+        ],
+        "lazy_kind": "eager",
+        "line": 16,
+        "source": "anndata._core.aligned_mapping",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/aligned_mapping.py",
+        "target": "anndata._warnings"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "AwkArray",
+          "CSArray",
+          "CSMatrix",
+          "CupyArray",
+          "XDataset"
+        ],
+        "lazy_kind": "eager",
+        "line": 17,
+        "source": "anndata._core.aligned_mapping",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/aligned_mapping.py",
+        "target": "anndata.compat"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "sparse_dataset"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 358,
+        "source": "anndata._core.aligned_mapping",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/aligned_mapping.py",
+        "target": "anndata.io"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "axis_len",
+          "convert_to_dict",
+          "deprecation_msg",
+          "raise_value_error_if_multiindex_columns",
+          "warn",
+          "warn_once"
+        ],
+        "lazy_kind": "eager",
+        "line": 18,
+        "source": "anndata._core.aligned_mapping",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/aligned_mapping.py",
+        "target": "anndata.utils"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "ElementRef"
+        ],
+        "lazy_kind": "eager",
+        "line": 23,
+        "source": "anndata._core.anndata",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/anndata.py",
+        "target": "anndata._core.access"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "_gen_dataframe"
+        ],
+        "lazy_kind": "eager",
+        "line": 52,
+        "source": "anndata._core.anndata",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/anndata.py",
+        "target": "anndata._core.aligned_df"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "AlignedMappingProperty",
+          "AxisArrays",
+          "Layers",
+          "PairwiseArrays"
+        ],
+        "lazy_kind": "eager",
+        "line": 53,
+        "source": "anndata._core.anndata",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/anndata.py",
+        "target": "anndata._core.aligned_mapping"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "AnnDataFileManager",
+          "to_memory"
+        ],
+        "lazy_kind": "eager",
+        "line": 54,
+        "source": "anndata._core.anndata",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/anndata.py",
+        "target": "anndata._core.file_backing"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "_get_vector_ambiguous",
+          "_normalize_indices",
+          "_subset"
+        ],
+        "lazy_kind": "eager",
+        "line": 55,
+        "source": "anndata._core.anndata",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/anndata.py",
+        "target": "anndata._core.index"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Raw"
+        ],
+        "lazy_kind": "eager",
+        "line": 56,
+        "source": "anndata._core.anndata",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/anndata.py",
+        "target": "anndata._core.raw"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "sparse_dataset"
+        ],
+        "lazy_kind": "eager",
+        "line": 24,
+        "source": "anndata._core.anndata",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/anndata.py",
+        "target": "anndata._core.sparse_dataset"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "BaseCompressedSparseDataset"
+        ],
+        "lazy_kind": "eager",
+        "line": 57,
+        "source": "anndata._core.anndata",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/anndata.py",
+        "target": "anndata._core.sparse_dataset"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "coerce_array"
+        ],
+        "lazy_kind": "eager",
+        "line": 58,
+        "source": "anndata._core.anndata",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/anndata.py",
+        "target": "anndata._core.storage"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "DictView",
+          "_resolve_idxs",
+          "as_view"
+        ],
+        "lazy_kind": "eager",
+        "line": 59,
+        "source": "anndata._core.anndata",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/anndata.py",
+        "target": "anndata._core.views"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Dataset2D"
+        ],
+        "lazy_kind": "eager",
+        "line": 60,
+        "source": "anndata._core.anndata",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/anndata.py",
+        "target": "anndata._core.xarray"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "_REGISTRY"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 1469,
+        "source": "anndata._core.anndata",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/anndata.py",
+        "target": "anndata._io.specs.registry"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "write_attribute"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 1029,
+        "source": "anndata._core.anndata",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/anndata.py",
+        "target": "anndata._io.utils"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "settings"
+        ],
+        "lazy_kind": "eager",
+        "line": 28,
+        "source": "anndata._core.anndata",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/anndata.py",
+        "target": "anndata._settings"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "ImplicitModificationWarning"
+        ],
+        "lazy_kind": "eager",
+        "line": 29,
+        "source": "anndata._core.anndata",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/anndata.py",
+        "target": "anndata._warnings"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "AdRef"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 1044,
+        "source": "anndata._core.anndata",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/anndata.py",
+        "target": "anndata.acc"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "AdRef",
+          "GraphMapAcc",
+          "LayerMapAcc",
+          "MapAcc",
+          "MultiMapAcc",
+          "RefAcc"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 1564,
+        "source": "anndata._core.anndata",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/anndata.py",
+        "target": "anndata.acc"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "AwkArray",
+          "CSArray",
+          "IndexManager",
+          "XDataset",
+          "ZarrArray",
+          "_move_adj_mtx",
+          "has_xp",
+          "old_positionals",
+          "pandas_as_str"
+        ],
+        "lazy_kind": "eager",
+        "line": 30,
+        "source": "anndata._core.anndata",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/anndata.py",
+        "target": "anndata.compat"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "_safe_transpose"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 1216,
+        "source": "anndata._core.anndata",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/anndata.py",
+        "target": "anndata.compat"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "read_h5ad",
+          "write_h5ad"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 1416,
+        "source": "anndata._core.anndata",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/anndata.py",
+        "target": "anndata.io"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "write_h5ad"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 1679,
+        "source": "anndata._core.anndata",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/anndata.py",
+        "target": "anndata.io"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "write_csvs"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 1720,
+        "source": "anndata._core.anndata",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/anndata.py",
+        "target": "anndata.io"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "write_loom"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 1743,
+        "source": "anndata._core.anndata",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/anndata.py",
+        "target": "anndata.io"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "write_zarr"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 1767,
+        "source": "anndata._core.anndata",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/anndata.py",
+        "target": "anndata.io"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "anndata_logger"
+        ],
+        "lazy_kind": "eager",
+        "line": 41,
+        "source": "anndata._core.anndata",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/anndata.py",
+        "target": "anndata.logging"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "SupportsArrayApi"
+        ],
+        "lazy_kind": "eager",
+        "line": 25,
+        "source": "anndata._core.anndata",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/anndata.py",
+        "target": "anndata.types"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "_XDataType"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 1341,
+        "source": "anndata._core.anndata",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/anndata.py",
+        "target": "anndata.typing"
+      },
+      {
+        "import_type": "from",
+        "imported": [],
+        "lazy_kind": "eager",
+        "line": 27,
+        "source": "anndata._core.anndata",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/anndata.py",
+        "target": "anndata.utils"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "axis_len",
+          "deprecation_msg",
+          "ensure_df_homogeneous",
+          "get_union_members",
+          "iter_outer",
+          "raise_value_error_if_multiindex_columns",
+          "set_module",
+          "warn"
+        ],
+        "lazy_kind": "eager",
+        "line": 42,
+        "source": "anndata._core.anndata",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/anndata.py",
+        "target": "anndata.utils"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "AnnData"
+        ],
+        "lazy_kind": "eager",
+        "line": 5,
+        "source": "anndata._core.extensions",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/extensions.py",
+        "target": "anndata._core.anndata"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "BaseCompressedSparseDataset"
+        ],
+        "lazy_kind": "eager",
+        "line": 12,
+        "source": "anndata._core.file_backing",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/file_backing.py",
+        "target": "anndata._core.sparse_dataset"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Dataset2D"
+        ],
+        "lazy_kind": "eager",
+        "line": 13,
+        "source": "anndata._core.file_backing",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/file_backing.py",
+        "target": "anndata._core.xarray"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "AwkArray",
+          "DaskArray",
+          "ZarrArray",
+          "ZarrGroup"
+        ],
+        "lazy_kind": "eager",
+        "line": 11,
+        "source": "anndata._core.file_backing",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/file_backing.py",
+        "target": "anndata.compat"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Dataset2D"
+        ],
+        "lazy_kind": "eager",
+        "line": 26,
+        "source": "anndata._core.index",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/index.py",
+        "target": "anndata._core.xarray"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "settings"
+        ],
+        "lazy_kind": "eager",
+        "line": 16,
+        "source": "anndata._core.index",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/index.py",
+        "target": "anndata._settings"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "A"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 576,
+        "source": "anndata._core.index",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/index.py",
+        "target": "anndata.acc"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "AwkArray",
+          "CSArray",
+          "CSMatrix",
+          "DaskArray",
+          "IndexManager",
+          "XDataArray",
+          "has_xp"
+        ],
+        "lazy_kind": "eager",
+        "line": 17,
+        "source": "anndata._core.index",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/index.py",
+        "target": "anndata.compat"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "SupportsArrayApi"
+        ],
+        "lazy_kind": "eager",
+        "line": 14,
+        "source": "anndata._core.index",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/index.py",
+        "target": "anndata.types"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "AnnData"
+        ],
+        "lazy_kind": "eager",
+        "line": 34,
+        "source": "anndata._core.merge",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/merge.py",
+        "target": "anndata._core.anndata"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "to_memory"
+        ],
+        "lazy_kind": "eager",
+        "line": 20,
+        "source": "anndata._core.merge",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/merge.py",
+        "target": "anndata._core.file_backing"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "_subset",
+          "make_slice"
+        ],
+        "lazy_kind": "eager",
+        "line": 35,
+        "source": "anndata._core.merge",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/merge.py",
+        "target": "anndata._core.index"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Dataset2D"
+        ],
+        "lazy_kind": "eager",
+        "line": 36,
+        "source": "anndata._core.merge",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/merge.py",
+        "target": "anndata._core.xarray"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Dataset2D"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 1347,
+        "source": "anndata._core.merge",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/merge.py",
+        "target": "anndata._core.xarray"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Dataset2D"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 1638,
+        "source": "anndata._core.merge",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/merge.py",
+        "target": "anndata._core.xarray"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "compute_chunk_layout_for_axis_size",
+          "get_chunksize",
+          "maybe_open_h5"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 1227,
+        "source": "anndata._core.merge",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/merge.py",
+        "target": "anndata._io.specs.lazy_methods"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "DUMMY_RANGE_INDEX_KEY"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 1348,
+        "source": "anndata._core.merge",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/merge.py",
+        "target": "anndata._io.specs.lazy_methods"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "ExperimentalFeatureWarning"
+        ],
+        "lazy_kind": "eager",
+        "line": 21,
+        "source": "anndata._core.merge",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/merge.py",
+        "target": "anndata._warnings"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "AwkArray",
+          "CSArray",
+          "CSMatrix",
+          "CupyArray",
+          "CupyCSRMatrix",
+          "CupySparseMatrix",
+          "DaskArray",
+          "has_xp"
+        ],
+        "lazy_kind": "eager",
+        "line": 23,
+        "source": "anndata._core.merge",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/merge.py",
+        "target": "anndata.compat"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "awkward"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 213,
+        "source": "anndata._core.merge",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/merge.py",
+        "target": "anndata.compat"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "awkward"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 870,
+        "source": "anndata._core.merge",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/merge.py",
+        "target": "anndata.compat"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "xarray"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 1232,
+        "source": "anndata._core.merge",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/merge.py",
+        "target": "anndata.compat"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "xarray"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 1639,
+        "source": "anndata._core.merge",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/merge.py",
+        "target": "anndata.compat"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "read_elem_lazy"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 1233,
+        "source": "anndata._core.merge",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/merge.py",
+        "target": "anndata.experimental"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Dataset2D"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 837,
+        "source": "anndata._core.merge",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/merge.py",
+        "target": "anndata.experimental.backed._compat"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Default",
+          "asarray",
+          "axis_len",
+          "warn",
+          "warn_once"
+        ],
+        "lazy_kind": "eager",
+        "line": 33,
+        "source": "anndata._core.merge",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/merge.py",
+        "target": "anndata.utils"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "AnnData"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 189,
+        "source": "anndata._core.raw",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/raw.py",
+        "target": "anndata"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "_gen_dataframe"
+        ],
+        "lazy_kind": "eager",
+        "line": 11,
+        "source": "anndata._core.raw",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/raw.py",
+        "target": "anndata._core.aligned_df"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "AlignedMappingProperty",
+          "AxisArrays"
+        ],
+        "lazy_kind": "eager",
+        "line": 12,
+        "source": "anndata._core.raw",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/raw.py",
+        "target": "anndata._core.aligned_mapping"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "AnnData"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 140,
+        "source": "anndata._core.raw",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/raw.py",
+        "target": "anndata._core.anndata"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "_get_vector_ambiguous",
+          "_normalize_index",
+          "_subset",
+          "unpack_index"
+        ],
+        "lazy_kind": "eager",
+        "line": 13,
+        "source": "anndata._core.raw",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/raw.py",
+        "target": "anndata._core.index"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "sparse_dataset"
+        ],
+        "lazy_kind": "eager",
+        "line": 14,
+        "source": "anndata._core.raw",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/raw.py",
+        "target": "anndata._core.sparse_dataset"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "AdRef"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 139,
+        "source": "anndata._core.raw",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/raw.py",
+        "target": "anndata.acc"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "CupyArray",
+          "CupySparseMatrix"
+        ],
+        "lazy_kind": "eager",
+        "line": 10,
+        "source": "anndata._core.raw",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/raw.py",
+        "target": "anndata.compat"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "_ensure_numpy_idx",
+          "_fix_slice_bounds",
+          "_subset",
+          "unpack_index"
+        ],
+        "lazy_kind": "eager",
+        "line": 45,
+        "source": "anndata._core.sparse_dataset",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/sparse_dataset.py",
+        "target": "anndata._core.index"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "settings"
+        ],
+        "lazy_kind": "eager",
+        "line": 32,
+        "source": "anndata._core.sparse_dataset",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/sparse_dataset.py",
+        "target": "anndata._settings"
+      },
+      {
+        "import_type": "from",
+        "imported": [],
+        "lazy_kind": "eager",
+        "line": 31,
+        "source": "anndata._core.sparse_dataset",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/sparse_dataset.py",
+        "target": "anndata.abc"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "CSArray",
+          "CSMatrix",
+          "CupyArray",
+          "CupyCSCMatrix",
+          "CupyCSMatrix",
+          "CupyCSRMatrix",
+          "H5Group",
+          "ZarrArray",
+          "ZarrGroup",
+          "_read_attr"
+        ],
+        "lazy_kind": "eager",
+        "line": 33,
+        "source": "anndata._core.sparse_dataset",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/sparse_dataset.py",
+        "target": "anndata.compat"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Dataset2D"
+        ],
+        "lazy_kind": "eager",
+        "line": 20,
+        "source": "anndata._core.storage",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/storage.py",
+        "target": "anndata._core.xarray"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "ImplicitModificationWarning"
+        ],
+        "lazy_kind": "eager",
+        "line": 11,
+        "source": "anndata._core.storage",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/storage.py",
+        "target": "anndata._warnings"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "CSArray",
+          "CSMatrix"
+        ],
+        "lazy_kind": "eager",
+        "line": 9,
+        "source": "anndata._core.storage",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/storage.py",
+        "target": "anndata.compat"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "XDataset",
+          "has_xp"
+        ],
+        "lazy_kind": "eager",
+        "line": 12,
+        "source": "anndata._core.storage",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/storage.py",
+        "target": "anndata.compat"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "_ArrayDataStructureTypes"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 34,
+        "source": "anndata._core.storage",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/storage.py",
+        "target": "anndata.typing"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "ensure_df_homogeneous",
+          "get_union_members",
+          "join_english",
+          "raise_value_error_if_multiindex_columns",
+          "warn"
+        ],
+        "lazy_kind": "eager",
+        "line": 13,
+        "source": "anndata._core.storage",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/storage.py",
+        "target": "anndata.utils"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "ElementRef"
+        ],
+        "lazy_kind": "eager",
+        "line": 28,
+        "source": "anndata._core.views",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/views.py",
+        "target": "anndata._core.access"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Dataset2D"
+        ],
+        "lazy_kind": "eager",
+        "line": 29,
+        "source": "anndata._core.views",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/views.py",
+        "target": "anndata._core.xarray"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "settings"
+        ],
+        "lazy_kind": "eager",
+        "line": 16,
+        "source": "anndata._core.views",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/views.py",
+        "target": "anndata._settings"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "ImplicitModificationWarning"
+        ],
+        "lazy_kind": "eager",
+        "line": 13,
+        "source": "anndata._core.views",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/views.py",
+        "target": "anndata._warnings"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "AwkArray",
+          "CupyArray",
+          "CupyCSCMatrix",
+          "CupyCSRMatrix",
+          "DaskArray",
+          "IndexManager",
+          "ZappyArray",
+          "has_xp"
+        ],
+        "lazy_kind": "eager",
+        "line": 17,
+        "source": "anndata._core.views",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/views.py",
+        "target": "anndata.compat"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "awkward"
+        ],
+        "lazy_kind": "eager",
+        "line": 386,
+        "source": "anndata._core.views",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/views.py",
+        "target": "anndata.compat"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "SupportsArrayApi"
+        ],
+        "lazy_kind": "eager",
+        "line": 14,
+        "source": "anndata._core.views",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/views.py",
+        "target": "anndata.types"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "warn"
+        ],
+        "lazy_kind": "eager",
+        "line": 27,
+        "source": "anndata._core.views",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/views.py",
+        "target": "anndata.utils"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "DS_CONCAT_DUMMY_INDEX_NAME",
+          "DS_MERGE_DUMMY_INDEX_NAME"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 246,
+        "source": "anndata._core.xarray",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/xarray.py",
+        "target": "anndata._core.merge"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "warn"
+        ],
+        "lazy_kind": "eager",
+        "line": 12,
+        "source": "anndata._core.xarray",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/xarray.py",
+        "target": "anndata._warnings"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "XDataArray",
+          "XDataset",
+          "XVariable",
+          "pandas_as_str"
+        ],
+        "lazy_kind": "eager",
+        "line": 14,
+        "source": "anndata._core.xarray",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_core/xarray.py",
+        "target": "anndata.compat"
+      },
+      {
+        "import_type": "from",
+        "imported": [],
+        "lazy_kind": "lazy_local",
+        "line": 9,
+        "source": "anndata._io",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/__init__.py",
+        "target": "anndata.io"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "warn"
+        ],
+        "lazy_kind": "eager",
+        "line": 3,
+        "source": "anndata._io",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/__init__.py",
+        "target": "anndata.utils"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "AnnData"
+        ],
+        "lazy_kind": "eager",
+        "line": 17,
+        "source": "anndata._io.h5ad",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/h5ad.py",
+        "target": "anndata._core.anndata"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "filename"
+        ],
+        "lazy_kind": "eager",
+        "line": 18,
+        "source": "anndata._io.h5ad",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/h5ad.py",
+        "target": "anndata._core.file_backing"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "BaseCompressedSparseDataset"
+        ],
+        "lazy_kind": "eager",
+        "line": 19,
+        "source": "anndata._io.h5ad",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/h5ad.py",
+        "target": "anndata._core.sparse_dataset"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "read_elem",
+          "write_elem"
+        ],
+        "lazy_kind": "eager",
+        "line": 28,
+        "source": "anndata._io.h5ad",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/h5ad.py",
+        "target": "anndata._io.specs"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "IOSpec",
+          "write_spec"
+        ],
+        "lazy_kind": "eager",
+        "line": 29,
+        "source": "anndata._io.h5ad",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/h5ad.py",
+        "target": "anndata._io.specs.registry"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "_check_has_no_slash_key",
+          "_read_legacy_raw",
+          "idx_chunks_along_axis",
+          "no_write_dataset_2d",
+          "report_read_key_on_error",
+          "report_write_key_on_error"
+        ],
+        "lazy_kind": "eager",
+        "line": 30,
+        "source": "anndata._io.h5ad",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/h5ad.py",
+        "target": "anndata._io.utils"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "OldFormatWarning"
+        ],
+        "lazy_kind": "eager",
+        "line": 15,
+        "source": "anndata._io.h5ad",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/h5ad.py",
+        "target": "anndata._warnings"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "CSMatrix",
+          "_clean_uns",
+          "_decode_structured_array",
+          "_from_fixed_length_strings"
+        ],
+        "lazy_kind": "eager",
+        "line": 20,
+        "source": "anndata._io.h5ad",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/h5ad.py",
+        "target": "anndata.compat"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "read_dispatched"
+        ],
+        "lazy_kind": "eager",
+        "line": 26,
+        "source": "anndata._io.h5ad",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/h5ad.py",
+        "target": "anndata.experimental"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "iter_outer",
+          "warn"
+        ],
+        "lazy_kind": "eager",
+        "line": 27,
+        "source": "anndata._io.h5ad",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/h5ad.py",
+        "target": "anndata.utils"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "AnnData"
+        ],
+        "lazy_kind": "eager",
+        "line": 17,
+        "source": "anndata._io.read",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/read.py",
+        "target": "anndata"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "is_float"
+        ],
+        "lazy_kind": "eager",
+        "line": 21,
+        "source": "anndata._io.read",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/read.py",
+        "target": "anndata._io.utils"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "settings"
+        ],
+        "lazy_kind": "eager",
+        "line": 18,
+        "source": "anndata._io.read",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/read.py",
+        "target": "anndata._settings"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "old_positionals",
+          "pandas_as_str"
+        ],
+        "lazy_kind": "eager",
+        "line": 19,
+        "source": "anndata._io.read",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/read.py",
+        "target": "anndata.compat"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "warn"
+        ],
+        "lazy_kind": "eager",
+        "line": 20,
+        "source": "anndata._io.read",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/read.py",
+        "target": "anndata.utils"
+      },
+      {
+        "import_type": "from",
+        "imported": [],
+        "lazy_kind": "eager",
+        "line": 3,
+        "source": "anndata._io.specs",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/specs/__init__.py",
+        "target": "anndata._io.specs.lazy_methods"
+      },
+      {
+        "import_type": "from",
+        "imported": [],
+        "lazy_kind": "eager",
+        "line": 3,
+        "source": "anndata._io.specs",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/specs/__init__.py",
+        "target": "anndata._io.specs.methods"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "_LAZY_REGISTRY",
+          "_REGISTRY",
+          "IOSpec",
+          "Reader",
+          "Writer",
+          "get_spec",
+          "read_elem",
+          "read_elem_lazy",
+          "write_elem"
+        ],
+        "lazy_kind": "eager",
+        "line": 4,
+        "source": "anndata._io.specs",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/specs/__init__.py",
+        "target": "anndata._io.specs.registry"
+      },
+      {
+        "import_type": "import",
+        "imported": [],
+        "lazy_kind": "eager",
+        "line": 13,
+        "source": "anndata._io.specs.lazy_methods",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/specs/lazy_methods.py",
+        "target": "anndata"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "filename",
+          "get_elem_name"
+        ],
+        "lazy_kind": "eager",
+        "line": 14,
+        "source": "anndata._io.specs.lazy_methods",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/specs/lazy_methods.py",
+        "target": "anndata._core.file_backing"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Dataset2D",
+          "requires_xarray"
+        ],
+        "lazy_kind": "eager",
+        "line": 15,
+        "source": "anndata._io.specs.lazy_methods",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/specs/lazy_methods.py",
+        "target": "anndata._core.xarray"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "_LAZY_REGISTRY",
+          "IOSpec",
+          "read_elem"
+        ],
+        "lazy_kind": "eager",
+        "line": 28,
+        "source": "anndata._io.specs.lazy_methods",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/specs/lazy_methods.py",
+        "target": "anndata._io.specs.registry"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "CSCDataset",
+          "CSRDataset"
+        ],
+        "lazy_kind": "eager",
+        "line": 16,
+        "source": "anndata._io.specs.lazy_methods",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/specs/lazy_methods.py",
+        "target": "anndata.abc"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "DaskArray",
+          "H5Array",
+          "H5Group",
+          "XDataset",
+          "XVariable",
+          "ZarrArray",
+          "ZarrGroup",
+          "pandas_as_str"
+        ],
+        "lazy_kind": "eager",
+        "line": 17,
+        "source": "anndata._io.specs.lazy_methods",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/specs/lazy_methods.py",
+        "target": "anndata.compat"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "xarray"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 247,
+        "source": "anndata._io.specs.lazy_methods",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/specs/lazy_methods.py",
+        "target": "anndata.compat"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "CategoricalArray",
+          "MaskedArray"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 245,
+        "source": "anndata._io.specs.lazy_methods",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/specs/lazy_methods.py",
+        "target": "anndata.experimental.backed._lazy_arrays"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "CategoricalArray"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 332,
+        "source": "anndata._io.specs.lazy_methods",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/specs/lazy_methods.py",
+        "target": "anndata.experimental.backed._lazy_arrays"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "MaskedArray"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 359,
+        "source": "anndata._io.specs.lazy_methods",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/specs/lazy_methods.py",
+        "target": "anndata.experimental.backed._lazy_arrays"
+      },
+      {
+        "import_type": "import",
+        "imported": [],
+        "lazy_kind": "eager",
+        "line": 22,
+        "source": "anndata._io.specs.methods",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/specs/methods.py",
+        "target": "anndata"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "AnnData",
+          "Raw"
+        ],
+        "lazy_kind": "eager",
+        "line": 23,
+        "source": "anndata._io.specs.methods",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/specs/methods.py",
+        "target": "anndata"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "views"
+        ],
+        "lazy_kind": "eager",
+        "line": 24,
+        "source": "anndata._io.specs.methods",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/specs/methods.py",
+        "target": "anndata._core"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "_normalize_indices"
+        ],
+        "lazy_kind": "eager",
+        "line": 25,
+        "source": "anndata._io.specs.methods",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/specs/methods.py",
+        "target": "anndata._core.index"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "intersect_keys"
+        ],
+        "lazy_kind": "eager",
+        "line": 26,
+        "source": "anndata._io.specs.methods",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/specs/methods.py",
+        "target": "anndata._core.merge"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "_CSCDataset",
+          "_CSRDataset",
+          "sparse_dataset"
+        ],
+        "lazy_kind": "eager",
+        "line": 27,
+        "source": "anndata._io.specs.methods",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/specs/methods.py",
+        "target": "anndata._core.sparse_dataset"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "h5ad"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 212,
+        "source": "anndata._io.specs.methods",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/specs/methods.py",
+        "target": "anndata._io"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "zarr"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 231,
+        "source": "anndata._io.specs.methods",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/specs/methods.py",
+        "target": "anndata._io"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "_REGISTRY",
+          "IOSpec",
+          "read_elem",
+          "read_elem_partial"
+        ],
+        "lazy_kind": "eager",
+        "line": 55,
+        "source": "anndata._io.specs.methods",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/specs/methods.py",
+        "target": "anndata._io.specs.registry"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "_check_has_no_slash_key",
+          "check_key",
+          "zero_dim_array_as_scalar"
+        ],
+        "lazy_kind": "eager",
+        "line": 28,
+        "source": "anndata._io.specs.methods",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/specs/methods.py",
+        "target": "anndata._io.utils"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "settings"
+        ],
+        "lazy_kind": "eager",
+        "line": 52,
+        "source": "anndata._io.specs.methods",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/specs/methods.py",
+        "target": "anndata._settings"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "StorageType"
+        ],
+        "lazy_kind": "eager",
+        "line": 33,
+        "source": "anndata._io.specs.methods",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/specs/methods.py",
+        "target": "anndata._types"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "OldFormatWarning"
+        ],
+        "lazy_kind": "eager",
+        "line": 34,
+        "source": "anndata._io.specs.methods",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/specs/methods.py",
+        "target": "anndata._warnings"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "AwkArray",
+          "CupyArray",
+          "CupyCSCMatrix",
+          "CupyCSRMatrix",
+          "DaskArray",
+          "H5Array",
+          "H5File",
+          "H5Group",
+          "ZarrArray",
+          "ZarrGroup",
+          "_decode_structured_array",
+          "_from_fixed_length_strings",
+          "_read_attr",
+          "_require_group_write_dataframe"
+        ],
+        "lazy_kind": "eager",
+        "line": 35,
+        "source": "anndata._io.specs.methods",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/specs/methods.py",
+        "target": "anndata.compat"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "PANDAS_STRING_ARRAY_TYPES"
+        ],
+        "lazy_kind": "eager",
+        "line": 53,
+        "source": "anndata._io.specs.methods",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/specs/methods.py",
+        "target": "anndata.compat"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "_to_fixed_length_strings"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 741,
+        "source": "anndata._io.specs.methods",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/specs/methods.py",
+        "target": "anndata.compat"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "awkward"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 990,
+        "source": "anndata._io.specs.methods",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/specs/methods.py",
+        "target": "anndata.compat"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "awkward"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 1007,
+        "source": "anndata._io.specs.methods",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/specs/methods.py",
+        "target": "anndata.compat"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "iter_outer",
+          "warn"
+        ],
+        "lazy_kind": "eager",
+        "line": 54,
+        "source": "anndata._io.specs.methods",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/specs/methods.py",
+        "target": "anndata.utils"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "report_read_key_on_error",
+          "report_write_key_on_error"
+        ],
+        "lazy_kind": "eager",
+        "line": 12,
+        "source": "anndata._io.specs.registry",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/specs/registry.py",
+        "target": "anndata._io.utils"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "is_group_consolidated"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 365,
+        "source": "anndata._io.specs.registry",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/specs/registry.py",
+        "target": "anndata._io.zarr"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "settings"
+        ],
+        "lazy_kind": "eager",
+        "line": 13,
+        "source": "anndata._io.specs.registry",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/specs/registry.py",
+        "target": "anndata._settings"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Read",
+          "ReadLazy",
+          "_ReadInternal",
+          "_ReadLazyInternal"
+        ],
+        "lazy_kind": "eager",
+        "line": 14,
+        "source": "anndata._io.specs.registry",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/specs/registry.py",
+        "target": "anndata._types"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "DaskArray",
+          "ZarrGroup",
+          "_read_attr",
+          "has_xp"
+        ],
+        "lazy_kind": "eager",
+        "line": 15,
+        "source": "anndata._io.specs.registry",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/specs/registry.py",
+        "target": "anndata.compat"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "DaskArray"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 268,
+        "source": "anndata._io.specs.registry",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/specs/registry.py",
+        "target": "anndata.compat"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "warn"
+        ],
+        "lazy_kind": "eager",
+        "line": 17,
+        "source": "anndata._io.specs.registry",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/specs/registry.py",
+        "target": "anndata.utils"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "BaseCompressedSparseDataset"
+        ],
+        "lazy_kind": "eager",
+        "line": 11,
+        "source": "anndata._io.utils",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/utils.py",
+        "target": "anndata._core.sparse_dataset"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "read_elem"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 157,
+        "source": "anndata._io.utils",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/utils.py",
+        "target": "anndata._io.specs"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "write_elem"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 165,
+        "source": "anndata._io.utils",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/utils.py",
+        "target": "anndata._io.specs"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Reader"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 223,
+        "source": "anndata._io.utils",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/utils.py",
+        "target": "anndata._io.specs"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Writer"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 261,
+        "source": "anndata._io.utils",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/utils.py",
+        "target": "anndata._io.specs"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "has_dataset_2d"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 352,
+        "source": "anndata._io.utils",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/utils.py",
+        "target": "anndata.experimental.backed._compat"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "warn"
+        ],
+        "lazy_kind": "eager",
+        "line": 12,
+        "source": "anndata._io.utils",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/utils.py",
+        "target": "anndata.utils"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "no_write_dataset_2d"
+        ],
+        "lazy_kind": "eager",
+        "line": 13,
+        "source": "anndata._io.write",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/write.py",
+        "target": "anndata._io.utils"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "WriteWarning"
+        ],
+        "lazy_kind": "eager",
+        "line": 15,
+        "source": "anndata._io.write",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/write.py",
+        "target": "anndata._warnings"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "old_positionals"
+        ],
+        "lazy_kind": "eager",
+        "line": 16,
+        "source": "anndata._io.write",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/write.py",
+        "target": "anndata.compat"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "get_logger"
+        ],
+        "lazy_kind": "eager",
+        "line": 17,
+        "source": "anndata._io.write",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/write.py",
+        "target": "anndata.logging"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "warn"
+        ],
+        "lazy_kind": "eager",
+        "line": 18,
+        "source": "anndata._io.write",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/write.py",
+        "target": "anndata.utils"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "AnnData"
+        ],
+        "lazy_kind": "eager",
+        "line": 13,
+        "source": "anndata._io.zarr",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/zarr.py",
+        "target": "anndata._core.anndata"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "read_elem"
+        ],
+        "lazy_kind": "eager",
+        "line": 19,
+        "source": "anndata._io.zarr",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/zarr.py",
+        "target": "anndata._io.specs"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "_read_legacy_raw",
+          "no_write_dataset_2d",
+          "report_read_key_on_error"
+        ],
+        "lazy_kind": "eager",
+        "line": 20,
+        "source": "anndata._io.zarr",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/zarr.py",
+        "target": "anndata._io.utils"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "settings"
+        ],
+        "lazy_kind": "eager",
+        "line": 14,
+        "source": "anndata._io.zarr",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/zarr.py",
+        "target": "anndata._settings"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "OldFormatWarning"
+        ],
+        "lazy_kind": "eager",
+        "line": 15,
+        "source": "anndata._io.zarr",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/zarr.py",
+        "target": "anndata._warnings"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "_clean_uns",
+          "_from_fixed_length_strings"
+        ],
+        "lazy_kind": "eager",
+        "line": 16,
+        "source": "anndata._io.zarr",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/zarr.py",
+        "target": "anndata.compat"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "read_dispatched",
+          "write_dispatched"
+        ],
+        "lazy_kind": "eager",
+        "line": 17,
+        "source": "anndata._io.zarr",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/zarr.py",
+        "target": "anndata.experimental"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "warn"
+        ],
+        "lazy_kind": "eager",
+        "line": 18,
+        "source": "anndata._io.zarr",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_io/zarr.py",
+        "target": "anndata.utils"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "H5Array",
+          "H5Group",
+          "ZarrArray",
+          "ZarrGroup"
+        ],
+        "lazy_kind": "eager",
+        "line": 10,
+        "source": "anndata._types",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_types.py",
+        "target": "anndata.compat"
+      },
+      {
+        "import_type": "from",
+        "imported": [],
+        "lazy_kind": "eager",
+        "line": 9,
+        "source": "anndata._types",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_types.py",
+        "target": "anndata.typing"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "set_module"
+        ],
+        "lazy_kind": "eager",
+        "line": 11,
+        "source": "anndata._types",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/_types.py",
+        "target": "anndata.utils"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "ArrayView"
+        ],
+        "lazy_kind": "eager",
+        "line": 14,
+        "source": "anndata.acc",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/acc/__init__.py",
+        "target": "anndata._core.views"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Dataset2D"
+        ],
+        "lazy_kind": "eager",
+        "line": 15,
+        "source": "anndata.acc",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/acc/__init__.py",
+        "target": "anndata._core.xarray"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "to_json"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 651,
+        "source": "anndata.acc",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/acc/__init__.py",
+        "target": "anndata.acc._parse_json"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "parse_json"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 665,
+        "source": "anndata.acc",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/acc/__init__.py",
+        "target": "anndata.acc._parse_json"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "parse"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 701,
+        "source": "anndata.acc",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/acc/__init__.py",
+        "target": "anndata.acc._parse_str"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "CupySparseMatrix",
+          "DaskArray",
+          "has_xp"
+        ],
+        "lazy_kind": "eager",
+        "line": 16,
+        "source": "anndata.acc",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/acc/__init__.py",
+        "target": "anndata.compat"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "AdRef"
+        ],
+        "lazy_kind": "eager",
+        "line": 5,
+        "source": "anndata.acc._parse_json",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/acc/_parse_json.py",
+        "target": "anndata.acc"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "GraphAcc"
+        ],
+        "lazy_kind": "eager",
+        "line": 5,
+        "source": "anndata.acc._parse_json",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/acc/_parse_json.py",
+        "target": "anndata.acc"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "LayerAcc"
+        ],
+        "lazy_kind": "eager",
+        "line": 5,
+        "source": "anndata.acc._parse_json",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/acc/_parse_json.py",
+        "target": "anndata.acc"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "MetaAcc"
+        ],
+        "lazy_kind": "eager",
+        "line": 5,
+        "source": "anndata.acc._parse_json",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/acc/_parse_json.py",
+        "target": "anndata.acc"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "MultiAcc"
+        ],
+        "lazy_kind": "eager",
+        "line": 5,
+        "source": "anndata.acc._parse_json",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/acc/_parse_json.py",
+        "target": "anndata.acc"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "GraphMapAcc"
+        ],
+        "lazy_kind": "eager",
+        "line": 6,
+        "source": "anndata.acc._parse_str",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/acc/_parse_str.py",
+        "target": "anndata.acc"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "LayerMapAcc"
+        ],
+        "lazy_kind": "eager",
+        "line": 6,
+        "source": "anndata.acc._parse_str",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/acc/_parse_str.py",
+        "target": "anndata.acc"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "MetaAcc"
+        ],
+        "lazy_kind": "eager",
+        "line": 6,
+        "source": "anndata.acc._parse_str",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/acc/_parse_str.py",
+        "target": "anndata.acc"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "MultiMapAcc"
+        ],
+        "lazy_kind": "eager",
+        "line": 6,
+        "source": "anndata.acc._parse_str",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/acc/_parse_str.py",
+        "target": "anndata.acc"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "warn"
+        ],
+        "lazy_kind": "eager",
+        "line": 20,
+        "source": "anndata.compat",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/compat/__init__.py",
+        "target": "anndata._warnings"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "SupportsArrayApi"
+        ],
+        "lazy_kind": "eager",
+        "line": 18,
+        "source": "anndata.compat",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/compat/__init__.py",
+        "target": "anndata.types"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "IOSpec",
+          "read_elem_lazy"
+        ],
+        "lazy_kind": "eager",
+        "line": 6,
+        "source": "anndata.experimental",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/__init__.py",
+        "target": "anndata._io.specs"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Dataset2DIlocIndexer",
+          "Read",
+          "ReadCallback",
+          "StorageType",
+          "Write",
+          "WriteCallback"
+        ],
+        "lazy_kind": "eager",
+        "line": 7,
+        "source": "anndata.experimental",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/__init__.py",
+        "target": "anndata._types"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "read_dispatched",
+          "write_dispatched"
+        ],
+        "lazy_kind": "eager",
+        "line": 16,
+        "source": "anndata.experimental",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/__init__.py",
+        "target": "anndata.experimental._dispatch_io"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "read_lazy"
+        ],
+        "lazy_kind": "eager",
+        "line": 17,
+        "source": "anndata.experimental",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/__init__.py",
+        "target": "anndata.experimental.backed"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "concat_on_disk"
+        ],
+        "lazy_kind": "eager",
+        "line": 18,
+        "source": "anndata.experimental",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/__init__.py",
+        "target": "anndata.experimental.merge"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "AnnCollection"
+        ],
+        "lazy_kind": "eager",
+        "line": 19,
+        "source": "anndata.experimental",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/__init__.py",
+        "target": "anndata.experimental.multi_files"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "AnnLoader"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 45,
+        "source": "anndata.experimental",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/__init__.py",
+        "target": "anndata.experimental.pytorch"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "module_get_attr_redirect"
+        ],
+        "lazy_kind": "eager",
+        "line": 15,
+        "source": "anndata.experimental",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/__init__.py",
+        "target": "anndata.utils"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "_REGISTRY",
+          "Reader"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 35,
+        "source": "anndata.experimental._dispatch_io",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/_dispatch_io.py",
+        "target": "anndata._io.specs"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "_REGISTRY",
+          "Writer"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 70,
+        "source": "anndata.experimental._dispatch_io",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/_dispatch_io.py",
+        "target": "anndata._io.specs"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Dataset2D"
+        ],
+        "lazy_kind": "eager",
+        "line": 3,
+        "source": "anndata.experimental.backed",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/backed/__init__.py",
+        "target": "anndata._core.xarray"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "read_lazy"
+        ],
+        "lazy_kind": "eager",
+        "line": 4,
+        "source": "anndata.experimental.backed",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/backed/__init__.py",
+        "target": "anndata.experimental.backed._io"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "CategoricalArray",
+          "MaskedArray"
+        ],
+        "lazy_kind": "eager",
+        "line": 5,
+        "source": "anndata.experimental.backed",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/backed/__init__.py",
+        "target": "anndata.experimental.backed._lazy_arrays"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Dataset2D"
+        ],
+        "lazy_kind": "eager",
+        "line": 5,
+        "source": "anndata.experimental.backed._compat",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/backed/_compat.py",
+        "target": "anndata._core.xarray"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "AnnData"
+        ],
+        "lazy_kind": "eager",
+        "line": 15,
+        "source": "anndata.experimental.backed._io",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/backed/_io.py",
+        "target": "anndata._core.anndata"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "AnnDataFileManager"
+        ],
+        "lazy_kind": "eager",
+        "line": 10,
+        "source": "anndata.experimental.backed._io",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/backed/_io.py",
+        "target": "anndata._core.file_backing"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "requires_xarray"
+        ],
+        "lazy_kind": "eager",
+        "line": 16,
+        "source": "anndata.experimental.backed._io",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/backed/_io.py",
+        "target": "anndata._core.xarray"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "read_elem_lazy"
+        ],
+        "lazy_kind": "eager",
+        "line": 11,
+        "source": "anndata.experimental.backed._io",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/backed/_io.py",
+        "target": "anndata._io.specs.registry"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "settings"
+        ],
+        "lazy_kind": "eager",
+        "line": 17,
+        "source": "anndata.experimental.backed._io",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/backed/_io.py",
+        "target": "anndata._settings"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "AnnDataElem"
+        ],
+        "lazy_kind": "eager",
+        "line": 12,
+        "source": "anndata.experimental.backed._io",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/backed/_io.py",
+        "target": "anndata._types"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "ZarrGroup"
+        ],
+        "lazy_kind": "eager",
+        "line": 18,
+        "source": "anndata.experimental.backed._io",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/backed/_io.py",
+        "target": "anndata.compat"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "read_dispatched"
+        ],
+        "lazy_kind": "eager",
+        "line": 20,
+        "source": "anndata.experimental.backed._io",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/backed/_io.py",
+        "target": "anndata.experimental"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "get_literal_members",
+          "warn"
+        ],
+        "lazy_kind": "eager",
+        "line": 19,
+        "source": "anndata.experimental.backed._io",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/backed/_io.py",
+        "target": "anndata.utils"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "_subset"
+        ],
+        "lazy_kind": "eager",
+        "line": 9,
+        "source": "anndata.experimental.backed._lazy_arrays",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/backed/_lazy_arrays.py",
+        "target": "anndata._core.index"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "as_view"
+        ],
+        "lazy_kind": "eager",
+        "line": 10,
+        "source": "anndata.experimental.backed._lazy_arrays",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/backed/_lazy_arrays.py",
+        "target": "anndata._core.views"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "get_chunksize"
+        ],
+        "lazy_kind": "eager",
+        "line": 11,
+        "source": "anndata.experimental.backed._lazy_arrays",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/backed/_lazy_arrays.py",
+        "target": "anndata._io.specs.lazy_methods"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "pandas_nullable_dtype"
+        ],
+        "lazy_kind": "eager",
+        "line": 13,
+        "source": "anndata.experimental.backed._lazy_arrays",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/backed/_lazy_arrays.py",
+        "target": "anndata._io.utils"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "settings"
+        ],
+        "lazy_kind": "eager",
+        "line": 14,
+        "source": "anndata.experimental.backed._lazy_arrays",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/backed/_lazy_arrays.py",
+        "target": "anndata._settings"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "H5Array",
+          "H5AsTypeView",
+          "XBackendArray",
+          "XDataArray",
+          "XZarrArrayWrapper",
+          "ZarrArray"
+        ],
+        "lazy_kind": "eager",
+        "line": 15,
+        "source": "anndata.experimental.backed._lazy_arrays",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/backed/_lazy_arrays.py",
+        "target": "anndata.compat"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "read_elem"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 120,
+        "source": "anndata.experimental.backed._lazy_arrays",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/backed/_lazy_arrays.py",
+        "target": "anndata.io"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "to_memory"
+        ],
+        "lazy_kind": "eager",
+        "line": 15,
+        "source": "anndata.experimental.merge",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/merge.py",
+        "target": "anndata._core.file_backing"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "MissingVal",
+          "_resolve_axis",
+          "concat_arrays",
+          "gen_inner_reindexers",
+          "gen_reindexer",
+          "intersect_keys",
+          "merge_dataframes",
+          "merge_indices",
+          "resolve_merge_strategy",
+          "unify_dtypes"
+        ],
+        "lazy_kind": "eager",
+        "line": 16,
+        "source": "anndata.experimental.merge",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/merge.py",
+        "target": "anndata._core.merge"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "BaseCompressedSparseDataset",
+          "sparse_dataset"
+        ],
+        "lazy_kind": "eager",
+        "line": 28,
+        "source": "anndata.experimental.merge",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/merge.py",
+        "target": "anndata._core.sparse_dataset"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "read_elem",
+          "write_elem"
+        ],
+        "lazy_kind": "eager",
+        "line": 29,
+        "source": "anndata.experimental.merge",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/merge.py",
+        "target": "anndata._io.specs"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "open_write_group"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 130,
+        "source": "anndata.experimental.merge",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/merge.py",
+        "target": "anndata._io.zarr"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "H5Array",
+          "H5Group",
+          "ZarrArray",
+          "ZarrGroup"
+        ],
+        "lazy_kind": "eager",
+        "line": 30,
+        "source": "anndata.experimental.merge",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/merge.py",
+        "target": "anndata.compat"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "read_dispatched"
+        ],
+        "lazy_kind": "eager",
+        "line": 31,
+        "source": "anndata.experimental.merge",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/merge.py",
+        "target": "anndata.experimental"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "read_elem_lazy"
+        ],
+        "lazy_kind": "eager",
+        "line": 31,
+        "source": "anndata.experimental.merge",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/merge.py",
+        "target": "anndata.experimental"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "AnnCollection"
+        ],
+        "lazy_kind": "eager",
+        "line": 3,
+        "source": "anndata.experimental.multi_files",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/multi_files/__init__.py",
+        "target": "anndata.experimental.multi_files._anncollection"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "AxisArrays"
+        ],
+        "lazy_kind": "eager",
+        "line": 14,
+        "source": "anndata.experimental.multi_files._anncollection",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/multi_files/_anncollection.py",
+        "target": "anndata._core.aligned_mapping"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "AnnData"
+        ],
+        "lazy_kind": "eager",
+        "line": 15,
+        "source": "anndata.experimental.multi_files._anncollection",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/multi_files/_anncollection.py",
+        "target": "anndata._core.anndata"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "_normalize_index",
+          "_normalize_indices"
+        ],
+        "lazy_kind": "eager",
+        "line": 16,
+        "source": "anndata.experimental.multi_files._anncollection",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/multi_files/_anncollection.py",
+        "target": "anndata._core.index"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "concat_arrays",
+          "inner_concat_aligned_mapping"
+        ],
+        "lazy_kind": "eager",
+        "line": 17,
+        "source": "anndata.experimental.multi_files._anncollection",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/multi_files/_anncollection.py",
+        "target": "anndata._core.merge"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "BaseCompressedSparseDataset"
+        ],
+        "lazy_kind": "eager",
+        "line": 18,
+        "source": "anndata.experimental.multi_files._anncollection",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/multi_files/_anncollection.py",
+        "target": "anndata._core.sparse_dataset"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "_resolve_idx"
+        ],
+        "lazy_kind": "eager",
+        "line": 19,
+        "source": "anndata.experimental.multi_files._anncollection",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/multi_files/_anncollection.py",
+        "target": "anndata._core.views"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "old_positionals"
+        ],
+        "lazy_kind": "eager",
+        "line": 20,
+        "source": "anndata.experimental.multi_files._anncollection",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/multi_files/_anncollection.py",
+        "target": "anndata.compat"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "warn"
+        ],
+        "lazy_kind": "eager",
+        "line": 21,
+        "source": "anndata.experimental.multi_files._anncollection",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/multi_files/_anncollection.py",
+        "target": "anndata.utils"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "AnnLoader"
+        ],
+        "lazy_kind": "eager",
+        "line": 3,
+        "source": "anndata.experimental.pytorch",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/pytorch/__init__.py",
+        "target": "anndata.experimental.pytorch._annloader"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "AnnData"
+        ],
+        "lazy_kind": "eager",
+        "line": 13,
+        "source": "anndata.experimental.pytorch._annloader",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/pytorch/_annloader.py",
+        "target": "anndata._core.anndata"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "old_positionals"
+        ],
+        "lazy_kind": "eager",
+        "line": 14,
+        "source": "anndata.experimental.pytorch._annloader",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/pytorch/_annloader.py",
+        "target": "anndata.compat"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "AnnCollection",
+          "_ConcatViewMixin"
+        ],
+        "lazy_kind": "eager",
+        "line": 15,
+        "source": "anndata.experimental.pytorch._annloader",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/pytorch/_annloader.py",
+        "target": "anndata.experimental.multi_files._anncollection"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "sparse_dataset"
+        ],
+        "lazy_kind": "eager",
+        "line": 3,
+        "source": "anndata.io",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/io.py",
+        "target": "anndata._core.sparse_dataset"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "read_h5ad",
+          "write_h5ad"
+        ],
+        "lazy_kind": "eager",
+        "line": 4,
+        "source": "anndata.io",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/io.py",
+        "target": "anndata._io.h5ad"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "read_csv",
+          "read_excel",
+          "read_hdf",
+          "read_loom",
+          "read_mtx",
+          "read_text",
+          "read_umi_tools"
+        ],
+        "lazy_kind": "eager",
+        "line": 5,
+        "source": "anndata.io",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/io.py",
+        "target": "anndata._io.read"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "read_elem",
+          "write_elem"
+        ],
+        "lazy_kind": "eager",
+        "line": 14,
+        "source": "anndata.io",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/io.py",
+        "target": "anndata._io.specs"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "write_csvs",
+          "write_loom"
+        ],
+        "lazy_kind": "eager",
+        "line": 15,
+        "source": "anndata.io",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/io.py",
+        "target": "anndata._io.write"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "read_zarr",
+          "write_zarr"
+        ],
+        "lazy_kind": "eager",
+        "line": 16,
+        "source": "anndata.io",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/io.py",
+        "target": "anndata._io.zarr"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "old_positionals"
+        ],
+        "lazy_kind": "eager",
+        "line": 6,
+        "source": "anndata.logging",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/logging.py",
+        "target": "anndata.compat"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "warn"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 40,
+        "source": "anndata.types",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/types.py",
+        "target": "anndata.utils"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "AnnData"
+        ],
+        "lazy_kind": "eager",
+        "line": 16,
+        "source": "anndata.typing",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/typing.py",
+        "target": "anndata._core.anndata"
+      },
+      {
+        "import_type": "from",
+        "imported": [],
+        "lazy_kind": "eager",
+        "line": 15,
+        "source": "anndata.typing",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/typing.py",
+        "target": "anndata.abc"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "AwkArray",
+          "CSArray",
+          "CSMatrix",
+          "CupyArray",
+          "CupySparseMatrix",
+          "DaskArray",
+          "H5Array",
+          "IndexManager",
+          "XDataArray",
+          "ZappyArray",
+          "ZarrArray"
+        ],
+        "lazy_kind": "eager",
+        "line": 17,
+        "source": "anndata.typing",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/typing.py",
+        "target": "anndata.compat"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "SupportsArrayApi"
+        ],
+        "lazy_kind": "eager",
+        "line": 13,
+        "source": "anndata.typing",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/typing.py",
+        "target": "anndata.types"
+      },
+      {
+        "import_type": "import",
+        "imported": [],
+        "lazy_kind": "eager",
+        "line": 15,
+        "source": "anndata.utils",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/utils.py",
+        "target": "anndata"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "BaseCompressedSparseDataset"
+        ],
+        "lazy_kind": "eager",
+        "line": 17,
+        "source": "anndata.utils",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/utils.py",
+        "target": "anndata._core.sparse_dataset"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "warn"
+        ],
+        "lazy_kind": "eager",
+        "line": 18,
+        "source": "anndata.utils",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/utils.py",
+        "target": "anndata._warnings"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "CSArray",
+          "CupyArray",
+          "CupySparseMatrix",
+          "DaskArray"
+        ],
+        "lazy_kind": "eager",
+        "line": 19,
+        "source": "anndata.utils",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/utils.py",
+        "target": "anndata.compat"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "awkward"
+        ],
+        "lazy_kind": "eager",
+        "line": 129,
+        "source": "anndata.utils",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/utils.py",
+        "target": "anndata.compat"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "get_logger"
+        ],
+        "lazy_kind": "eager",
+        "line": 20,
+        "source": "anndata.utils",
+        "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/utils.py",
+        "target": "anndata.logging"
+      }
+    ],
+    "module_roots": [
+      "/tmp/importscope-example-repos/anndata",
+      "/tmp/importscope-example-repos/anndata/src"
+    ],
+    "modules": {
+      "anndata": {
+        "definitions": [
+          "_DEPRECATED",
+          "_DEPRECATED_IO",
+          "__all__",
+          "__getattr__"
+        ],
+        "is_package": true,
+        "module": "anndata",
+        "path": "/tmp/importscope-example-repos/anndata/src/anndata/__init__.py"
+      },
+      "anndata._core": {
+        "definitions": [],
+        "is_package": true,
+        "module": "anndata._core",
+        "path": "/tmp/importscope-example-repos/anndata/src/anndata/_core/__init__.py"
+      },
+      "anndata._core.access": {
+        "definitions": [
+          "ElementRef"
+        ],
+        "is_package": false,
+        "module": "anndata._core.access",
+        "path": "/tmp/importscope-example-repos/anndata/src/anndata/_core/access.py"
+      },
+      "anndata._core.aligned_df": {
+        "definitions": [
+          "_gen_dataframe",
+          "_gen_dataframe_1d",
+          "_gen_dataframe_df",
+          "_gen_dataframe_mapping",
+          "_gen_dataframe_xdataset",
+          "_gen_dataframe_xr",
+          "_mk_df_error"
+        ],
+        "is_package": false,
+        "module": "anndata._core.aligned_df",
+        "path": "/tmp/importscope-example-repos/anndata/src/anndata/_core/aligned_df.py"
+      },
+      "anndata._core.aligned_mapping": {
+        "definitions": [
+          "AlignedActual",
+          "AlignedMappingBase",
+          "AlignedMappingProperty",
+          "AlignedView",
+          "AxisArrays",
+          "AxisArraysBase",
+          "AxisArraysView",
+          "Layers",
+          "LayersBase",
+          "LayersView",
+          "OneDIdx",
+          "PairwiseArrays",
+          "PairwiseArraysBase",
+          "PairwiseArraysView",
+          "TwoDIdx",
+          "Value"
+        ],
+        "is_package": false,
+        "module": "anndata._core.aligned_mapping",
+        "path": "/tmp/importscope-example-repos/anndata/src/anndata/_core/aligned_mapping.py"
+      },
+      "anndata._core.anndata": {
+        "definitions": [
+          "AnnData",
+          "_check_2d_shape",
+          "_infer_shape",
+          "_infer_shape_for_axis",
+          "_remove_unused_categories_xr"
+        ],
+        "is_package": false,
+        "module": "anndata._core.anndata",
+        "path": "/tmp/importscope-example-repos/anndata/src/anndata/_core/anndata.py"
+      },
+      "anndata._core.extensions": {
+        "definitions": [
+          "__all__",
+          "register_anndata_namespace"
+        ],
+        "is_package": false,
+        "module": "anndata._core.extensions",
+        "path": "/tmp/importscope-example-repos/anndata/src/anndata/_core/extensions.py"
+      },
+      "anndata._core.file_backing": {
+        "definitions": [
+          "AnnDataFileManager",
+          "_",
+          "filename",
+          "get_elem_name",
+          "to_memory"
+        ],
+        "is_package": false,
+        "module": "anndata._core.file_backing",
+        "path": "/tmp/importscope-example-repos/anndata/src/anndata/_core/file_backing.py"
+      },
+      "anndata._core.index": {
+        "definitions": [
+          "ArrayApiDtype",
+          "DtypeKind",
+          "XArrayDtype",
+          "_XrDtV",
+          "__all__",
+          "_ensure_numpy_idx",
+          "_fix_slice_bounds",
+          "_from_array",
+          "_from_int",
+          "_from_sequence",
+          "_from_slice",
+          "_from_sparse",
+          "_from_str",
+          "_from_xarray",
+          "_gen_anndata_index",
+          "_get_index_size",
+          "_get_vector_ambiguous",
+          "_index_manager_to_numpy_idx_in_tuple",
+          "_index_order_and_inverse",
+          "_normalize_index",
+          "_normalize_indices",
+          "_prepare_array_api_idx",
+          "_process_index_for_h5py",
+          "_safe_fancy_index_h5py",
+          "_subset",
+          "_subset_awkarray",
+          "_subset_dask",
+          "_subset_dataset",
+          "_subset_df",
+          "_subset_sparse",
+          "array_api_ix",
+          "make_slice",
+          "unpack_index"
+        ],
+        "is_package": false,
+        "module": "anndata._core.index",
+        "path": "/tmp/importscope-example-repos/anndata/src/anndata/_core/index.py"
+      },
+      "anndata._core.merge": {
+        "definitions": [
+          "DS_CONCAT_DUMMY_INDEX_NAME",
+          "DS_MERGE_DUMMY_INDEX_NAME",
+          "MERGE_STRATEGIES",
+          "MissingVal",
+          "OrderedSet",
+          "Reindexer",
+          "StrategiesLiteral",
+          "_cp_block_diag",
+          "_dask_block_diag",
+          "_merge_nested",
+          "_resolve_axis",
+          "as_cp_sparse",
+          "as_sparse",
+          "axis_indices",
+          "check_combinable_cols",
+          "concat",
+          "concat_arrays",
+          "concat_dataset2d_on_annot_axis",
+          "concat_pairwise_mapping",
+          "default_fill_value",
+          "equal",
+          "equal_array",
+          "equal_awkward",
+          "equal_cupyarray",
+          "equal_dask_array",
+          "equal_dataframe",
+          "equal_sparse",
+          "first",
+          "gen_inner_reindexers",
+          "gen_outer_reindexers",
+          "gen_reindexer",
+          "inner_concat_aligned_mapping",
+          "intersect_keys",
+          "is_missing",
+          "make_dask_col_from_extension_dtype",
+          "make_xarray_extension_dtypes_dask",
+          "merge_dataframes",
+          "merge_first",
+          "merge_indices",
+          "merge_nested",
+          "merge_only",
+          "merge_outer",
+          "merge_same",
+          "merge_unique",
+          "missing_element",
+          "not_missing",
+          "np_bool_to_pd_bool_array",
+          "only",
+          "outer_concat_aligned_mapping",
+          "resolve_merge_strategy",
+          "try_unifying_dtype",
+          "unify_dtypes",
+          "union_keys",
+          "unique_value"
+        ],
+        "is_package": false,
+        "module": "anndata._core.merge",
+        "path": "/tmp/importscope-example-repos/anndata/src/anndata/_core/merge.py"
+      },
+      "anndata._core.raw": {
+        "definitions": [
+          "IndexDimError",
+          "Raw",
+          "_RawViewHack"
+        ],
+        "is_package": false,
+        "module": "anndata._core.raw",
+        "path": "/tmp/importscope-example-repos/anndata/src/anndata/_core/raw.py"
+      },
+      "anndata._core.sparse_dataset": {
+        "definitions": [
+          "BackedSparseMatrix",
+          "BaseCompressedSparseDataset",
+          "CompressedVectors",
+          "_CSCDataset",
+          "_CSRDataset",
+          "_get_group_format",
+          "get_np_module",
+          "is_gpu",
+          "is_sparse_indexing_overridden",
+          "slice_as_int",
+          "slice_len",
+          "sparse_dataset",
+          "subset_sparsedataset"
+        ],
+        "is_package": false,
+        "module": "anndata._core.sparse_dataset",
+        "path": "/tmp/importscope-example-repos/anndata/src/anndata/_core/sparse_dataset.py"
+      },
+      "anndata._core.storage": {
+        "definitions": [
+          "coerce_array"
+        ],
+        "is_package": false,
+        "module": "anndata._core.storage",
+        "path": "/tmp/importscope-example-repos/anndata/src/anndata/_core/storage.py"
+      },
+      "anndata._core.views": {
+        "definitions": [
+          "ArrayView",
+          "CupyArrayView",
+          "CupySparseCSCView",
+          "CupySparseCSRView",
+          "DaskArrayView",
+          "DataFrameView",
+          "DictView",
+          "SparseCSCArrayView",
+          "SparseCSCMatrixView",
+          "SparseCSRArrayView",
+          "SparseCSRMatrixView",
+          "_",
+          "_SetItemMixin",
+          "_UFuncMethod",
+          "_ViewMixin",
+          "_resolve_idx",
+          "_resolve_idx_array_api",
+          "_resolve_idx_index_manager",
+          "_resolve_idx_ndarray",
+          "_resolve_idx_slice",
+          "_resolve_idx_slice_slice",
+          "_resolve_idxs",
+          "as_view",
+          "as_view_array",
+          "as_view_csc_array",
+          "as_view_csc_matrix",
+          "as_view_csr_array",
+          "as_view_csr_matrix",
+          "as_view_cupy",
+          "as_view_cupy_csc",
+          "as_view_cupy_csr",
+          "as_view_dask_array",
+          "as_view_df",
+          "as_view_dict",
+          "as_view_zappy",
+          "view_update"
+        ],
+        "is_package": false,
+        "module": "anndata._core.views",
+        "path": "/tmp/importscope-example-repos/anndata/src/anndata/_core/views.py"
+      },
+      "anndata._core.xarray": {
+        "definitions": [
+          "Dataset2D",
+          "IlocGetter",
+          "requires_xarray"
+        ],
+        "is_package": false,
+        "module": "anndata._core.xarray",
+        "path": "/tmp/importscope-example-repos/anndata/src/anndata/_core/xarray.py"
+      },
+      "anndata._io": {
+        "definitions": [
+          "__all__",
+          "__getattr__"
+        ],
+        "is_package": true,
+        "module": "anndata._io",
+        "path": "/tmp/importscope-example-repos/anndata/src/anndata/_io/__init__.py"
+      },
+      "anndata._io.h5ad": {
+        "definitions": [
+          "_read_raw",
+          "_write_raw",
+          "_write_x",
+          "read_dataframe",
+          "read_dataframe_legacy",
+          "read_dataset",
+          "read_dense_as_csc",
+          "read_dense_as_csr",
+          "read_dense_as_sparse",
+          "read_h5ad",
+          "read_h5ad_backed",
+          "write_h5ad",
+          "write_sparse_as_dense"
+        ],
+        "is_package": false,
+        "module": "anndata._io.h5ad",
+        "path": "/tmp/importscope-example-repos/anndata/src/anndata/_io/h5ad.py"
+      },
+      "anndata._io.read": {
+        "definitions": [
+          "_fmt_loom_axis_attrs",
+          "_iter_lines",
+          "_read_text",
+          "read_csv",
+          "read_excel",
+          "read_hdf",
+          "read_loom",
+          "read_mtx",
+          "read_text",
+          "read_umi_tools"
+        ],
+        "is_package": false,
+        "module": "anndata._io.read",
+        "path": "/tmp/importscope-example-repos/anndata/src/anndata/_io/read.py"
+      },
+      "anndata._io.specs": {
+        "definitions": [
+          "__all__"
+        ],
+        "is_package": true,
+        "module": "anndata._io.specs",
+        "path": "/tmp/importscope-example-repos/anndata/src/anndata/_io/specs/__init__.py"
+      },
+      "anndata._io.specs.lazy_methods": {
+        "definitions": [
+          "DUMMY_RANGE_INDEX_KEY",
+          "_DEFAULT_STRIDE",
+          "_gen_xarray_dict_iterator_from_elems",
+          "compute_chunk_layout_for_axis_size",
+          "get_chunksize",
+          "make_dask_chunk",
+          "maybe_open_h5",
+          "read_categorical",
+          "read_dataframe",
+          "read_h5_array",
+          "read_h5_string_array",
+          "read_nullable",
+          "read_sparse_as_dask",
+          "read_zarr_array",
+          "resolve_chunks"
+        ],
+        "is_package": false,
+        "module": "anndata._io.specs.lazy_methods",
+        "path": "/tmp/importscope-example-repos/anndata/src/anndata/_io/specs/lazy_methods.py"
+      },
+      "anndata._io.specs.methods": {
+        "definitions": [
+          "GLOBAL_LOCK",
+          "_BaseMaskedArray",
+          "_iter_chunks_for_copy",
+          "_read_nullable",
+          "_read_nullable_string",
+          "_read_partial",
+          "_remove_scalar_compression_args",
+          "_to_cpu_mem_wrapper",
+          "_to_hdf5_vlen_strings",
+          "read_anndata",
+          "read_array",
+          "read_array_partial",
+          "read_awkward",
+          "read_basic",
+          "read_basic_zarr",
+          "read_categorical",
+          "read_dataframe",
+          "read_dataframe_0_1_0",
+          "read_dataframe_partial",
+          "read_hdf5_string",
+          "read_indices",
+          "read_mapping",
+          "read_null",
+          "read_partial",
+          "read_partial_categorical",
+          "read_partial_dataframe_0_1_0",
+          "read_recarray",
+          "read_scalar",
+          "read_series",
+          "read_sparse",
+          "read_sparse_partial",
+          "read_string_array",
+          "read_string_array_partial",
+          "read_zarr_array_partial",
+          "read_zarr_string",
+          "suppress_autoshard_warning",
+          "write_anndata",
+          "write_awkward",
+          "write_basic",
+          "write_basic_dask_dask_dense",
+          "write_categorical",
+          "write_chunked_dense_array_to_group",
+          "write_csc",
+          "write_csr",
+          "write_cupy_dask",
+          "write_dask_sparse",
+          "write_dataframe",
+          "write_hdf5_scalar",
+          "write_list",
+          "write_mapping",
+          "write_null_h5py",
+          "write_null_zarr",
+          "write_nullable",
+          "write_raw",
+          "write_recarray",
+          "write_recarray_zarr",
+          "write_scalar_zarr",
+          "write_sparse_compressed",
+          "write_sparse_dataset",
+          "write_string",
+          "write_vlen_string_array",
+          "write_vlen_string_array_zarr",
+          "zarr_v3_compressor_compat",
+          "zarr_v3_sharding"
+        ],
+        "is_package": false,
+        "module": "anndata._io.specs.methods",
+        "path": "/tmp/importscope-example-repos/anndata/src/anndata/_io/specs/methods.py"
+      },
+      "anndata._io.specs.registry": {
+        "definitions": [
+          "IORegistry",
+          "IORegistryError",
+          "IOSpec",
+          "LazyReader",
+          "Reader",
+          "Writer",
+          "_LAZY_REGISTRY",
+          "_REGISTRY",
+          "_iter_patterns",
+          "get_spec",
+          "normalize_nested",
+          "proc_spec",
+          "proc_spec_mapping",
+          "proc_spec_spec",
+          "read_elem",
+          "read_elem_lazy",
+          "read_elem_partial",
+          "to_writeable",
+          "write_elem",
+          "write_spec"
+        ],
+        "is_package": false,
+        "module": "anndata._io.specs.registry",
+        "path": "/tmp/importscope-example-repos/anndata/src/anndata/_io/specs/registry.py"
+      },
+      "anndata._io.utils": {
+        "definitions": [
+          "AnnDataReadError",
+          "_check_has_no_slash_key",
+          "_get_display_path",
+          "_read_legacy_raw",
+          "add_key_note",
+          "check_key",
+          "convert_bool",
+          "convert_string",
+          "idx_chunks_along_axis",
+          "is_float",
+          "is_int",
+          "no_write_dataset_2d",
+          "pandas_nullable_dtype",
+          "read_attribute",
+          "report_read_key_on_error",
+          "report_write_key_on_error",
+          "write_attribute",
+          "zero_dim_array_as_scalar"
+        ],
+        "is_package": false,
+        "module": "anndata._io.utils",
+        "path": "/tmp/importscope-example-repos/anndata/src/anndata/_io/utils.py"
+      },
+      "anndata._io.write": {
+        "definitions": [
+          "_get_chunk_indices",
+          "_write_in_zarr_chunks",
+          "logger",
+          "write_csvs",
+          "write_loom"
+        ],
+        "is_package": false,
+        "module": "anndata._io.write",
+        "path": "/tmp/importscope-example-repos/anndata/src/anndata/_io/write.py"
+      },
+      "anndata._io.zarr": {
+        "definitions": [
+          "is_group_consolidated",
+          "open_write_group",
+          "read_dataframe",
+          "read_dataframe_legacy",
+          "read_dataset",
+          "read_zarr",
+          "write_zarr",
+          "zarrs_context"
+        ],
+        "is_package": false,
+        "module": "anndata._io.zarr",
+        "path": "/tmp/importscope-example-repos/anndata/src/anndata/_io/zarr.py"
+      },
+      "anndata._settings": {
+        "definitions": [
+          "Settings",
+          "settings"
+        ],
+        "is_package": false,
+        "module": "anndata._settings",
+        "path": "/tmp/importscope-example-repos/anndata/src/anndata/_settings.py"
+      },
+      "anndata._types": {
+        "definitions": [
+          "Dataset2DIlocIndexer",
+          "Read",
+          "ReadCallback",
+          "ReadLazy",
+          "ReduceFunc",
+          "Write",
+          "WriteCallback",
+          "_ArrayStorageType",
+          "_GroupStorageType",
+          "_ReadInternal",
+          "_ReadLazyInternal",
+          "_WriteInternal",
+          "__all__"
+        ],
+        "is_package": false,
+        "module": "anndata._types",
+        "path": "/tmp/importscope-example-repos/anndata/src/anndata/_types.py"
+      },
+      "anndata._warnings": {
+        "definitions": [
+          "ExperimentalFeatureWarning",
+          "ImplicitModificationWarning",
+          "OldFormatWarning",
+          "WriteWarning",
+          "_FILE_PREFIXES",
+          "__all__",
+          "warn"
+        ],
+        "is_package": false,
+        "module": "anndata._warnings",
+        "path": "/tmp/importscope-example-repos/anndata/src/anndata/_warnings.py"
+      },
+      "anndata.abc": {
+        "definitions": [
+          "CSCDataset",
+          "CSRDataset",
+          "_AbstractCSDataset",
+          "__all__",
+          "_sparse_dataset_doc"
+        ],
+        "is_package": false,
+        "module": "anndata.abc",
+        "path": "/tmp/importscope-example-repos/anndata/src/anndata/abc.py"
+      },
+      "anndata.acc": {
+        "definitions": [
+          "A",
+          "AdAcc",
+          "AdRef",
+          "GraphAcc",
+          "GraphMapAcc",
+          "LayerAcc",
+          "LayerMapAcc",
+          "MapAcc",
+          "MetaAcc",
+          "MultiAcc",
+          "MultiMapAcc",
+          "RefAcc",
+          "__all__",
+          "_checks",
+          "_expand_idx2d_list",
+          "_is_idx2d_list",
+          "_is_t_list"
+        ],
+        "is_package": true,
+        "module": "anndata.acc",
+        "path": "/tmp/importscope-example-repos/anndata/src/anndata/acc/__init__.py"
+      },
+      "anndata.acc._parse_json": {
+        "definitions": [
+          "__all__",
+          "_as_idx_2d",
+          "_idx_2d_ser",
+          "parse_json",
+          "to_json"
+        ],
+        "is_package": false,
+        "module": "anndata.acc._parse_json",
+        "path": "/tmp/importscope-example-repos/anndata/src/anndata/acc/_parse_json.py"
+      },
+      "anndata.acc._parse_str": {
+        "definitions": [
+          "_parse_idx_2d",
+          "_parse_path_2d",
+          "_parse_path_multi",
+          "parse"
+        ],
+        "is_package": false,
+        "module": "anndata.acc._parse_str",
+        "path": "/tmp/importscope-example-repos/anndata/src/anndata/acc/_parse_str.py"
+      },
+      "anndata.compat": {
+        "definitions": [
+          "CSArray",
+          "CSMatrix",
+          "CupyCSMatrix",
+          "Empty",
+          "H5Array",
+          "H5File",
+          "H5Group",
+          "IndexManager",
+          "PANDAS_STRING_ARRAY_TYPES",
+          "_clean_uns",
+          "_decode_structured_array",
+          "_find_sparse_matrices",
+          "_from_fixed_length_strings",
+          "_move_adj_mtx",
+          "_read_attr",
+          "_read_attr_hdf5",
+          "_require_group_write_dataframe",
+          "_safe_transpose",
+          "_to_fixed_length_strings",
+          "_transpose_by_block",
+          "has_xp",
+          "is_cupy_importable",
+          "old_positionals",
+          "pandas_as_str"
+        ],
+        "is_package": true,
+        "module": "anndata.compat",
+        "path": "/tmp/importscope-example-repos/anndata/src/anndata/compat/__init__.py"
+      },
+      "anndata.experimental": {
+        "definitions": [
+          "_DEPRECATED",
+          "__all__",
+          "__getattr__"
+        ],
+        "is_package": true,
+        "module": "anndata.experimental",
+        "path": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/__init__.py"
+      },
+      "anndata.experimental._dispatch_io": {
+        "definitions": [
+          "read_dispatched",
+          "write_dispatched"
+        ],
+        "is_package": false,
+        "module": "anndata.experimental._dispatch_io",
+        "path": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/_dispatch_io.py"
+      },
+      "anndata.experimental.backed": {
+        "definitions": [
+          "__all__"
+        ],
+        "is_package": true,
+        "module": "anndata.experimental.backed",
+        "path": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/backed/__init__.py"
+      },
+      "anndata.experimental.backed._compat": {
+        "definitions": [
+          "has_dataset_2d"
+        ],
+        "is_package": false,
+        "module": "anndata.experimental.backed._compat",
+        "path": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/backed/_compat.py"
+      },
+      "anndata.experimental.backed._io": {
+        "definitions": [
+          "ANNDATA_ELEMS",
+          "read_lazy"
+        ],
+        "is_package": false,
+        "module": "anndata.experimental.backed._io",
+        "path": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/backed/_io.py"
+      },
+      "anndata.experimental.backed._lazy_arrays": {
+        "definitions": [
+          "CategoricalArray",
+          "MaskedArray",
+          "ZarrOrHDF5Wrapper",
+          "_",
+          "_subset_masked",
+          "_view_pd_boolean_array"
+        ],
+        "is_package": false,
+        "module": "anndata.experimental.backed._lazy_arrays",
+        "path": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/backed/_lazy_arrays.py"
+      },
+      "anndata.experimental.merge": {
+        "definitions": [
+          "EAGER_TYPES",
+          "IdentityReindexer",
+          "SPARSE_MATRIX",
+          "_",
+          "_concat_on_disk_inner",
+          "_df_index",
+          "_gen_slice_to_append",
+          "_indices_equal",
+          "_write_alt_annot",
+          "_write_alt_mapping",
+          "_write_alt_pairwise",
+          "_write_axis_annot",
+          "_write_concat_arrays",
+          "_write_concat_mappings",
+          "_write_concat_sequence",
+          "as_group",
+          "concat_on_disk",
+          "read_as_backed",
+          "write_concat_dense",
+          "write_concat_sparse"
+        ],
+        "is_package": false,
+        "module": "anndata.experimental.merge",
+        "path": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/merge.py"
+      },
+      "anndata.experimental.multi_files": {
+        "definitions": [
+          "__all__"
+        ],
+        "is_package": true,
+        "module": "anndata.experimental.multi_files",
+        "path": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/multi_files/__init__.py"
+      },
+      "anndata.experimental.multi_files._anncollection": {
+        "definitions": [
+          "ATTRS",
+          "AnnCollection",
+          "AnnCollectionView",
+          "ConvertType",
+          "DictCallable",
+          "LazyAttrData",
+          "MapObsView",
+          "_ConcatViewMixin",
+          "_IterateViewMixin",
+          "_harmonize_types",
+          "_merge",
+          "_select_convert"
+        ],
+        "is_package": false,
+        "module": "anndata.experimental.multi_files._anncollection",
+        "path": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/multi_files/_anncollection.py"
+      },
+      "anndata.experimental.pytorch": {
+        "definitions": [
+          "__all__"
+        ],
+        "is_package": true,
+        "module": "anndata.experimental.pytorch",
+        "path": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/pytorch/__init__.py"
+      },
+      "anndata.experimental.pytorch._annloader": {
+        "definitions": [
+          "AnnLoader",
+          "BatchIndexSampler",
+          "_convert_on_top",
+          "default_converter"
+        ],
+        "is_package": false,
+        "module": "anndata.experimental.pytorch._annloader",
+        "path": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/pytorch/_annloader.py"
+      },
+      "anndata.io": {
+        "definitions": [
+          "__all__"
+        ],
+        "is_package": false,
+        "module": "anndata.io",
+        "path": "/tmp/importscope-example-repos/anndata/src/anndata/io.py"
+      },
+      "anndata.logging": {
+        "definitions": [
+          "_previous_memory_usage",
+          "anndata_logger",
+          "format_memory_usage",
+          "get_logger",
+          "get_memory_usage",
+          "print_memory_usage"
+        ],
+        "is_package": false,
+        "module": "anndata.logging",
+        "path": "/tmp/importscope-example-repos/anndata/src/anndata/logging.py"
+      },
+      "anndata.types": {
+        "definitions": [
+          "SupportsArrayApi",
+          "__getattr__"
+        ],
+        "is_package": false,
+        "module": "anndata.types",
+        "path": "/tmp/importscope-example-repos/anndata/src/anndata/types.py"
+      },
+      "anndata.typing": {
+        "definitions": [
+          "_ArrayDataStructureTypes",
+          "_InMemoryArrayOrScalarType",
+          "_Index1DNorm",
+          "_XDataType",
+          "__all__"
+        ],
+        "is_package": false,
+        "module": "anndata.typing",
+        "path": "/tmp/importscope-example-repos/anndata/src/anndata/typing.py"
+      },
+      "anndata.utils": {
+        "definitions": [
+          "Default",
+          "asarray",
+          "asarray_cupy",
+          "asarray_cupy_sparse",
+          "asarray_dask",
+          "asarray_h5py_dataset",
+          "asarray_sparse",
+          "asarray_sparse_dataset",
+          "axis_len",
+          "convert_dictionary_to_structured_array",
+          "convert_to_dict",
+          "convert_to_dict_dict",
+          "convert_to_dict_ndarray",
+          "convert_to_dict_nonetype",
+          "deprecation_msg",
+          "ensure_df_homogeneous",
+          "get_literal_members",
+          "get_union_members",
+          "import_name",
+          "iter_outer",
+          "join_english",
+          "logger",
+          "make_index_unique",
+          "module_get_attr_redirect",
+          "raise_value_error_if_multiindex_columns",
+          "set_module",
+          "warn_names_duplicates",
+          "warn_once"
+        ],
+        "is_package": false,
+        "module": "anndata.utils",
+        "path": "/tmp/importscope-example-repos/anndata/src/anndata/utils.py"
+      }
+    },
+    "repo": "/tmp/importscope-example-repos/anndata"
+  },
+  "config": {
+    "discovery": {
+      "exclude": [
+        ".venv/**",
+        "venv/**",
+        ".tox/**",
+        "build/**",
+        "dist/**",
+        ".git/**",
+        "docs/**",
+        "tests/**",
+        "benchmarks/**",
+        "ci/**",
+        "src/anndata/tests/**"
+      ],
+      "include": []
+    },
+    "outputs": {
+      "profiles": {
+        "all": {
+          "description": "All graph families and reports.",
+          "formats": [
+            "svg",
+            "md"
+          ],
+          "graphs": [
+            {
+              "id": "module-layout",
+              "kind": "inventory",
+              "stem": "module_layout_graph"
+            },
+            {
+              "id": "package-dependency",
+              "kind": "module",
+              "labeled": false,
+              "package_level": true,
+              "stem": "group_dependency_graph"
+            },
+            {
+              "id": "module-dependency",
+              "kind": "module",
+              "labeled": false,
+              "package_level": false,
+              "stem": "module_dependency_graph"
+            },
+            {
+              "id": "symbol-labeled-module-dependency",
+              "kind": "module",
+              "labeled": true,
+              "package_level": false,
+              "stem": "module_dependency_with_symbols"
+            },
+            {
+              "filter": "boundary_helper",
+              "id": "boundary-helper",
+              "kind": "module",
+              "labeled": true,
+              "package_level": false,
+              "stem": "boundary_helper_candidates"
+            },
+            {
+              "id": "symbol-import",
+              "kind": "symbol",
+              "stem": "symbol_import_graph"
+            }
+          ],
+          "summary": "full"
+        },
+        "overview": {
+          "description": "Repo overview with grouped dependency graphs and summary report.",
+          "formats": [
+            "svg",
+            "md"
+          ],
+          "graphs": [
+            {
+              "id": "module-layout",
+              "kind": "inventory",
+              "stem": "module_layout_graph"
+            },
+            {
+              "id": "package-dependency",
+              "kind": "module",
+              "labeled": false,
+              "package_level": true,
+              "stem": "group_dependency_graph"
+            },
+            {
+              "id": "module-dependency",
+              "kind": "module",
+              "labeled": false,
+              "package_level": false,
+              "stem": "module_dependency_graph"
+            }
+          ],
+          "summary": "full"
+        },
+        "policy": {
+          "description": "Policy-focused violation and helper cleanup outputs.",
+          "formats": [
+            "svg",
+            "md"
+          ],
+          "graphs": [
+            {
+              "filter": "policy",
+              "id": "policy-violations",
+              "kind": "module",
+              "labeled": true,
+              "package_level": false,
+              "stem": "policy_violation_graph"
+            },
+            {
+              "filter": "boundary_helper",
+              "id": "boundary-helper",
+              "kind": "module",
+              "labeled": true,
+              "package_level": false,
+              "stem": "boundary_helper_candidates"
+            }
+          ],
+          "summary": "full"
+        },
+        "symbols": {
+          "description": "Comprehensive symbol import graph plus summary.",
+          "formats": [
+            "svg",
+            "md"
+          ],
+          "graphs": [
+            {
+              "id": "symbol-import",
+              "kind": "symbol",
+              "stem": "symbol_import_graph"
+            }
+          ],
+          "summary": "short"
+        }
+      },
+      "snapshot_artifact": "analysis_snapshot.json",
+      "summary_artifact": "architecture_report.md",
+      "tables": {
+        "cycles": "module_cycles.csv",
+        "edges": "internal_import_edges.csv",
+        "findings": "policy_findings.csv",
+        "module_symbols": "module_definitions.csv",
+        "private_imports": "private_import_edges.csv"
+      }
+    },
+    "package": "anndata",
+    "policy": {
+      "allowed_import_pairs": [],
+      "allowed_private_target_prefixes": [
+        "anndata._"
+      ],
+      "boundary_helper_symbols": [],
+      "boundary_helper_target_prefixes": [],
+      "display_groups": [
+        {
+          "class": "package",
+          "fill": "#f8fafc",
+          "label": "package",
+          "match_prefixes": [],
+          "name": "package",
+          "stroke": "#334155"
+        },
+        {
+          "class": "other",
+          "fill": "#f8fafc",
+          "label": "other",
+          "match_prefixes": [],
+          "name": "other",
+          "stroke": "#64748b"
+        }
+      ],
+      "enabled": true,
+      "forbidden_imports": [
+        {
+          "source_prefixes": [
+            "anndata.experimental._dispatch_io"
+          ],
+          "target_prefixes": [
+            "anndata._io.specs"
+          ]
+        }
+      ],
+      "module_group_depth": 3,
+      "policy_areas": []
+    },
+    "tool": {
+      "default_profile": "overview",
+      "name": "importscope"
+    }
+  },
+  "finding_counts": {
+    "boundary_helper": 2,
+    "forbidden_import": 2
+  },
+  "findings": [
+    {
+      "finding_type": "forbidden_import",
+      "imported": [
+        "_REGISTRY",
+        "Reader"
+      ],
+      "line": 35,
+      "message": "Import violates configured architectural direction.",
+      "severity": "error",
+      "source": "anndata.experimental._dispatch_io",
+      "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/_dispatch_io.py",
+      "target": "anndata._io.specs"
+    },
+    {
+      "finding_type": "boundary_helper",
+      "imported": [
+        "_REGISTRY",
+        "Reader"
+      ],
+      "line": 35,
+      "message": "Boundary/helper candidate edge for cleanup review.",
+      "severity": "warning",
+      "source": "anndata.experimental._dispatch_io",
+      "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/_dispatch_io.py",
+      "target": "anndata._io.specs"
+    },
+    {
+      "finding_type": "forbidden_import",
+      "imported": [
+        "_REGISTRY",
+        "Writer"
+      ],
+      "line": 70,
+      "message": "Import violates configured architectural direction.",
+      "severity": "error",
+      "source": "anndata.experimental._dispatch_io",
+      "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/_dispatch_io.py",
+      "target": "anndata._io.specs"
+    },
+    {
+      "finding_type": "boundary_helper",
+      "imported": [
+        "_REGISTRY",
+        "Writer"
+      ],
+      "line": 70,
+      "message": "Boundary/helper candidate edge for cleanup review.",
+      "severity": "warning",
+      "source": "anndata.experimental._dispatch_io",
+      "source_file": "/tmp/importscope-example-repos/anndata/src/anndata/experimental/_dispatch_io.py",
+      "target": "anndata._io.specs"
+    }
+  ],
+  "profile": "overview"
+}

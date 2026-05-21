@@ -1,0 +1,854 @@
+{
+  "analysis": {
+    "coverage_gaps": [],
+    "cycles": [
+      [
+        "demo_shop.domain.models",
+        "demo_shop.persistence.repository"
+      ]
+    ],
+    "edges": [
+      {
+        "import_type": "from",
+        "imported": [
+          "LineItem",
+          "Money",
+          "Order"
+        ],
+        "lazy_kind": "eager",
+        "line": 3,
+        "source": "demo_shop",
+        "source_file": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/__init__.py",
+        "target": "demo_shop.domain.models"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "place_order"
+        ],
+        "lazy_kind": "eager",
+        "line": 4,
+        "source": "demo_shop",
+        "source_file": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/__init__.py",
+        "target": "demo_shop.services.orders"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "create_order_endpoint"
+        ],
+        "lazy_kind": "eager",
+        "line": 3,
+        "source": "demo_shop.api",
+        "source_file": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/api/__init__.py",
+        "target": "demo_shop.api.routes"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "CreateOrderRequest",
+          "OrderResponse"
+        ],
+        "lazy_kind": "eager",
+        "line": 4,
+        "source": "demo_shop.api",
+        "source_file": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/api/__init__.py",
+        "target": "demo_shop.api.schemas"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "CreateOrderRequest",
+          "OrderResponse"
+        ],
+        "lazy_kind": "eager",
+        "line": 9,
+        "source": "demo_shop.api.routes",
+        "source_file": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/api/routes.py",
+        "target": "demo_shop.api.schemas"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "quote_identifier"
+        ],
+        "lazy_kind": "eager",
+        "line": 10,
+        "source": "demo_shop.api.routes",
+        "source_file": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/api/routes.py",
+        "target": "demo_shop.persistence._sql"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "place_order"
+        ],
+        "lazy_kind": "eager",
+        "line": 13,
+        "source": "demo_shop.api.routes",
+        "source_file": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/api/routes.py",
+        "target": "demo_shop.services.orders"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Order"
+        ],
+        "lazy_kind": "eager",
+        "line": 7,
+        "source": "demo_shop.api.schemas",
+        "source_file": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/api/schemas.py",
+        "target": "demo_shop.domain.models"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "create_order_endpoint"
+        ],
+        "lazy_kind": "eager",
+        "line": 3,
+        "source": "demo_shop.app",
+        "source_file": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/app.py",
+        "target": "demo_shop.api.routes"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "build_container"
+        ],
+        "lazy_kind": "eager",
+        "line": 4,
+        "source": "demo_shop.app",
+        "source_file": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/app.py",
+        "target": "demo_shop.container"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "create_order_endpoint"
+        ],
+        "lazy_kind": "eager",
+        "line": 7,
+        "source": "demo_shop.cli",
+        "source_file": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/cli.py",
+        "target": "demo_shop.api.routes"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "CreateOrderRequest"
+        ],
+        "lazy_kind": "eager",
+        "line": 8,
+        "source": "demo_shop.cli",
+        "source_file": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/cli.py",
+        "target": "demo_shop.api.schemas"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "EmailClient"
+        ],
+        "lazy_kind": "eager",
+        "line": 3,
+        "source": "demo_shop.container",
+        "source_file": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/container.py",
+        "target": "demo_shop.infra.email"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "PaymentGateway"
+        ],
+        "lazy_kind": "eager",
+        "line": 4,
+        "source": "demo_shop.container",
+        "source_file": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/container.py",
+        "target": "demo_shop.infra.payment"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "OrderRepository"
+        ],
+        "lazy_kind": "eager",
+        "line": 5,
+        "source": "demo_shop.container",
+        "source_file": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/container.py",
+        "target": "demo_shop.persistence.repository"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "DomainError",
+          "InvalidOrder"
+        ],
+        "lazy_kind": "eager",
+        "line": 3,
+        "source": "demo_shop.domain",
+        "source_file": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/domain/__init__.py",
+        "target": "demo_shop.domain.errors"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "LineItem",
+          "Money",
+          "Order"
+        ],
+        "lazy_kind": "eager",
+        "line": 4,
+        "source": "demo_shop.domain",
+        "source_file": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/domain/__init__.py",
+        "target": "demo_shop.domain.models"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "InvalidOrder"
+        ],
+        "lazy_kind": "eager",
+        "line": 14,
+        "source": "demo_shop.domain.models",
+        "source_file": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/domain/models.py",
+        "target": "demo_shop.domain.errors"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "OrderRepository"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 64,
+        "source": "demo_shop.domain.models",
+        "source_file": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/domain/models.py",
+        "target": "demo_shop.persistence.repository"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "EmailClient"
+        ],
+        "lazy_kind": "eager",
+        "line": 3,
+        "source": "demo_shop.infra",
+        "source_file": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/infra/__init__.py",
+        "target": "demo_shop.infra.email"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "PaymentGateway"
+        ],
+        "lazy_kind": "eager",
+        "line": 4,
+        "source": "demo_shop.infra",
+        "source_file": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/infra/__init__.py",
+        "target": "demo_shop.infra.payment"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Money"
+        ],
+        "lazy_kind": "eager",
+        "line": 5,
+        "source": "demo_shop.infra.payment",
+        "source_file": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/infra/payment.py",
+        "target": "demo_shop.domain.models"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "OrderRepository"
+        ],
+        "lazy_kind": "eager",
+        "line": 3,
+        "source": "demo_shop.persistence",
+        "source_file": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/persistence/__init__.py",
+        "target": "demo_shop.persistence.repository"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Order"
+        ],
+        "lazy_kind": "eager",
+        "line": 5,
+        "source": "demo_shop.persistence.repository",
+        "source_file": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/persistence/repository.py",
+        "target": "demo_shop.domain.models"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "quote_identifier"
+        ],
+        "lazy_kind": "eager",
+        "line": 6,
+        "source": "demo_shop.persistence.repository",
+        "source_file": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/persistence/repository.py",
+        "target": "demo_shop.persistence._sql"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Money",
+          "Order"
+        ],
+        "lazy_kind": "eager",
+        "line": 9,
+        "source": "demo_shop.plugins.discounts",
+        "source_file": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/plugins/discounts.py",
+        "target": "demo_shop.domain.models"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "place_order"
+        ],
+        "lazy_kind": "eager",
+        "line": 3,
+        "source": "demo_shop.services",
+        "source_file": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/services/__init__.py",
+        "target": "demo_shop.services.orders"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "CatalogPriceBook",
+          "PriceBook"
+        ],
+        "lazy_kind": "eager",
+        "line": 4,
+        "source": "demo_shop.services",
+        "source_file": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/services/__init__.py",
+        "target": "demo_shop.services.pricing"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Order"
+        ],
+        "lazy_kind": "eager",
+        "line": 5,
+        "source": "demo_shop.services.notifications",
+        "source_file": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/services/notifications.py",
+        "target": "demo_shop.domain.models"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "EmailClient"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 10,
+        "source": "demo_shop.services.notifications",
+        "source_file": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/services/notifications.py",
+        "target": "demo_shop.infra.email"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Order"
+        ],
+        "lazy_kind": "eager",
+        "line": 5,
+        "source": "demo_shop.services.orders",
+        "source_file": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/services/orders.py",
+        "target": "demo_shop.domain.models"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "PaymentGateway"
+        ],
+        "lazy_kind": "eager",
+        "line": 6,
+        "source": "demo_shop.services.orders",
+        "source_file": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/services/orders.py",
+        "target": "demo_shop.infra.payment"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "OrderRepository"
+        ],
+        "lazy_kind": "eager",
+        "line": 7,
+        "source": "demo_shop.services.orders",
+        "source_file": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/services/orders.py",
+        "target": "demo_shop.persistence.repository"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "send_order_confirmation"
+        ],
+        "lazy_kind": "eager",
+        "line": 8,
+        "source": "demo_shop.services.orders",
+        "source_file": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/services/orders.py",
+        "target": "demo_shop.services.notifications"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "CatalogPriceBook",
+          "PriceBook"
+        ],
+        "lazy_kind": "eager",
+        "line": 9,
+        "source": "demo_shop.services.orders",
+        "source_file": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/services/orders.py",
+        "target": "demo_shop.services.pricing"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Money"
+        ],
+        "lazy_kind": "eager",
+        "line": 12,
+        "source": "demo_shop.services.pricing",
+        "source_file": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/services/pricing.py",
+        "target": "demo_shop.domain.models"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "normalize_sku"
+        ],
+        "lazy_kind": "eager",
+        "line": 13,
+        "source": "demo_shop.services.pricing",
+        "source_file": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/services/pricing.py",
+        "target": "demo_shop.persistence._sql"
+      }
+    ],
+    "module_roots": [
+      "/home/daniele/importscope/docs/examples/demo-shop-repo",
+      "/home/daniele/importscope/docs/examples/demo-shop-repo/src"
+    ],
+    "modules": {
+      "demo_shop": {
+        "definitions": [
+          "__all__"
+        ],
+        "is_package": true,
+        "module": "demo_shop",
+        "path": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/__init__.py"
+      },
+      "demo_shop.api": {
+        "definitions": [
+          "__all__"
+        ],
+        "is_package": true,
+        "module": "demo_shop.api",
+        "path": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/api/__init__.py"
+      },
+      "demo_shop.api.routes": {
+        "definitions": [
+          "create_order_endpoint"
+        ],
+        "is_package": false,
+        "module": "demo_shop.api.routes",
+        "path": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/api/routes.py"
+      },
+      "demo_shop.api.schemas": {
+        "definitions": [
+          "CreateOrderRequest",
+          "OrderResponse"
+        ],
+        "is_package": false,
+        "module": "demo_shop.api.schemas",
+        "path": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/api/schemas.py"
+      },
+      "demo_shop.app": {
+        "definitions": [
+          "create_app"
+        ],
+        "is_package": false,
+        "module": "demo_shop.app",
+        "path": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/app.py"
+      },
+      "demo_shop.cli": {
+        "definitions": [
+          "build_parser",
+          "main"
+        ],
+        "is_package": false,
+        "module": "demo_shop.cli",
+        "path": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/cli.py"
+      },
+      "demo_shop.container": {
+        "definitions": [
+          "build_container"
+        ],
+        "is_package": false,
+        "module": "demo_shop.container",
+        "path": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/container.py"
+      },
+      "demo_shop.domain": {
+        "definitions": [
+          "__all__"
+        ],
+        "is_package": true,
+        "module": "demo_shop.domain",
+        "path": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/domain/__init__.py"
+      },
+      "demo_shop.domain.errors": {
+        "definitions": [
+          "DomainError",
+          "InvalidOrder"
+        ],
+        "is_package": false,
+        "module": "demo_shop.domain.errors",
+        "path": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/domain/errors.py"
+      },
+      "demo_shop.domain.models": {
+        "definitions": [
+          "LineItem",
+          "Money",
+          "Order"
+        ],
+        "is_package": false,
+        "module": "demo_shop.domain.models",
+        "path": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/domain/models.py"
+      },
+      "demo_shop.infra": {
+        "definitions": [
+          "__all__"
+        ],
+        "is_package": true,
+        "module": "demo_shop.infra",
+        "path": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/infra/__init__.py"
+      },
+      "demo_shop.infra.email": {
+        "definitions": [
+          "EmailClient"
+        ],
+        "is_package": false,
+        "module": "demo_shop.infra.email",
+        "path": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/infra/email.py"
+      },
+      "demo_shop.infra.payment": {
+        "definitions": [
+          "PaymentGateway"
+        ],
+        "is_package": false,
+        "module": "demo_shop.infra.payment",
+        "path": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/infra/payment.py"
+      },
+      "demo_shop.persistence": {
+        "definitions": [
+          "__all__"
+        ],
+        "is_package": true,
+        "module": "demo_shop.persistence",
+        "path": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/persistence/__init__.py"
+      },
+      "demo_shop.persistence._sql": {
+        "definitions": [
+          "normalize_sku",
+          "quote_identifier"
+        ],
+        "is_package": false,
+        "module": "demo_shop.persistence._sql",
+        "path": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/persistence/_sql.py"
+      },
+      "demo_shop.persistence.repository": {
+        "definitions": [
+          "OrderRepository"
+        ],
+        "is_package": false,
+        "module": "demo_shop.persistence.repository",
+        "path": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/persistence/repository.py"
+      },
+      "demo_shop.plugins": {
+        "definitions": [],
+        "is_package": true,
+        "module": "demo_shop.plugins",
+        "path": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/plugins/__init__.py"
+      },
+      "demo_shop.plugins.discounts": {
+        "definitions": [
+          "apply_loyalty_discount"
+        ],
+        "is_package": false,
+        "module": "demo_shop.plugins.discounts",
+        "path": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/plugins/discounts.py"
+      },
+      "demo_shop.services": {
+        "definitions": [
+          "__all__"
+        ],
+        "is_package": true,
+        "module": "demo_shop.services",
+        "path": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/services/__init__.py"
+      },
+      "demo_shop.services.notifications": {
+        "definitions": [
+          "send_order_confirmation"
+        ],
+        "is_package": false,
+        "module": "demo_shop.services.notifications",
+        "path": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/services/notifications.py"
+      },
+      "demo_shop.services.orders": {
+        "definitions": [
+          "place_order"
+        ],
+        "is_package": false,
+        "module": "demo_shop.services.orders",
+        "path": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/services/orders.py"
+      },
+      "demo_shop.services.pricing": {
+        "definitions": [
+          "CatalogPriceBook",
+          "PriceBook"
+        ],
+        "is_package": false,
+        "module": "demo_shop.services.pricing",
+        "path": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/services/pricing.py"
+      }
+    },
+    "repo": "/home/daniele/importscope/docs/examples/demo-shop-repo"
+  },
+  "config": {
+    "discovery": {
+      "exclude": [
+        ".venv/**",
+        "venv/**",
+        ".tox/**",
+        "build/**",
+        "dist/**",
+        ".git/**",
+        "docs/**",
+        "tests/**"
+      ],
+      "include": []
+    },
+    "outputs": {
+      "profiles": {
+        "all": {
+          "description": "All graph families and reports.",
+          "formats": [
+            "svg",
+            "md"
+          ],
+          "graphs": [
+            {
+              "id": "module-layout",
+              "kind": "inventory",
+              "stem": "module_layout_graph"
+            },
+            {
+              "id": "package-dependency",
+              "kind": "module",
+              "labeled": false,
+              "package_level": true,
+              "stem": "group_dependency_graph"
+            },
+            {
+              "id": "module-dependency",
+              "kind": "module",
+              "labeled": false,
+              "package_level": false,
+              "stem": "module_dependency_graph"
+            },
+            {
+              "id": "symbol-labeled-module-dependency",
+              "kind": "module",
+              "labeled": true,
+              "package_level": false,
+              "stem": "module_dependency_with_symbols"
+            },
+            {
+              "filter": "boundary_helper",
+              "id": "boundary-helper",
+              "kind": "module",
+              "labeled": true,
+              "package_level": false,
+              "stem": "boundary_helper_candidates"
+            },
+            {
+              "id": "symbol-import",
+              "kind": "symbol",
+              "stem": "symbol_import_graph"
+            }
+          ],
+          "summary": "full"
+        },
+        "overview": {
+          "description": "Repo overview with grouped dependency graphs and summary report.",
+          "formats": [
+            "svg",
+            "md"
+          ],
+          "graphs": [
+            {
+              "id": "module-layout",
+              "kind": "inventory",
+              "stem": "module_layout_graph"
+            },
+            {
+              "id": "package-dependency",
+              "kind": "module",
+              "labeled": false,
+              "package_level": true,
+              "stem": "group_dependency_graph"
+            },
+            {
+              "id": "module-dependency",
+              "kind": "module",
+              "labeled": false,
+              "package_level": false,
+              "stem": "module_dependency_graph"
+            }
+          ],
+          "summary": "full"
+        },
+        "policy": {
+          "description": "Policy-focused violation and helper cleanup outputs.",
+          "formats": [
+            "svg",
+            "md"
+          ],
+          "graphs": [
+            {
+              "filter": "policy",
+              "id": "policy-violations",
+              "kind": "module",
+              "labeled": true,
+              "package_level": false,
+              "stem": "policy_violation_graph"
+            },
+            {
+              "filter": "boundary_helper",
+              "id": "boundary-helper",
+              "kind": "module",
+              "labeled": true,
+              "package_level": false,
+              "stem": "boundary_helper_candidates"
+            }
+          ],
+          "summary": "full"
+        },
+        "symbols": {
+          "description": "Comprehensive symbol import graph plus summary.",
+          "formats": [
+            "svg",
+            "md"
+          ],
+          "graphs": [
+            {
+              "id": "symbol-import",
+              "kind": "symbol",
+              "stem": "symbol_import_graph"
+            }
+          ],
+          "summary": "short"
+        }
+      },
+      "snapshot_artifact": "analysis_snapshot.json",
+      "summary_artifact": "architecture_report.md",
+      "tables": {
+        "cycles": "module_cycles.csv",
+        "edges": "internal_import_edges.csv",
+        "findings": "policy_findings.csv",
+        "module_symbols": "module_definitions.csv",
+        "private_imports": "private_import_edges.csv"
+      }
+    },
+    "package": "demo_shop",
+    "policy": {
+      "allowed_import_pairs": [],
+      "allowed_private_target_prefixes": [],
+      "boundary_helper_symbols": [],
+      "boundary_helper_target_prefixes": [],
+      "display_groups": [
+        {
+          "class": "package",
+          "fill": "#f8fafc",
+          "label": "package",
+          "match_prefixes": [],
+          "name": "package",
+          "stroke": "#334155"
+        },
+        {
+          "class": "other",
+          "fill": "#f8fafc",
+          "label": "other",
+          "match_prefixes": [],
+          "name": "other",
+          "stroke": "#64748b"
+        }
+      ],
+      "enabled": true,
+      "forbidden_imports": [
+        {
+          "source_prefixes": [
+            "demo_shop.domain"
+          ],
+          "target_prefixes": [
+            "demo_shop.persistence"
+          ]
+        },
+        {
+          "source_prefixes": [
+            "demo_shop.api"
+          ],
+          "target_prefixes": [
+            "demo_shop.persistence._"
+          ]
+        },
+        {
+          "source_prefixes": [
+            "demo_shop.services"
+          ],
+          "target_prefixes": [
+            "demo_shop.persistence._"
+          ]
+        }
+      ],
+      "module_group_depth": 3,
+      "policy_areas": []
+    },
+    "tool": {
+      "default_profile": "overview",
+      "name": "importscope"
+    }
+  },
+  "finding_counts": {
+    "boundary_helper": 1,
+    "forbidden_import": 1
+  },
+  "findings": [
+    {
+      "finding_type": "forbidden_import",
+      "imported": [
+        "OrderRepository"
+      ],
+      "line": 64,
+      "message": "Import violates configured architectural direction.",
+      "severity": "error",
+      "source": "demo_shop.domain.models",
+      "source_file": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/domain/models.py",
+      "target": "demo_shop.persistence.repository"
+    },
+    {
+      "finding_type": "boundary_helper",
+      "imported": [
+        "OrderRepository"
+      ],
+      "line": 64,
+      "message": "Boundary/helper candidate edge for cleanup review.",
+      "severity": "warning",
+      "source": "demo_shop.domain.models",
+      "source_file": "/home/daniele/importscope/docs/examples/demo-shop-repo/src/demo_shop/domain/models.py",
+      "target": "demo_shop.persistence.repository"
+    }
+  ],
+  "profile": "all"
+}

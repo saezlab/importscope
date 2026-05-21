@@ -3,7 +3,6 @@ __pycache__/
 /build/
 /docs/_build/
 /docs/generated/
-/docs/assets/generated/
 .DS_Store
 /.vscode/
 /*.egg-info/

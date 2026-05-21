@@ -1,0 +1,48 @@
+# Import graph report
+
+- Repo: `/home/daniele/importscope/docs/examples/demo-shop-repo`
+- Modules parsed: `22`
+- Internal import edges: `37`
+- Lazy local edges: `2`
+- Lazy dynamic edges: `0`
+- Strongly connected components >1: `1`
+- Private import edges: `3`
+- Cross-area private import edges: `0`
+- Boundary/helper cleanup candidate edges: `1`
+- Coverage gaps: `0`
+
+## Findings summary
+
+- `boundary_helper`: `1`
+- `forbidden_import`: `1`
+
+## Cycles
+
+### Component 1
+- `demo_shop.domain.models`
+- `demo_shop.persistence.repository`
+
+
+## Cross-area private imports
+
+No cross-area private imports detected.
+
+## Boundary/helper cleanup candidates
+
+- `demo_shop.domain.models` -> `demo_shop.persistence.repository` at line `64` importing `OrderRepository`
+
+## Hotspots
+
+### Highest fan-in
+- `demo_shop.domain.models` imported by `9` edge(s)
+- `demo_shop.persistence.repository` imported by `4` edge(s)
+- `demo_shop.api.routes` imported by `3` edge(s)
+- `demo_shop.api.schemas` imported by `3` edge(s)
+- `demo_shop.infra.email` imported by `3` edge(s)
+
+### Highest fan-out
+- `demo_shop.services.orders` imports `5` edge(s)
+- `demo_shop.api.routes` imports `3` edge(s)
+- `demo_shop.container` imports `3` edge(s)
+- `demo_shop` imports `2` edge(s)
+- `demo_shop.api` imports `2` edge(s)

@@ -1,0 +1,44 @@
+# Import graph report
+
+- Repo: `/home/daniele/importscope`
+- Modules parsed: `9`
+- Internal import edges: `12`
+- Lazy local edges: `0`
+- Lazy dynamic edges: `0`
+- Strongly connected components >1: `0`
+- Private import edges: `1`
+- Cross-area private import edges: `0`
+- Boundary/helper cleanup candidate edges: `0`
+- Coverage gaps: `0`
+
+## Findings summary
+
+No policy findings detected.
+
+## Cycles
+
+No module-level circular imports detected.
+
+## Cross-area private imports
+
+No cross-area private imports detected.
+
+## Boundary/helper cleanup candidates
+
+No boundary/helper cleanup candidates detected.
+
+## Hotspots
+
+### Highest fan-in
+- `importscope.model` imported by `4` edge(s)
+- `importscope.app` imported by `2` edge(s)
+- `importscope.policy` imported by `2` edge(s)
+- `importscope._metadata` imported by `1` edge(s)
+- `importscope.analyzer` imported by `1` edge(s)
+
+### Highest fan-out
+- `importscope.app` imports `4` edge(s)
+- `importscope` imports `2` edge(s)
+- `importscope.renderers` imports `2` edge(s)
+- `importscope.__main__` imports `1` edge(s)
+- `importscope.analyzer` imports `1` edge(s)
