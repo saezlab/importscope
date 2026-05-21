@@ -19,6 +19,8 @@ jobs:
         -   uses: ./.github/actions/setup
             with:
                 python-version: '3.12'
+        -   name: Install Graphviz
+            run: sudo apt-get update && sudo apt-get install -y graphviz
         -   name: Sync docs dependencies
             run: uv sync --group docs
         -   name: configure mkdocs-material cache

@@ -39,6 +39,15 @@ def _finalize_report(out_dir: Path) -> None:
         report_md.unlink()
 
 
+def _assert_expected_outputs(out_dir: Path, names: list[str]) -> None:
+    missing = [name for name in names if not (out_dir / name).exists()]
+    if missing:
+        missing_text = ', '.join(missing)
+        raise RuntimeError(
+            f'Missing generated docs artifacts in {out_dir}: {missing_text}'
+        )
+
+
 def _generate_demo_no_config_layout(
     demo_repo: Path, demo_out_dir: Path
 ) -> None:
@@ -91,6 +100,15 @@ def on_pre_build(config: object, **kwargs: object) -> None:
         render='svg',
     )
     _finalize_report(out_dir)
+    _assert_expected_outputs(
+        out_dir,
+        [
+            'group_dependency_graph.svg',
+            'module_dependency_with_symbols.svg',
+            'symbol_import_graph.svg',
+            'architecture_report.txt',
+        ],
+    )
     analyze_repo(
         repo=demo_repo,
         out=demo_out_dir,
@@ -108,3 +126,14 @@ def on_pre_build(config: object, **kwargs: object) -> None:
     )
     _finalize_report(demo_out_dir)
     _generate_demo_no_config_layout(demo_repo, demo_out_dir)
+    _assert_expected_outputs(
+        demo_out_dir,
+        [
+            'group_dependency_graph.svg',
+            'module_dependency_with_symbols.svg',
+            'symbol_import_graph.svg',
+            'module_layout_graph.svg',
+            'module_layout_graph_no_config.svg',
+            'architecture_report.txt',
+        ],
+    )
