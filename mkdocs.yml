@@ -1,0 +1,94 @@
+site_name: 'importscope'
+site_url: https://saezlab.github.io/importscope
+theme:
+    name: material
+    font:
+        text: Lato
+        code: Roboto Mono
+    features:
+    -   content.code.copy
+    -   content.action.edit
+    -   navigation.tabs
+    -   navigation.instant
+    -   navigation.footer
+    palette:
+    -   scheme: default
+        primary: teal
+        accent: light blue
+        toggle:
+            icon: material/toggle-switch
+            name: Switch to dark mode
+    -   scheme: slate
+        primary: teal
+        accent: light blue
+        toggle:
+            icon: material/toggle-switch-off
+            name: Switch to light mode
+
+#=======    Website Navigation settings   =====
+nav:
+-   Home: index.md
+-   Installation: installation.md
+-   Quickstart: quickstart.md
+-   CLI:
+    -   CLI overview: cli.md
+    -   check: cli/check.md
+    -   init: cli/init.md
+    -   config: cli/config.md
+    -   profiles: cli/profiles.md
+    -   analyze: cli/analyze.md
+    -   inspect: cli/inspect.md
+    -   Configuration file: configuration.md
+-   Examples:
+    -   Overview: learn/guides/index.md
+    -   Run on anndata: learn/guides/run-on-anndata.md
+    -   Run on annnet: learn/guides/run-on-annnet.md
+    -   Run on CORNETO: learn/guides/run-on-corneto.md
+    -   Run on NetworkX: learn/guides/run-on-networkx.md
+    -   Run on OmniPath: learn/guides/run-on-omnipath.md
+-   Community:
+    -   Join us: community/index.md
+    -   Contribute to the documentation: community/contribute-docs.md
+    -   Contribute to the package code: community/contribute-codebase.md
+
+
+
+#=======    Extension settings (sorted alphabetically)  =====
+markdown_extensions:
+-   admonition
+-   attr_list
+-   md_in_html
+  #----- Python Markdown Extensions
+-   pymdownx.details
+-   pymdownx.emoji:
+        emoji_index: !!python/name:material.extensions.emoji.twemoji
+        emoji_generator: !!python/name:material.extensions.emoji.to_svg
+-   pymdownx.highlight: # Note: list of Pygments: https://pygments.org/docs/lexers/
+        anchor_linenums: true
+        line_spans: __span
+        pygments_lang_class: true
+-   pymdownx.inlinehilite
+-   pymdownx.snippets
+-   pymdownx.superfences:
+        custom_fences:
+        -   name: mermaid
+            class: mermaid
+            format: !!python/name:pymdownx.superfences.fence_code_format
+-   pymdownx.tabbed:
+        alternate_style: true
+
+#=======    Plugins    =====
+hooks:
+-   docs/_hooks/generate_repo_artifacts.py
+
+plugins:
+-   search
+-   autorefs
+
+extra_css:
+-   assets/stylesheets/image-lightbox.css
+
+extra_javascript:
+-   assets/javascripts/image-lightbox.js
+
+copyright: © Copyright 2021-2025, Saez-lab development team.

@@ -1,0 +1,33 @@
+tool:
+  default_profile: overview
+discovery:
+  exclude:
+  - .venv/**
+  - venv/**
+  - .tox/**
+  - build/**
+  - dist/**
+  - .git/**
+  - docs/**
+  - tests/**
+  include:
+  - omnipath/__init__.py
+  - omnipath/requests.py
+  - omnipath/interactions.py
+  - omnipath/constants/**
+  - omnipath/_core/downloader/**
+  - omnipath/_core/requests/**
+  - omnipath/_core/query/__init__.py
+  - omnipath/_core/query/_query.py
+  - omnipath/_core/query/_query_validator.py
+  - omnipath/_core/utils/__init__.py
+  - omnipath/_core/utils/_static.py
+policy:
+  enabled: false
+  module_group_depth: 3
+  allowed_private_target_prefixes:
+  - omnipath._core.downloader
+  - omnipath._core.query
+  - omnipath._core.requests
+  - omnipath._core.utils
+package: omnipath

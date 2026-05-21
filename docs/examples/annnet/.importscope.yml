@@ -1,0 +1,34 @@
+tool:
+  default_profile: overview
+discovery:
+  exclude:
+  - .venv/**
+  - venv/**
+  - .tox/**
+  - build/**
+  - dist/**
+  - .git/**
+  - docs/**
+  - tests/**
+  - benchmarks/**
+  - notebooks/**
+  - tools/**
+  - annnet/adapters/**
+  - annnet/io/**
+  - annnet/utils/**
+policy:
+  enabled: true
+  module_group_depth: 3
+  forbidden_imports:
+  - source_prefixes:
+    - annnet.core.graph
+    target_prefixes:
+    - annnet._support.dataframe_backend
+  - source_prefixes:
+    - annnet.core.graph
+    target_prefixes:
+    - annnet.algorithms.traversal
+  allowed_private_target_prefixes:
+  - annnet.core._
+  - annnet._support
+package: annnet

@@ -1,0 +1,19 @@
+tool:
+  default_profile: overview
+discovery:
+  exclude:
+  - .venv/**
+  - venv/**
+  - .tox/**
+  - build/**
+  - dist/**
+  - .git/**
+  - doc/**
+  - examples/**
+  - benchmarks/**
+  - tools/**
+  - networkx/**/tests/**
+policy:
+  enabled: false
+  module_group_depth: 3
+package: networkx

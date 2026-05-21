@@ -1,0 +1,29 @@
+tool:
+  default_profile: overview
+discovery:
+  exclude:
+  - .venv/**
+  - venv/**
+  - .tox/**
+  - build/**
+  - dist/**
+  - .git/**
+  - docs/**
+  - tests/**
+policy:
+  enabled: true
+  module_group_depth: 3
+  forbidden_imports:
+  - source_prefixes:
+    - demo_shop.domain
+    target_prefixes:
+    - demo_shop.persistence
+  - source_prefixes:
+    - demo_shop.api
+    target_prefixes:
+    - demo_shop.persistence._
+  - source_prefixes:
+    - demo_shop.services
+    target_prefixes:
+    - demo_shop.persistence._
+package: demo_shop

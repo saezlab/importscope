@@ -1,0 +1,26 @@
+tool:
+  default_profile: overview
+discovery:
+  exclude:
+  - .venv/**
+  - venv/**
+  - .tox/**
+  - build/**
+  - dist/**
+  - .git/**
+  - docs/**
+  - tests/**
+  - benchmarks/**
+  - ci/**
+  - src/anndata/tests/**
+policy:
+  enabled: true
+  module_group_depth: 3
+  forbidden_imports:
+  - source_prefixes:
+    - anndata.experimental._dispatch_io
+    target_prefixes:
+    - anndata._io.specs
+  allowed_private_target_prefixes:
+  - anndata._
+package: anndata

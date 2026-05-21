@@ -1,0 +1,26 @@
+tool:
+  default_profile: overview
+discovery:
+  exclude:
+  - .venv/**
+  - venv/**
+  - .tox/**
+  - build/**
+  - dist/**
+  - .git/**
+  - docs/**
+  - tests/**
+  - scripts/**
+  include:
+  - corneto/__init__.py
+  - corneto/_constants.py
+  - corneto/_settings.py
+  - corneto/backend/**
+  - corneto/methods/**
+policy:
+  enabled: false
+  module_group_depth: 2
+  allowed_private_target_prefixes:
+  - corneto._constants
+  - corneto._settings
+package: corneto
