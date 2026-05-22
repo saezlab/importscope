@@ -73,5 +73,5 @@ importscope inspect \
 }
 ```
 
-<small>For symbol-level detail in the focused slice, open
-[the labeled module graph](../../assets/generated/annnet/module_dependency_with_symbols.svg).</small>
+For symbol-level detail in the focused slice, open
+[the labeled module graph](../../assets/generated/annnet/module_dependency_with_symbols.svg).

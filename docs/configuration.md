@@ -254,6 +254,117 @@ for more advanced cases:
 Those are still legitimate, but they should come after the first structural or
 policy-aware run, not before it.
 
+## Graph layout overrides
+
+If one graph family is structurally correct but visually harder to read, add a
+per-graph `layout` block under the profile graph spec.
+
+Example:
+
+```yaml
+outputs:
+  profiles:
+    overview:
+      graphs:
+        - id: module-dependency
+          stem: module_dependency_graph
+          kind: module
+          package_level: false
+          labeled: false
+          layout:
+            direction: LR
+            ranksep: 0.45
+            nodesep: 0.25
+            splines: false
+```
+
+Supported `direction` values are `TD`, `TB`, `BT`, `LR`, and `RL`.
+`TD` is accepted for convenience and maps to Graphviz `rankdir="TB"` in DOT
+output.
+
+The same layout block is used for DOT and Mermaid output. Direction is the most
+important setting, but `ranksep`, `nodesep`, `splines`, `ratio`, `pad`, and
+`concentrate` can also be overridden when you need to tune a specific graph.
+
+You can also remove a built-in default by setting it to `null`.
+
+Example:
+
+```yaml
+outputs:
+  profiles:
+    overview:
+      graphs:
+        - id: module-dependency
+          stem: module_dependency_graph
+          kind: module
+          package_level: false
+          labeled: false
+          layout:
+            direction: LR
+            ranksep: 1.8
+            nodesep: 0.7
+            pad: 0.6
+            splines: spline
+            ratio: null
+```
+
+This matters in practice because some Graphviz defaults are deliberately
+compact. For example, `ratio: "compress"` can make a "wide" layout look too
+similar to a tighter one by squeezing the final drawing back down. Setting
+`ratio: null` lets Graphviz keep the larger spacing implied by the other layout
+settings.
+
+### Concrete comparison
+
+On a real repository, direction changes usually matter more than spacing
+changes. The example below uses a slice of `annnet` that keeps two level-1
+branches, `annnet.core` and `annnet.io`, so the orientation change is easy to
+see.
+
+Baseline top-to-bottom profile graph spec:
+
+```yaml
+outputs:
+  profiles:
+    overview:
+      graphs:
+        - id: module-dependency
+          stem: module_dependency_graph
+          kind: module
+          package_level: false
+          labeled: false
+          layout:
+            direction: TB
+```
+
+![annnet core+io top-to-bottom layout](assets/generated/annnet-layouts/core-io-module-dependency-tb.svg)
+
+Left-to-right profile graph spec:
+
+```yaml
+outputs:
+  profiles:
+    overview:
+      graphs:
+        - id: module-dependency
+          stem: module_dependency_graph
+          kind: module
+          package_level: false
+          labeled: false
+          layout:
+            direction: LR
+            ranksep: 0.45
+            nodesep: 0.25
+            splines: false
+```
+
+![annnet core+io left-to-right layout](assets/generated/annnet-layouts/core-io-module-dependency-lr-tight.svg)
+
+If a "wide" profile still looks too similar to a tighter one, check whether a
+default such as `ratio: "compress"` is still active. That setting can dominate
+other spacing adjustments until you override it or unset it with `null`.
+
 ## Suggested workflow
 
 1. Run one structural pass with no config.

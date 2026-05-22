@@ -32,3 +32,24 @@ policy:
   - annnet.core._
   - annnet._support
 package: annnet
+outputs:
+  profiles:
+    focused-symbol-labeled-module-dependency:
+      description: Focused annnet slice with a readable labeled module graph.
+      graphs:
+      - id: symbol-labeled-module-dependency
+        stem: module_dependency_with_symbols
+        kind: module
+        package_level: false
+        labeled: true
+        layout:
+          direction: TB
+          ranksep: 1.1
+          nodesep: 0.18
+          pad: 0.22
+          ratio: fill
+          splines: false
+          concentrate: true
+      formats:
+      - svg
+      summary: none

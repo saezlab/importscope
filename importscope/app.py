@@ -271,6 +271,7 @@ def analyze_repo(
         stem = str(graph['stem'])
         kind = str(graph.get('kind', 'module'))
         filter_name = graph.get('filter')
+        layout = graph.get('layout') if isinstance(graph, dict) else None
         filter_fn = _filter_fn(
             str(filter_name) if filter_name else None, config, result
         )
@@ -285,6 +286,7 @@ def analyze_repo(
                     out / f'{stem}.mmd',
                     config,
                     result,
+                    layout=layout,
                 )
             if want_dot or want_svg:
                 dot_path, remove_after = _dot_path_for_render(
@@ -296,6 +298,7 @@ def analyze_repo(
                         dot_path,
                         config,
                         result,
+                        layout=layout,
                     )
                     or wrote_any
                 )
@@ -322,6 +325,7 @@ def analyze_repo(
                     config,
                     result,
                     max_edges=max_symbol_edges,
+                    layout=layout,
                 )
             if want_dot or want_svg:
                 dot_path, remove_after = _dot_path_for_render(
@@ -335,6 +339,7 @@ def analyze_repo(
                         config,
                         result,
                         max_edges=max_symbol_edges,
+                        layout=layout,
                     )
                     or wrote_any
                 )
@@ -363,6 +368,7 @@ def analyze_repo(
                 labeled=bool(graph.get('labeled')),
                 package_level=bool(graph.get('package_level')),
                 filter_fn=filter_fn,
+                layout=layout,
             )
         if want_dot or want_svg:
             dot_path, remove_after = _dot_path_for_render(
@@ -378,6 +384,7 @@ def analyze_repo(
                     labeled=bool(graph.get('labeled')),
                     package_level=bool(graph.get('package_level')),
                     filter_fn=filter_fn,
+                    layout=layout,
                 )
                 or wrote_any
             )

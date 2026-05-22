@@ -994,3 +994,101 @@ def test_leaf_package_cluster_collapses_to_single_node(tmp_path: Path) -> None:
 
     assert 'subgraph cluster_annnet__io_csv {' not in dot
     assert '"annnet.io.csv" [label="annnet.io.csv"' in dot
+
+
+
+def test_analyze_repo_profile_layout_direction_flows_to_dot_and_mermaid(
+    tmp_path: Path,
+) -> None:
+    repo = tmp_path / 'repo'
+    package_dir = repo / 'sample'
+    package_dir.mkdir(parents=True)
+    (package_dir / '__init__.py').write_text('', encoding='utf-8')
+    (package_dir / 'a.py').write_text('from . import b\n', encoding='utf-8')
+    (package_dir / 'b.py').write_text('VALUE = 1\n', encoding='utf-8')
+
+    config_path = repo / '.importscope.yml'
+    config_path.write_text(
+        yaml.safe_dump(
+            {
+                'package': 'sample',
+                'outputs': {
+                    'profiles': {
+                        'layout-check': {
+                            'description': 'Layout override check.',
+                            'graphs': [
+                                {
+                                    'id': 'module-dependency',
+                                    'stem': 'module_dependency_graph',
+                                    'kind': 'module',
+                                    'package_level': False,
+                                    'labeled': False,
+                                    'layout': {
+                                        'direction': 'RL',
+                                        'ranksep': 2.25,
+                                        'nodesep': 0.5,
+                                    },
+                                }
+                            ],
+                            'formats': ['dot', 'mmd'],
+                            'summary': 'none',
+                        }
+                    }
+                },
+            },
+            sort_keys=False,
+        ),
+        encoding='utf-8',
+    )
+
+    out = tmp_path / 'out'
+    analyze_repo(
+        repo=repo,
+        out=out,
+        config_path=config_path,
+        profile='layout-check',
+        package='sample',
+        formats=['dot', 'mmd'],
+        render='source',
+    )
+
+    dot = (out / 'module_dependency_graph.dot').read_text(encoding='utf-8')
+    mmd = (out / 'module_dependency_graph.mmd').read_text(encoding='utf-8')
+
+    assert 'rankdir="RL"' in dot
+    assert 'ranksep=2.25' in dot
+    assert 'nodesep=0.5' in dot
+    assert mmd.startswith('flowchart RL\n')
+
+
+
+def test_write_dot_graph_maps_td_direction_to_graphviz_tb(
+    tmp_path: Path,
+) -> None:
+    repo = Path('/tmp/fake-layout')
+    result = AnalysisResult(
+        repo=repo,
+        module_roots=[repo],
+        modules={
+            'sample': ModuleInfo('sample', repo / 'sample/__init__.py', True),
+            'sample.a': ModuleInfo('sample.a', repo / 'sample/a.py', False),
+            'sample.b': ModuleInfo('sample.b', repo / 'sample/b.py', False),
+        },
+        edges=[ImportEdge(source='sample.a', target='sample.b')],
+        cycles=[],
+        coverage_gaps=[],
+    )
+    config = default_config()
+    config['package'] = 'sample'
+
+    dot_path = tmp_path / 'td-layout.dot'
+    write_dot_graph(
+        result.edges,
+        dot_path,
+        config,
+        result,
+        layout={'direction': 'TD'},
+    )
+
+    dot = dot_path.read_text(encoding='utf-8')
+    assert 'rankdir="TB"' in dot

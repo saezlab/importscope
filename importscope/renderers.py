@@ -89,6 +89,85 @@ HIGHLIGHT_STYLE = {
     'dot_style': 'bold',
 }
 
+VALID_FLOW_DIRECTIONS = {'TB', 'TD', 'BT', 'LR', 'RL'}
+DOT_GRAPH_ATTR_ORDER = (
+    'rankdir',
+    'bgcolor',
+    'compound',
+    'splines',
+    'pad',
+    'nodesep',
+    'ranksep',
+    'ratio',
+    'concentrate',
+)
+
+
+def _layout_mapping(layout: dict[str, Any] | None) -> dict[str, Any]:
+    return layout if isinstance(layout, dict) else {}
+
+
+def _normalize_direction(direction: Any, *, for_dot: bool) -> str:
+    value = str(direction).strip().upper()
+    if value not in VALID_FLOW_DIRECTIONS:
+        raise ValueError(
+            'Graph layout direction must be one of TB, TD, BT, LR, RL'
+        )
+    if for_dot and value == 'TD':
+        return 'TB'
+    return value
+
+
+def _graph_direction(
+    layout: dict[str, Any] | None,
+    *,
+    default: str,
+    for_dot: bool,
+) -> str:
+    data = _layout_mapping(layout)
+    if 'direction' in data:
+        return _normalize_direction(data['direction'], for_dot=for_dot)
+    if 'rankdir' in data:
+        return _normalize_direction(data['rankdir'], for_dot=for_dot)
+    return _normalize_direction(default, for_dot=for_dot)
+
+
+def _cluster_direction(direction: str) -> str:
+    return 'TB' if direction in {'LR', 'RL'} else 'LR'
+
+
+def _dot_attr_value(value: Any) -> str:
+    if isinstance(value, bool):
+        return 'true' if value else 'false'
+    if isinstance(value, (int, float)):
+        return str(value)
+    return f'"{dot_label(str(value))}"'
+
+
+def _graph_attr_line(
+    defaults: dict[str, Any], layout: dict[str, Any] | None = None
+) -> str:
+    attrs = dict(defaults)
+    data = _layout_mapping(layout)
+    attrs['rankdir'] = _graph_direction(
+        data, default=str(attrs['rankdir']), for_dot=True
+    )
+    for key in DOT_GRAPH_ATTR_ORDER:
+        if key == 'rankdir':
+            continue
+        if key in data:
+            value = data[key]
+            if value is None:
+                attrs.pop(key, None)
+            else:
+                attrs[key] = value
+    parts = [
+        f'{key}={_dot_attr_value(attrs[key])}'
+        for key in DOT_GRAPH_ATTR_ORDER
+        if key in attrs
+    ]
+    return f'  graph [{", ".join(parts)}];'
+
 
 def is_policy_edge(
     edge: ImportEdge, config: dict[str, Any], result: AnalysisResult
@@ -132,28 +211,67 @@ def dot_node_line(
 
 
 def module_graph_header(
-    *, package_level: bool = False, labeled: bool = False
+    *,
+    package_level: bool = False,
+    labeled: bool = False,
+    layout: dict[str, Any] | None = None,
 ) -> str:
     if package_level:
-        return (
-            '  graph [rankdir="TB", bgcolor="white", compound=true, splines=spline, '
-            'pad=0.25, nodesep=0.3, ranksep=0.9, ratio="compress"];'
+        return _graph_attr_line(
+            {
+                'rankdir': 'TB',
+                'bgcolor': 'white',
+                'compound': True,
+                'splines': 'spline',
+                'pad': 0.25,
+                'nodesep': 0.3,
+                'ranksep': 0.9,
+                'ratio': 'compress',
+            },
+            layout,
         )
     if labeled:
-        return (
-            '  graph [rankdir="TB", bgcolor="white", compound=true, splines=spline, '
-            'pad=0.3, nodesep=0.25, ranksep=1.5, ratio="compress"];'
+        return _graph_attr_line(
+            {
+                'rankdir': 'TB',
+                'bgcolor': 'white',
+                'compound': True,
+                'splines': 'spline',
+                'pad': 0.3,
+                'nodesep': 0.25,
+                'ranksep': 1.5,
+                'ratio': 'compress',
+            },
+            layout,
         )
-    return (
-        '  graph [rankdir="TB", bgcolor="white", compound=true, splines=spline, '
-        'pad=0.25, nodesep=0.3, ranksep=0.95, ratio="compress"];'
+    return _graph_attr_line(
+        {
+            'rankdir': 'TB',
+            'bgcolor': 'white',
+            'compound': True,
+            'splines': 'spline',
+            'pad': 0.25,
+            'nodesep': 0.3,
+            'ranksep': 0.95,
+            'ratio': 'compress',
+        },
+        layout,
     )
 
 
-def inventory_graph_header() -> str:
-    return (
-        '  graph [rankdir="TB", bgcolor="white", compound=true, splines=false, '
-        'pad=0.15, nodesep=0.18, ranksep=0.45, ratio="compress"];'
+def inventory_graph_header(layout: dict[str, Any] | None = None) -> str:
+    return _graph_attr_line(
+        {
+            'rankdir': 'TB',
+            'bgcolor': 'white',
+            'compound': True,
+            'splines': False,
+            'pad': 0.15,
+            'nodesep': 0.18,
+            'ranksep': 0.45,
+            'ratio': 'compress',
+        },
+        layout,
     )
 
 
@@ -518,6 +636,7 @@ def write_mermaid_graph(
     labeled: bool = False,
     package_level: bool = False,
     filter_fn: Callable[[ImportEdge], bool] | None = None,
+    layout: dict[str, Any] | None = None,
 ) -> bool:
     edge_list = list(edges)
     if filter_fn is not None:
@@ -548,8 +667,11 @@ def write_mermaid_graph(
         else identity_groups(nodes)
     )
 
+    direction = _graph_direction(layout, default='LR', for_dot=False)
+    cluster_direction = _cluster_direction(direction)
+
     lines = [
-        'flowchart LR',
+        f'flowchart {direction}',
         f'  %% {title}',
         '  %% A --> B means A imports/depends on B',
         '',
@@ -576,7 +698,7 @@ def write_mermaid_graph(
             lines.append(
                 f'{indent}subgraph cluster_{mermaid_id(key)}["{mermaid_label(label)}"]'
             )
-            lines.append(f'{indent}  direction TB')
+            lines.append(f'{indent}  direction {cluster_direction}')
             for node in groups.get(key, []):
                 lines.append(
                     f'{indent}  {mermaid_id(node)}["{mermaid_label(node)}"]'
@@ -602,7 +724,7 @@ def write_mermaid_graph(
             lines.append(
                 f'  subgraph cluster_{mermaid_id(key)}["{mermaid_label(label)}"]'
             )
-            lines.append('    direction TB')
+            lines.append(f'    direction {cluster_direction}')
             for node in group_nodes:
                 lines.append(f'    {mermaid_id(node)}["{mermaid_label(node)}"]')
             lines.append('  end')
@@ -694,6 +816,7 @@ def write_dot_graph(
     filter_fn: Callable[[ImportEdge], bool] | None = None,
     highlight_nodes: set[str] | None = None,
     highlight_edges: set[tuple[str, str]] | None = None,
+    layout: dict[str, Any] | None = None,
 ) -> bool:
     edge_list = list(edges)
     if filter_fn is not None:
@@ -726,7 +849,7 @@ def write_dot_graph(
 
     lines = [
         'digraph G {',
-        module_graph_header(package_level=package_level, labeled=labeled),
+        module_graph_header(package_level=package_level, labeled=labeled, layout=layout),
         '  node [shape="box", style="rounded,filled", fontname="Helvetica", fontsize=10, color="#64748b", fillcolor="white"];',
         '  edge [fontname="Helvetica", fontsize=9, color="#64748b", arrowsize=0.7];',
         '',
@@ -918,6 +1041,8 @@ def write_module_inventory_mermaid(
     out: Path,
     config: dict[str, Any],
     result: AnalysisResult,
+    *,
+    layout: dict[str, Any] | None = None,
 ) -> bool:
     nodes = sorted(result.modules)
     if not nodes:
@@ -926,8 +1051,10 @@ def write_module_inventory_mermaid(
     groups = identity_groups(nodes)
     package_name = package_name_from_config(config, result)
     _, children = module_cluster_tree(nodes, package_name)
+    direction = _graph_direction(layout, default='TD', for_dot=False)
+    cluster_direction = _cluster_direction(direction)
     lines = [
-        'flowchart TD',
+        f'flowchart {direction}',
         '  %% Module inventory graph',
         '  %% Boxes show the package/module hierarchy without import arrows.',
         '',
@@ -941,7 +1068,7 @@ def write_module_inventory_mermaid(
         lines.append(
             f'{indent}subgraph cluster_{mermaid_id(key)}["{mermaid_label(label)}"]'
         )
-        lines.append(f'{indent}  direction TB')
+        lines.append(f'{indent}  direction {cluster_direction}')
         if groups.get(key):
             lines.append(f'{indent}  {mermaid_id(key)}["{mermaid_label(key)}"]')
         child_keys = children.get(key, [])
@@ -959,7 +1086,7 @@ def write_module_inventory_mermaid(
             lines.append(
                 f'{indent}  subgraph cluster_{mermaid_id(key)}__modules["{mermaid_label(key + " modules")}"]'
             )
-            lines.append(f'{indent}    direction TB')
+            lines.append(f'{indent}    direction {cluster_direction}')
             for child_key in leaf_children:
                 emit_cluster(child_key, indent + '    ')
             lines.append(f'{indent}  end')
@@ -975,7 +1102,7 @@ def write_module_inventory_mermaid(
         lines.append(
             f'  subgraph cluster_{mermaid_id(package_name)}["{mermaid_label(package_name)}"]'
         )
-        lines.append('    direction TB')
+        lines.append(f'    direction {cluster_direction}')
         if package_name in groups:
             lines.append(
                 f'    {mermaid_id(package_name)}["{mermaid_label(package_name)}"]'
@@ -1009,6 +1136,8 @@ def write_module_inventory_dot(
     out: Path,
     config: dict[str, Any],
     result: AnalysisResult,
+    *,
+    layout: dict[str, Any] | None = None,
 ) -> bool:
     nodes = sorted(result.modules)
     if not nodes:
@@ -1019,7 +1148,7 @@ def write_module_inventory_dot(
     _, children = module_cluster_tree(nodes, package_name)
     lines = [
         'digraph G {',
-        inventory_graph_header(),
+        inventory_graph_header(layout),
         '  node [shape="box", style="rounded,filled", fontname="Helvetica", fontsize=10, color="#64748b", fillcolor="white"];',
         '  edge [style="invis"];',
         '',
@@ -1180,6 +1309,7 @@ def write_symbol_import_mermaid(
     result: AnalysisResult,
     *,
     max_edges: int | None = None,
+    layout: dict[str, Any] | None = None,
 ) -> bool:
     symbol_edges = build_symbol_edges(
         edges, config, result, max_edges=max_edges
@@ -1188,13 +1318,15 @@ def write_symbol_import_mermaid(
         return False
     module_nodes = sorted({src for src, _, _, _, _ in symbol_edges})
     symbol_nodes = sorted({tgt for _, tgt, _, _, _ in symbol_edges})
+    direction = _graph_direction(layout, default='LR', for_dot=False)
+    cluster_direction = _cluster_direction(direction)
     lines = [
-        'flowchart LR',
+        f'flowchart {direction}',
         '  %% Comprehensive symbol-import graph',
         '  %% This is an import graph, not a runtime call graph.',
         '',
         '  subgraph importing_modules["Importing modules"]',
-        '    direction TB',
+        f'    direction {cluster_direction}',
     ]
     for node in module_nodes:
         style = module_cluster_style(
@@ -1211,7 +1343,7 @@ def write_symbol_import_mermaid(
             '  end',
             '',
             '  subgraph imported_symbols["Imported modules/symbols"]',
-            '    direction TB',
+            f'    direction {cluster_direction}',
         ]
     )
     for node in symbol_nodes:
@@ -1282,6 +1414,7 @@ def write_symbol_import_dot(
     result: AnalysisResult,
     *,
     max_edges: int | None = None,
+    layout: dict[str, Any] | None = None,
 ) -> bool:
     symbol_edges = build_symbol_edges(
         edges, config, result, max_edges=max_edges
@@ -1299,7 +1432,19 @@ def write_symbol_import_dot(
         )
     lines = [
         'digraph G {',
-        '  graph [rankdir="LR", bgcolor="white", compound=true, splines=spline, pad=0.5, nodesep=0.45, ranksep=2.5, concentrate=false];',
+        _graph_attr_line(
+            {
+                'rankdir': 'LR',
+                'bgcolor': 'white',
+                'compound': True,
+                'splines': 'spline',
+                'pad': 0.5,
+                'nodesep': 0.45,
+                'ranksep': 2.5,
+                'concentrate': False,
+            },
+            layout,
+        ),
         '  node [shape="box", style="rounded,filled", fontname="Helvetica", fontsize=8, margin="0.04,0.02", color="#64748b", fillcolor="white"];',
         '  edge [fontname="Helvetica", fontsize=7, color="#94a3b8", arrowsize=0.45];',
         '',
