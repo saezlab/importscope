@@ -1,0 +1,1081 @@
+{
+  "analysis": {
+    "coverage_gaps": [],
+    "cycles": [
+      [
+        "omnipath",
+        "omnipath._core.downloader._downloader",
+        "omnipath._core.query",
+        "omnipath._core.query._query",
+        "omnipath._core.query._query_validator",
+        "omnipath._core.requests",
+        "omnipath._core.requests._annotations",
+        "omnipath._core.requests._complexes",
+        "omnipath._core.requests._intercell",
+        "omnipath._core.requests._request",
+        "omnipath._core.requests._utils",
+        "omnipath._core.utils",
+        "omnipath._core.utils._static",
+        "omnipath.interactions",
+        "omnipath.requests"
+      ]
+    ],
+    "edges": [
+      {
+        "import_type": "from",
+        "imported": [
+          "_get_server_version"
+        ],
+        "lazy_kind": "eager",
+        "line": 6,
+        "source": "omnipath",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/__init__.py",
+        "target": "omnipath._core.downloader._downloader"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "static",
+          "options"
+        ],
+        "lazy_kind": "eager",
+        "line": 2,
+        "source": "omnipath",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/__init__.py",
+        "target": "omnipath._core.utils"
+      },
+      {
+        "import_type": "import",
+        "imported": [],
+        "lazy_kind": "eager",
+        "line": 8,
+        "source": "omnipath",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/__init__.py",
+        "target": "omnipath.constants"
+      },
+      {
+        "import_type": "import",
+        "imported": [],
+        "lazy_kind": "eager",
+        "line": 9,
+        "source": "omnipath",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/__init__.py",
+        "target": "omnipath.interactions"
+      },
+      {
+        "import_type": "import",
+        "imported": [],
+        "lazy_kind": "eager",
+        "line": 7,
+        "source": "omnipath",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/__init__.py",
+        "target": "omnipath.requests"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "options"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 39,
+        "source": "omnipath._core.downloader._downloader",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/_core/downloader/_downloader.py",
+        "target": "omnipath"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Options"
+        ],
+        "lazy_kind": "eager",
+        "line": 16,
+        "source": "omnipath._core.downloader._downloader",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/_core/downloader/_downloader.py",
+        "target": "omnipath._core.utils"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "UNKNOWN_SERVER_VERSION",
+          "Key",
+          "Format",
+          "Endpoint"
+        ],
+        "lazy_kind": "eager",
+        "line": 17,
+        "source": "omnipath._core.downloader._downloader",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/_core/downloader/_downloader.py",
+        "target": "omnipath.constants._pkg_constants"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "QueryType"
+        ],
+        "lazy_kind": "eager",
+        "line": 1,
+        "source": "omnipath._core.query",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/_core/query/__init__.py",
+        "target": "omnipath._core.query._query"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "EnzsubValidator",
+          "ComplexesValidator",
+          "IntercellValidator",
+          "AnnotationsValidator",
+          "InteractionsValidator"
+        ],
+        "lazy_kind": "eager",
+        "line": 8,
+        "source": "omnipath._core.query._query",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/_core/query/_query.py",
+        "target": "omnipath._core.query._query_validator"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "FormatterMeta",
+          "ErrorFormatter"
+        ],
+        "lazy_kind": "eager",
+        "line": 7,
+        "source": "omnipath._core.query._query",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/_core/query/_query.py",
+        "target": "omnipath.constants._constants"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "options"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 139,
+        "source": "omnipath._core.query._query_validator",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/_core/query/_query_validator.py",
+        "target": "omnipath"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Downloader"
+        ],
+        "lazy_kind": "eager",
+        "line": 31,
+        "source": "omnipath._core.query._query_validator",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/_core/query/_query_validator.py",
+        "target": "omnipath._core.downloader._downloader"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Int_t",
+          "Str_t",
+          "Bool_t",
+          "None_t",
+          "Strseq_t",
+          "License_t",
+          "Organism_t"
+        ],
+        "lazy_kind": "eager",
+        "line": 19,
+        "source": "omnipath._core.query._query_validator",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/_core/query/_query_validator.py",
+        "target": "omnipath._core.query"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "d"
+        ],
+        "lazy_kind": "eager",
+        "line": 18,
+        "source": "omnipath._core.query._query_validator",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/_core/query/_query_validator.py",
+        "target": "omnipath._core.utils"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Options"
+        ],
+        "lazy_kind": "eager",
+        "line": 28,
+        "source": "omnipath._core.query._query_validator",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/_core/query/_query_validator.py",
+        "target": "omnipath._core.utils"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "NoValue"
+        ],
+        "lazy_kind": "eager",
+        "line": 29,
+        "source": "omnipath._core.query._query_validator",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/_core/query/_query_validator.py",
+        "target": "omnipath.constants._constants"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Key",
+          "Format"
+        ],
+        "lazy_kind": "eager",
+        "line": 30,
+        "source": "omnipath._core.query._query_validator",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/_core/query/_query_validator.py",
+        "target": "omnipath.constants._pkg_constants"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Annotations"
+        ],
+        "lazy_kind": "eager",
+        "line": 4,
+        "source": "omnipath._core.requests",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/_core/requests/__init__.py",
+        "target": "omnipath._core.requests._annotations"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Complexes"
+        ],
+        "lazy_kind": "eager",
+        "line": 2,
+        "source": "omnipath._core.requests",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/_core/requests/__init__.py",
+        "target": "omnipath._core.requests._complexes"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Intercell"
+        ],
+        "lazy_kind": "eager",
+        "line": 3,
+        "source": "omnipath._core.requests",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/_core/requests/__init__.py",
+        "target": "omnipath._core.requests._intercell"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Enzsub",
+          "SignedPTMs"
+        ],
+        "lazy_kind": "eager",
+        "line": 1,
+        "source": "omnipath._core.requests",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/_core/requests/__init__.py",
+        "target": "omnipath._core.requests._request"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "dtypes"
+        ],
+        "lazy_kind": "eager",
+        "line": 6,
+        "source": "omnipath._core.requests._annotations",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/_core/requests/_annotations.py",
+        "target": "omnipath"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "QueryType"
+        ],
+        "lazy_kind": "eager",
+        "line": 7,
+        "source": "omnipath._core.requests._annotations",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/_core/requests/_annotations.py",
+        "target": "omnipath._core.query"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "OmnipathRequestABC"
+        ],
+        "lazy_kind": "eager",
+        "line": 9,
+        "source": "omnipath._core.requests._annotations",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/_core/requests/_annotations.py",
+        "target": "omnipath._core.requests._request"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "d"
+        ],
+        "lazy_kind": "eager",
+        "line": 8,
+        "source": "omnipath._core.requests._annotations",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/_core/requests/_annotations.py",
+        "target": "omnipath._core.utils"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Key",
+          "final"
+        ],
+        "lazy_kind": "eager",
+        "line": 10,
+        "source": "omnipath._core.requests._annotations",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/_core/requests/_annotations.py",
+        "target": "omnipath.constants._pkg_constants"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "QueryType"
+        ],
+        "lazy_kind": "eager",
+        "line": 6,
+        "source": "omnipath._core.requests._complexes",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/_core/requests/_complexes.py",
+        "target": "omnipath._core.query"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "OrganismGenesymbolsRemover"
+        ],
+        "lazy_kind": "eager",
+        "line": 7,
+        "source": "omnipath._core.requests._complexes",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/_core/requests/_complexes.py",
+        "target": "omnipath._core.requests._request"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "final"
+        ],
+        "lazy_kind": "eager",
+        "line": 8,
+        "source": "omnipath._core.requests._complexes",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/_core/requests/_complexes.py",
+        "target": "omnipath.constants._pkg_constants"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "QueryType"
+        ],
+        "lazy_kind": "eager",
+        "line": 5,
+        "source": "omnipath._core.requests._intercell",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/_core/requests/_intercell.py",
+        "target": "omnipath._core.query"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Strseq_t"
+        ],
+        "lazy_kind": "eager",
+        "line": 6,
+        "source": "omnipath._core.requests._intercell",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/_core/requests/_intercell.py",
+        "target": "omnipath._core.query"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "_to_string_set"
+        ],
+        "lazy_kind": "eager",
+        "line": 9,
+        "source": "omnipath._core.requests._intercell",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/_core/requests/_intercell.py",
+        "target": "omnipath._core.query._query_validator"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "OrganismGenesymbolsRemover"
+        ],
+        "lazy_kind": "eager",
+        "line": 7,
+        "source": "omnipath._core.requests._intercell",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/_core/requests/_intercell.py",
+        "target": "omnipath._core.requests._request"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Key",
+          "Format",
+          "final"
+        ],
+        "lazy_kind": "eager",
+        "line": 8,
+        "source": "omnipath._core.requests._intercell",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/_core/requests/_intercell.py",
+        "target": "omnipath.constants._pkg_constants"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "options"
+        ],
+        "lazy_kind": "eager",
+        "line": 22,
+        "source": "omnipath._core.requests._request",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/_core/requests/_request.py",
+        "target": "omnipath"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Downloader"
+        ],
+        "lazy_kind": "eager",
+        "line": 35,
+        "source": "omnipath._core.requests._request",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/_core/requests/_request.py",
+        "target": "omnipath._core.downloader._downloader"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "QueryType"
+        ],
+        "lazy_kind": "eager",
+        "line": 24,
+        "source": "omnipath._core.requests._request",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/_core/requests/_request.py",
+        "target": "omnipath._core.query"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "_ERROR_EMPTY_FMT",
+          "_inject_params",
+          "_count_resources",
+          "_count_references",
+          "_inject_api_method",
+          "_strip_resource_label_df"
+        ],
+        "lazy_kind": "eager",
+        "line": 26,
+        "source": "omnipath._core.requests._request",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/_core/requests/_request.py",
+        "target": "omnipath._core.requests._utils"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "d"
+        ],
+        "lazy_kind": "eager",
+        "line": 25,
+        "source": "omnipath._core.requests._request",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/_core/requests/_request.py",
+        "target": "omnipath._core.utils"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "License",
+          "Organism"
+        ],
+        "lazy_kind": "eager",
+        "line": 23,
+        "source": "omnipath._core.requests._request",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/_core/requests/_request.py",
+        "target": "omnipath.constants"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "DEFAULT_FIELD",
+          "Key",
+          "Format",
+          "final"
+        ],
+        "lazy_kind": "eager",
+        "line": 34,
+        "source": "omnipath._core.requests._request",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/_core/requests/_request.py",
+        "target": "omnipath.constants._pkg_constants"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "OmniPath"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 518,
+        "source": "omnipath._core.requests._request",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/_core/requests/_request.py",
+        "target": "omnipath.interactions"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Enzsub"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 517,
+        "source": "omnipath._core.requests._request",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/_core/requests/_request.py",
+        "target": "omnipath.requests"
+      },
+      {
+        "import_type": "import",
+        "imported": [],
+        "lazy_kind": "lazy_local",
+        "line": 93,
+        "source": "omnipath._core.requests._utils",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/_core/requests/_utils.py",
+        "target": "omnipath"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "d"
+        ],
+        "lazy_kind": "eager",
+        "line": 12,
+        "source": "omnipath._core.requests._utils",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/_core/requests/_utils.py",
+        "target": "omnipath._core.utils"
+      },
+      {
+        "import_type": "import",
+        "imported": [],
+        "lazy_kind": "eager",
+        "line": 2,
+        "source": "omnipath._core.utils",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/_core/utils/__init__.py",
+        "target": "omnipath._core.utils._static"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Downloader"
+        ],
+        "lazy_kind": "eager",
+        "line": 12,
+        "source": "omnipath._core.utils._static",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/_core/utils/_static.py",
+        "target": "omnipath._core.downloader._downloader"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "AllInteractions"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 124,
+        "source": "omnipath._core.utils._static",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/_core/utils/_static.py",
+        "target": "omnipath._core.requests"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "InteractionDataset"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 127,
+        "source": "omnipath._core.utils._static",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/_core/utils/_static.py",
+        "target": "omnipath._core.requests"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Annotations"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 121,
+        "source": "omnipath._core.utils._static",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/_core/utils/_static.py",
+        "target": "omnipath._core.requests._annotations"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "_options"
+        ],
+        "lazy_kind": "eager",
+        "line": 11,
+        "source": "omnipath._core.utils._static",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/_core/utils/_static.py",
+        "target": "omnipath._core.utils"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "License",
+          "Organism",
+          "InteractionDataset"
+        ],
+        "lazy_kind": "eager",
+        "line": 1,
+        "source": "omnipath.constants",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/constants/__init__.py",
+        "target": "omnipath.constants._constants"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "License",
+          "Organism"
+        ],
+        "lazy_kind": "eager",
+        "line": 5,
+        "source": "omnipath.constants._pkg_constants",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/constants/_pkg_constants.py",
+        "target": "omnipath.constants"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "PrettyEnumMixin"
+        ],
+        "lazy_kind": "eager",
+        "line": 6,
+        "source": "omnipath.constants._pkg_constants",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/constants/_pkg_constants.py",
+        "target": "omnipath.constants._constants"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "*"
+        ],
+        "lazy_kind": "eager",
+        "line": 1,
+        "source": "omnipath.interactions",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/interactions.py",
+        "target": "omnipath._core.requests"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "*"
+        ],
+        "lazy_kind": "eager",
+        "line": 1,
+        "source": "omnipath.requests",
+        "source_file": "/tmp/importscope-example-repos/omnipath/omnipath/requests.py",
+        "target": "omnipath._core.requests"
+      }
+    ],
+    "module_roots": [
+      "/tmp/importscope-example-repos/omnipath"
+    ],
+    "modules": {
+      "omnipath": {
+        "definitions": [
+          "__author__",
+          "__email__",
+          "__full_version__",
+          "__maintainer__",
+          "__server_version__",
+          "__version__"
+        ],
+        "is_package": true,
+        "module": "omnipath",
+        "path": "/tmp/importscope-example-repos/omnipath/omnipath/__init__.py"
+      },
+      "omnipath._core.downloader": {
+        "definitions": [],
+        "is_package": true,
+        "module": "omnipath._core.downloader",
+        "path": "/tmp/importscope-example-repos/omnipath/omnipath/_core/downloader/__init__.py"
+      },
+      "omnipath._core.downloader._downloader": {
+        "definitions": [
+          "Downloader",
+          "_get_server_version"
+        ],
+        "is_package": false,
+        "module": "omnipath._core.downloader._downloader",
+        "path": "/tmp/importscope-example-repos/omnipath/omnipath/_core/downloader/_downloader.py"
+      },
+      "omnipath._core.query": {
+        "definitions": [],
+        "is_package": true,
+        "module": "omnipath._core.query",
+        "path": "/tmp/importscope-example-repos/omnipath/omnipath/_core/query/__init__.py"
+      },
+      "omnipath._core.query._query": {
+        "definitions": [
+          "AnnotationsQuery",
+          "ComplexesQuery",
+          "EnzsubQuery",
+          "InteractionsQuery",
+          "IntercellQuery",
+          "Query",
+          "QueryMeta",
+          "QueryType",
+          "SynonymizerMeta",
+          "__all__",
+          "_engine",
+          "_get_synonyms"
+        ],
+        "is_package": false,
+        "module": "omnipath._core.query._query",
+        "path": "/tmp/importscope-example-repos/omnipath/omnipath/_core/query/_query.py"
+      },
+      "omnipath._core.query._query_validator": {
+        "definitions": [
+          "AnnotationsValidator",
+          "AutoValidator",
+          "ComplexesValidator",
+          "EnzsubValidator",
+          "InteractionsValidator",
+          "IntercellValidator",
+          "QueryValidatorMixin",
+          "ServerValidatorMeta",
+          "__all__",
+          "_to_string_set"
+        ],
+        "is_package": false,
+        "module": "omnipath._core.query._query_validator",
+        "path": "/tmp/importscope-example-repos/omnipath/omnipath/_core/query/_query_validator.py"
+      },
+      "omnipath._core.requests": {
+        "definitions": [],
+        "is_package": true,
+        "module": "omnipath._core.requests",
+        "path": "/tmp/importscope-example-repos/omnipath/omnipath/_core/requests/__init__.py"
+      },
+      "omnipath._core.requests._annotations": {
+        "definitions": [
+          "Annotations",
+          "_MAX_N_PROTS",
+          "__all__"
+        ],
+        "is_package": false,
+        "module": "omnipath._core.requests._annotations",
+        "path": "/tmp/importscope-example-repos/omnipath/omnipath/_core/requests/_annotations.py"
+      },
+      "omnipath._core.requests._complexes": {
+        "definitions": [
+          "Complexes",
+          "__all__"
+        ],
+        "is_package": false,
+        "module": "omnipath._core.requests._complexes",
+        "path": "/tmp/importscope-example-repos/omnipath/omnipath/_core/requests/_complexes.py"
+      },
+      "omnipath._core.requests._intercell": {
+        "definitions": [
+          "Intercell",
+          "__all__"
+        ],
+        "is_package": false,
+        "module": "omnipath._core.requests._intercell",
+        "path": "/tmp/importscope-example-repos/omnipath/omnipath/_core/requests/_intercell.py"
+      },
+      "omnipath._core.requests._request": {
+        "definitions": [
+          "CommonPostProcessor",
+          "Enzsub",
+          "GraphLike",
+          "OmnipathRequestABC",
+          "OmnipathRequestMeta",
+          "OrganismGenesymbolsRemover",
+          "SignedPTMs",
+          "__all__",
+          "_error_handler"
+        ],
+        "is_package": false,
+        "module": "omnipath._core.requests._request",
+        "path": "/tmp/importscope-example-repos/omnipath/omnipath/_core/requests/_request.py"
+      },
+      "omnipath._core.requests._utils": {
+        "definitions": [
+          "_ERROR_EMPTY_FMT",
+          "_count_references",
+          "_count_resources",
+          "_get_helper",
+          "_inject_api_method",
+          "_inject_params",
+          "_split_unique_join",
+          "_strip_resource_label",
+          "_strip_resource_label_df"
+        ],
+        "is_package": false,
+        "module": "omnipath._core.requests._utils",
+        "path": "/tmp/importscope-example-repos/omnipath/omnipath/_core/requests/_utils.py"
+      },
+      "omnipath._core.utils": {
+        "definitions": [],
+        "is_package": true,
+        "module": "omnipath._core.utils",
+        "path": "/tmp/importscope-example-repos/omnipath/omnipath/_core/utils/__init__.py"
+      },
+      "omnipath._core.utils._static": {
+        "definitions": [
+          "static_table",
+          "static_tables"
+        ],
+        "is_package": false,
+        "module": "omnipath._core.utils._static",
+        "path": "/tmp/importscope-example-repos/omnipath/omnipath/_core/utils/_static.py"
+      },
+      "omnipath.constants": {
+        "definitions": [],
+        "is_package": true,
+        "module": "omnipath.constants",
+        "path": "/tmp/importscope-example-repos/omnipath/omnipath/constants/__init__.py"
+      },
+      "omnipath.constants._constants": {
+        "definitions": [
+          "ErrorFormatter",
+          "FormatterMeta",
+          "InteractionDataset",
+          "License",
+          "NoValue",
+          "Organism",
+          "PrettyEnumMixin",
+          "__all__",
+          "_pretty_raise_enum"
+        ],
+        "is_package": false,
+        "module": "omnipath.constants._constants",
+        "path": "/tmp/importscope-example-repos/omnipath/omnipath/constants/_constants.py"
+      },
+      "omnipath.constants._pkg_constants": {
+        "definitions": [
+          "DEFAULT_FIELD",
+          "DEFAULT_FORMAT",
+          "DEFAULT_OPTIONS",
+          "DEFAULT_ORGANISM",
+          "Endpoint",
+          "Format",
+          "Key",
+          "UNKNOWN_SERVER_VERSION"
+        ],
+        "is_package": false,
+        "module": "omnipath.constants._pkg_constants",
+        "path": "/tmp/importscope-example-repos/omnipath/omnipath/constants/_pkg_constants.py"
+      },
+      "omnipath.interactions": {
+        "definitions": [],
+        "is_package": false,
+        "module": "omnipath.interactions",
+        "path": "/tmp/importscope-example-repos/omnipath/omnipath/interactions.py"
+      },
+      "omnipath.requests": {
+        "definitions": [],
+        "is_package": false,
+        "module": "omnipath.requests",
+        "path": "/tmp/importscope-example-repos/omnipath/omnipath/requests.py"
+      }
+    },
+    "repo": "/tmp/importscope-example-repos/omnipath"
+  },
+  "config": {
+    "discovery": {
+      "exclude": [
+        ".venv/**",
+        "venv/**",
+        ".tox/**",
+        "build/**",
+        "dist/**",
+        ".git/**",
+        "docs/**",
+        "tests/**"
+      ],
+      "include": [
+        "omnipath/__init__.py",
+        "omnipath/requests.py",
+        "omnipath/interactions.py",
+        "omnipath/constants/**",
+        "omnipath/_core/downloader/**",
+        "omnipath/_core/requests/**",
+        "omnipath/_core/query/__init__.py",
+        "omnipath/_core/query/_query.py",
+        "omnipath/_core/query/_query_validator.py",
+        "omnipath/_core/utils/__init__.py",
+        "omnipath/_core/utils/_static.py"
+      ]
+    },
+    "outputs": {
+      "profiles": {
+        "all": {
+          "description": "All graph families and reports.",
+          "formats": [
+            "svg",
+            "md"
+          ],
+          "graphs": [
+            {
+              "id": "module-layout",
+              "kind": "inventory",
+              "stem": "module_layout_graph"
+            },
+            {
+              "id": "package-dependency",
+              "kind": "module",
+              "labeled": false,
+              "package_level": true,
+              "stem": "group_dependency_graph"
+            },
+            {
+              "id": "module-dependency",
+              "kind": "module",
+              "labeled": false,
+              "package_level": false,
+              "stem": "module_dependency_graph"
+            },
+            {
+              "id": "symbol-labeled-module-dependency",
+              "kind": "module",
+              "labeled": true,
+              "package_level": false,
+              "stem": "module_dependency_with_symbols"
+            },
+            {
+              "filter": "boundary_helper",
+              "id": "boundary-helper",
+              "kind": "module",
+              "labeled": true,
+              "package_level": false,
+              "stem": "boundary_helper_candidates"
+            },
+            {
+              "id": "symbol-import",
+              "kind": "symbol",
+              "stem": "symbol_import_graph"
+            }
+          ],
+          "summary": "full"
+        },
+        "overview": {
+          "description": "Repo overview with grouped dependency graphs and summary report.",
+          "formats": [
+            "svg",
+            "md"
+          ],
+          "graphs": [
+            {
+              "id": "module-layout",
+              "kind": "inventory",
+              "stem": "module_layout_graph"
+            },
+            {
+              "id": "package-dependency",
+              "kind": "module",
+              "labeled": false,
+              "package_level": true,
+              "stem": "group_dependency_graph"
+            },
+            {
+              "id": "module-dependency",
+              "kind": "module",
+              "labeled": false,
+              "package_level": false,
+              "stem": "module_dependency_graph"
+            }
+          ],
+          "summary": "full"
+        },
+        "policy": {
+          "description": "Policy-focused violation and helper cleanup outputs.",
+          "formats": [
+            "svg",
+            "md"
+          ],
+          "graphs": [
+            {
+              "filter": "policy",
+              "id": "policy-violations",
+              "kind": "module",
+              "labeled": true,
+              "package_level": false,
+              "stem": "policy_violation_graph"
+            },
+            {
+              "filter": "boundary_helper",
+              "id": "boundary-helper",
+              "kind": "module",
+              "labeled": true,
+              "package_level": false,
+              "stem": "boundary_helper_candidates"
+            }
+          ],
+          "summary": "full"
+        },
+        "symbols": {
+          "description": "Comprehensive symbol import graph plus summary.",
+          "formats": [
+            "svg",
+            "md"
+          ],
+          "graphs": [
+            {
+              "id": "symbol-import",
+              "kind": "symbol",
+              "stem": "symbol_import_graph"
+            }
+          ],
+          "summary": "short"
+        }
+      },
+      "snapshot_artifact": "analysis_snapshot.json",
+      "summary_artifact": "architecture_report.md",
+      "tables": {
+        "cycles": "module_cycles.csv",
+        "edges": "internal_import_edges.csv",
+        "findings": "policy_findings.csv",
+        "module_symbols": "module_definitions.csv",
+        "private_imports": "private_import_edges.csv"
+      }
+    },
+    "package": "omnipath",
+    "policy": {
+      "allowed_import_pairs": [],
+      "allowed_private_target_prefixes": [
+        "omnipath._core.downloader",
+        "omnipath._core.query",
+        "omnipath._core.requests",
+        "omnipath._core.utils"
+      ],
+      "boundary_helper_symbols": [],
+      "boundary_helper_target_prefixes": [],
+      "display_groups": [
+        {
+          "class": "package",
+          "fill": "#f8fafc",
+          "label": "package",
+          "match_prefixes": [],
+          "name": "package",
+          "stroke": "#334155"
+        },
+        {
+          "class": "other",
+          "fill": "#f8fafc",
+          "label": "other",
+          "match_prefixes": [],
+          "name": "other",
+          "stroke": "#64748b"
+        }
+      ],
+      "enabled": false,
+      "forbidden_imports": [],
+      "module_group_depth": 3,
+      "policy_areas": []
+    },
+    "tool": {
+      "default_profile": "overview",
+      "name": "importscope"
+    }
+  },
+  "finding_counts": {},
+  "findings": [],
+  "profile": "all"
+}

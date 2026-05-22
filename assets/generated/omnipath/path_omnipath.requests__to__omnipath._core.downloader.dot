@@ -1,0 +1,154 @@
+digraph G {
+  graph [rankdir="TB", bgcolor="white", compound=true, splines=spline, pad=0.3, nodesep=0.25, ranksep=1.5, ratio="compress"];
+  node [shape="box", style="rounded,filled", fontname="Helvetica", fontsize=10, color="#64748b", fillcolor="white"];
+  edge [fontname="Helvetica", fontsize=9, color="#64748b", arrowsize=0.7];
+
+  "omnipath" [label="omnipath", fillcolor="white", color="#334155"];
+
+  subgraph cluster_omnipath__core {
+    label="omnipath._core";
+    style="rounded,filled";
+    color="#334155";
+    fillcolor="#e4e7eb";
+    penwidth=1.2;
+    fontname="Helvetica-Bold";
+    fontsize=12;
+
+    subgraph cluster_omnipath__core_downloader {
+      label="omnipath._core.downloader";
+      style="rounded,filled";
+      color="#1d4ed8";
+      fillcolor="#dbeafe";
+      penwidth=1.2;
+      fontname="Helvetica-Bold";
+      fontsize=12;
+
+      "omnipath._core.downloader._downloader" [label="omnipath._core.downloader._downloader", fillcolor="#dbeafe", color="#ea580c", penwidth="2.8", fontcolor="#9a3412"];
+
+    }
+
+    subgraph cluster_omnipath__core_query {
+      label="omnipath._core.query";
+      style="rounded,filled";
+      color="#b45309";
+      fillcolor="#fef3c7";
+      penwidth=1.2;
+      fontname="Helvetica-Bold";
+      fontsize=12;
+
+      "omnipath._core.query" [label="omnipath._core.query", fillcolor="#fef3c7", color="#b45309"];
+      "omnipath._core.query._query" [label="omnipath._core.query._query", fillcolor="#fef3c7", color="#b45309"];
+      "omnipath._core.query._query_validator" [label="omnipath._core.query._query_validator", fillcolor="#fef3c7", color="#b45309"];
+
+    }
+
+    subgraph cluster_omnipath__core_requests {
+      label="omnipath._core.requests";
+      style="rounded,filled";
+      color="#15803d";
+      fillcolor="#dcfce7";
+      penwidth=1.2;
+      fontname="Helvetica-Bold";
+      fontsize=12;
+
+      "omnipath._core.requests" [label="omnipath._core.requests", fillcolor="#dcfce7", color="#ea580c", penwidth="2.8", fontcolor="#9a3412"];
+      "omnipath._core.requests._annotations" [label="omnipath._core.requests._annotations", fillcolor="#dcfce7", color="#15803d"];
+      "omnipath._core.requests._complexes" [label="omnipath._core.requests._complexes", fillcolor="#dcfce7", color="#15803d"];
+      "omnipath._core.requests._intercell" [label="omnipath._core.requests._intercell", fillcolor="#dcfce7", color="#15803d"];
+      "omnipath._core.requests._request" [label="omnipath._core.requests._request", fillcolor="#dcfce7", color="#ea580c", penwidth="2.8", fontcolor="#9a3412"];
+      "omnipath._core.requests._utils" [label="omnipath._core.requests._utils", fillcolor="#dcfce7", color="#15803d"];
+
+    }
+
+    subgraph cluster_omnipath__core_utils {
+      label="omnipath._core.utils";
+      style="rounded,filled";
+      color="#6d28d9";
+      fillcolor="#ede9fe";
+      penwidth=1.2;
+      fontname="Helvetica-Bold";
+      fontsize=12;
+
+      "omnipath._core.utils" [label="omnipath._core.utils", fillcolor="#ede9fe", color="#6d28d9"];
+      "omnipath._core.utils._static" [label="omnipath._core.utils._static", fillcolor="#ede9fe", color="#6d28d9"];
+
+    }
+
+  }
+
+  subgraph cluster_omnipath_constants {
+    label="omnipath.constants";
+    style="rounded,filled";
+    color="#334155";
+    fillcolor="#f8fafc";
+    penwidth=1.2;
+    fontname="Helvetica-Bold";
+    fontsize=12;
+
+    "omnipath.constants" [label="omnipath.constants", fillcolor="#f8fafc", color="#334155"];
+
+    "omnipath.constants._constants" [label="omnipath.constants._constants", fillcolor="#f8fafc", color="#334155"];
+
+    "omnipath.constants._pkg_constants" [label="omnipath.constants._pkg_constants", fillcolor="#f8fafc", color="#334155"];
+
+  }
+
+  "omnipath.interactions" [label="omnipath.interactions", fillcolor="#f8fafc", color="#334155"];
+
+  "omnipath.requests" [label="omnipath.requests", fillcolor="#f8fafc", color="#ea580c", penwidth="2.8", fontcolor="#9a3412"];
+
+  "omnipath" -> "omnipath._core.downloader._downloader" [color="#64748b", penwidth="1.0", style="solid", label="_get_server_version"];
+  "omnipath" -> "omnipath._core.utils" [color="#64748b", penwidth="1.0", style="solid", label="options, static"];
+  "omnipath" -> "omnipath.constants" [color="#64748b", penwidth="1.0", style="solid", label="1 import"];
+  "omnipath" -> "omnipath.interactions" [color="#64748b", penwidth="1.0", style="solid", label="1 import"];
+  "omnipath" -> "omnipath.requests" [color="#64748b", penwidth="1.0", style="solid", label="1 import"];
+  "omnipath._core.downloader._downloader" -> "omnipath" [color="#64748b", penwidth="1.2", style="solid,dotted", label="options"];
+  "omnipath._core.downloader._downloader" -> "omnipath._core.utils" [color="#64748b", penwidth="1.0", style="solid", label="Options"];
+  "omnipath._core.downloader._downloader" -> "omnipath.constants._pkg_constants" [color="#64748b", penwidth="1.0", style="solid", label="Endpoint, Format, Key\\nUNKNOWN_SERVER_VERSION"];
+  "omnipath._core.query" -> "omnipath._core.query._query" [color="#64748b", penwidth="1.0", style="solid", label="QueryType"];
+  "omnipath._core.query._query" -> "omnipath._core.query._query_validator" [color="#64748b", penwidth="1.0", style="solid", label="AnnotationsValidator\\nComplexesValidator, …"];
+  "omnipath._core.query._query" -> "omnipath.constants._constants" [color="#64748b", penwidth="1.0", style="solid", label="ErrorFormatter\\nFormatterMeta"];
+  "omnipath._core.query._query_validator" -> "omnipath" [color="#64748b", penwidth="1.2", style="solid,dotted", label="options"];
+  "omnipath._core.query._query_validator" -> "omnipath._core.downloader._downloader" [color="#64748b", penwidth="1.0", style="solid", label="Downloader"];
+  "omnipath._core.query._query_validator" -> "omnipath._core.query" [color="#64748b", penwidth="1.0", style="solid", label="Bool_t, Int_t, License_t\\nNone_t, …"];
+  "omnipath._core.query._query_validator" -> "omnipath._core.utils" [color="#64748b", penwidth="1.0", style="solid", label="Options, d"];
+  "omnipath._core.query._query_validator" -> "omnipath.constants._constants" [color="#64748b", penwidth="1.0", style="solid", label="NoValue"];
+  "omnipath._core.query._query_validator" -> "omnipath.constants._pkg_constants" [color="#64748b", penwidth="1.0", style="solid", label="Format, Key"];
+  "omnipath._core.requests" -> "omnipath._core.requests._annotations" [color="#64748b", penwidth="1.0", style="solid", label="Annotations"];
+  "omnipath._core.requests" -> "omnipath._core.requests._complexes" [color="#64748b", penwidth="1.0", style="solid", label="Complexes"];
+  "omnipath._core.requests" -> "omnipath._core.requests._intercell" [color="#64748b", penwidth="1.0", style="solid", label="Intercell"];
+  "omnipath._core.requests" -> "omnipath._core.requests._request" [color="#ea580c", fontcolor="#9a3412", penwidth="2.4", style="solid,bold", label="Enzsub, SignedPTMs"];
+  "omnipath._core.requests._annotations" -> "omnipath" [color="#64748b", penwidth="1.0", style="solid", label="dtypes"];
+  "omnipath._core.requests._annotations" -> "omnipath._core.query" [color="#64748b", penwidth="1.0", style="solid", label="QueryType"];
+  "omnipath._core.requests._annotations" -> "omnipath._core.requests._request" [color="#64748b", penwidth="1.0", style="solid", label="OmnipathRequestABC"];
+  "omnipath._core.requests._annotations" -> "omnipath._core.utils" [color="#64748b", penwidth="1.0", style="solid", label="d"];
+  "omnipath._core.requests._annotations" -> "omnipath.constants._pkg_constants" [color="#64748b", penwidth="1.0", style="solid", label="Key, final"];
+  "omnipath._core.requests._complexes" -> "omnipath._core.query" [color="#64748b", penwidth="1.0", style="solid", label="QueryType"];
+  "omnipath._core.requests._complexes" -> "omnipath._core.requests._request" [color="#64748b", penwidth="1.0", style="solid", label="OrganismGenesymbolsRemover"];
+  "omnipath._core.requests._complexes" -> "omnipath.constants._pkg_constants" [color="#64748b", penwidth="1.0", style="solid", label="final"];
+  "omnipath._core.requests._intercell" -> "omnipath._core.query" [color="#64748b", penwidth="1.0", style="solid", label="QueryType, Strseq_t"];
+  "omnipath._core.requests._intercell" -> "omnipath._core.query._query_validator" [color="#64748b", penwidth="1.0", style="solid", label="_to_string_set"];
+  "omnipath._core.requests._intercell" -> "omnipath._core.requests._request" [color="#64748b", penwidth="1.0", style="solid", label="OrganismGenesymbolsRemover"];
+  "omnipath._core.requests._intercell" -> "omnipath.constants._pkg_constants" [color="#64748b", penwidth="1.0", style="solid", label="Format, Key, final"];
+  "omnipath._core.requests._request" -> "omnipath" [color="#64748b", penwidth="1.0", style="solid", label="options"];
+  "omnipath._core.requests._request" -> "omnipath._core.downloader._downloader" [color="#ea580c", fontcolor="#9a3412", penwidth="2.4", style="solid,bold", label="Downloader"];
+  "omnipath._core.requests._request" -> "omnipath._core.query" [color="#64748b", penwidth="1.0", style="solid", label="QueryType"];
+  "omnipath._core.requests._request" -> "omnipath._core.requests._utils" [color="#64748b", penwidth="1.0", style="solid", label="_ERROR_EMPTY_FMT\\n_count_references, …"];
+  "omnipath._core.requests._request" -> "omnipath._core.utils" [color="#64748b", penwidth="1.0", style="solid", label="d"];
+  "omnipath._core.requests._request" -> "omnipath.constants" [color="#64748b", penwidth="1.0", style="solid", label="License, Organism"];
+  "omnipath._core.requests._request" -> "omnipath.constants._pkg_constants" [color="#64748b", penwidth="1.0", style="solid", label="DEFAULT_FIELD, Format\\nKey, …"];
+  "omnipath._core.requests._request" -> "omnipath.interactions" [color="#64748b", penwidth="1.2", style="solid,dotted", label="OmniPath"];
+  "omnipath._core.requests._request" -> "omnipath.requests" [color="#64748b", penwidth="1.2", style="solid,dotted", label="Enzsub"];
+  "omnipath._core.requests._utils" -> "omnipath" [color="#64748b", penwidth="1.2", style="solid,dotted", label="1 import"];
+  "omnipath._core.requests._utils" -> "omnipath._core.utils" [color="#64748b", penwidth="1.0", style="solid", label="d"];
+  "omnipath._core.utils" -> "omnipath._core.utils._static" [color="#64748b", penwidth="1.0", style="solid", label="1 import"];
+  "omnipath._core.utils._static" -> "omnipath._core.downloader._downloader" [color="#64748b", penwidth="1.0", style="solid", label="Downloader"];
+  "omnipath._core.utils._static" -> "omnipath._core.requests" [color="#64748b", penwidth="1.2", style="solid,dotted", label="AllInteractions\\nInteractionDataset"];
+  "omnipath._core.utils._static" -> "omnipath._core.requests._annotations" [color="#64748b", penwidth="1.2", style="solid,dotted", label="Annotations"];
+  "omnipath._core.utils._static" -> "omnipath._core.utils" [color="#64748b", penwidth="1.0", style="solid", label="_options"];
+  "omnipath.constants" -> "omnipath.constants._constants" [color="#64748b", penwidth="1.0", style="solid", label="InteractionDataset\\nLicense, …"];
+  "omnipath.constants._pkg_constants" -> "omnipath.constants" [color="#64748b", penwidth="1.0", style="solid", label="License, Organism"];
+  "omnipath.constants._pkg_constants" -> "omnipath.constants._constants" [color="#64748b", penwidth="1.0", style="solid", label="PrettyEnumMixin"];
+  "omnipath.interactions" -> "omnipath._core.requests" [color="#64748b", penwidth="1.0", style="solid", label="*"];
+  "omnipath.requests" -> "omnipath._core.requests" [color="#ea580c", fontcolor="#9a3412", penwidth="2.4", style="solid,bold", label="*"];
+}

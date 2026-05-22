@@ -1,0 +1,1206 @@
+{
+  "analysis": {
+    "coverage_gaps": [
+      {
+        "kind": "dynamic_import_unresolved",
+        "line": 13,
+        "module": "annnet._support.lazy_exports",
+        "source_file": "/home/daniele/annnet/annnet/_support/lazy_exports.py"
+      },
+      {
+        "kind": "dynamic_import_unresolved",
+        "line": 40,
+        "module": "annnet._support.lazy_exports",
+        "source_file": "/home/daniele/annnet/annnet/_support/lazy_exports.py"
+      },
+      {
+        "kind": "dynamic_import_unresolved",
+        "line": 43,
+        "module": "annnet._support.lazy_exports",
+        "source_file": "/home/daniele/annnet/annnet/_support/lazy_exports.py"
+      },
+      {
+        "kind": "dynamic_import_unresolved",
+        "line": 18,
+        "module": "annnet.algorithms",
+        "source_file": "/home/daniele/annnet/annnet/algorithms/__init__.py"
+      },
+      {
+        "kind": "dynamic_import_unresolved",
+        "line": 201,
+        "module": "annnet.core.backend_accessors._base",
+        "source_file": "/home/daniele/annnet/annnet/core/backend_accessors/_base.py"
+      }
+    ],
+    "cycles": [],
+    "edges": [
+      {
+        "import_type": "from",
+        "imported": [
+          "export_dir",
+          "resolve_lazy_export"
+        ],
+        "lazy_kind": "eager",
+        "line": 30,
+        "source": "annnet",
+        "source_file": "/home/daniele/annnet/annnet/__init__.py",
+        "target": "annnet._support.lazy_exports"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "info",
+          "__title__",
+          "__authors__",
+          "__license__",
+          "__version__",
+          "__maintainers__",
+          "get_latest_version"
+        ],
+        "lazy_kind": "eager",
+        "line": 21,
+        "source": "annnet",
+        "source_file": "/home/daniele/annnet/annnet/__init__.py",
+        "target": "annnet._support.metadata"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "DATAFRAME_BACKENDS",
+          "select_component",
+          "available_optional_components"
+        ],
+        "lazy_kind": "eager",
+        "line": 14,
+        "source": "annnet._support.dataframe_backend",
+        "source_file": "/home/daniele/annnet/annnet/_support/dataframe_backend.py",
+        "target": "annnet._support.optional_components"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "dataframe_to_rows",
+          "dataframe_from_rows"
+        ],
+        "lazy_kind": "eager",
+        "line": 10,
+        "source": "annnet._support.graph_records",
+        "source_file": "/home/daniele/annnet/annnet/_support/graph_records.py",
+        "target": "annnet._support.dataframe_backend"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "IO_MODULES",
+          "PLOT_BACKENDS",
+          "GRAPH_BACKENDS",
+          "DATAFRAME_BACKENDS",
+          "component_names",
+          "component_status"
+        ],
+        "lazy_kind": "eager",
+        "line": 14,
+        "source": "annnet._support.metadata",
+        "source_file": "/home/daniele/annnet/annnet/_support/metadata.py",
+        "target": "annnet._support.optional_components"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "PLOT_BACKENDS",
+          "component_names",
+          "select_component",
+          "available_optional_components"
+        ],
+        "lazy_kind": "eager",
+        "line": 5,
+        "source": "annnet._support.plotting_backend",
+        "source_file": "/home/daniele/annnet/annnet/_support/plotting_backend.py",
+        "target": "annnet._support.optional_components"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "dataframe_to_rows"
+        ],
+        "lazy_kind": "eager",
+        "line": 15,
+        "source": "annnet._support.serialization",
+        "source_file": "/home/daniele/annnet/annnet/_support/serialization.py",
+        "target": "annnet._support.dataframe_backend"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "EdgeType",
+          "EntityRecord"
+        ],
+        "lazy_kind": "eager",
+        "line": 2,
+        "source": "annnet.core",
+        "source_file": "/home/daniele/annnet/annnet/core/__init__.py",
+        "target": "annnet.core._records"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "AnnNet"
+        ],
+        "lazy_kind": "eager",
+        "line": 1,
+        "source": "annnet.core",
+        "source_file": "/home/daniele/annnet/annnet/core/__init__.py",
+        "target": "annnet.core.graph"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "dataframe_columns",
+          "dataframe_to_rows",
+          "dataframe_filter_eq",
+          "dataframe_upsert_rows"
+        ],
+        "lazy_kind": "eager",
+        "line": 6,
+        "source": "annnet.core._Annotation",
+        "source_file": "/home/daniele/annnet/annnet/core/_Annotation.py",
+        "target": "annnet._support.dataframe_backend"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "dataframe_to_rows",
+          "dataframe_from_rows",
+          "dataframe_write_csv",
+          "dataframe_write_parquet"
+        ],
+        "lazy_kind": "eager",
+        "line": 9,
+        "source": "annnet.core._History",
+        "source_file": "/home/daniele/annnet/annnet/core/_History.py",
+        "target": "annnet._support.dataframe_backend"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "dataframe_columns",
+          "dataframe_to_rows",
+          "dataframe_filter_eq"
+        ],
+        "lazy_kind": "eager",
+        "line": 15,
+        "source": "annnet.core._Layers",
+        "source_file": "/home/daniele/annnet/annnet/core/_Layers.py",
+        "target": "annnet._support.dataframe_backend"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "SliceRecord",
+          "EntityRecord",
+          "build_dataframe_from_rows"
+        ],
+        "lazy_kind": "eager",
+        "line": 14,
+        "source": "annnet.core._Layers",
+        "source_file": "/home/daniele/annnet/annnet/core/_Layers.py",
+        "target": "annnet.core._records"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "empty_dataframe",
+          "dataframe_height",
+          "dataframe_columns",
+          "dataframe_to_rows",
+          "dataframe_append_rows"
+        ],
+        "lazy_kind": "eager",
+        "line": 5,
+        "source": "annnet.core._Matrix",
+        "source_file": "/home/daniele/annnet/annnet/core/_Matrix.py",
+        "target": "annnet._support.dataframe_backend"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "clone_dataframe",
+          "dataframe_height",
+          "dataframe_columns",
+          "dataframe_to_rows",
+          "dataframe_filter_in",
+          "dataframe_memory_usage"
+        ],
+        "lazy_kind": "eager",
+        "line": 7,
+        "source": "annnet.core._Ops",
+        "source_file": "/home/daniele/annnet/annnet/core/_Ops.py",
+        "target": "annnet._support.dataframe_backend"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "EdgeRecord",
+          "SliceRecord",
+          "EntityRecord"
+        ],
+        "lazy_kind": "eager",
+        "line": 6,
+        "source": "annnet.core._Ops",
+        "source_file": "/home/daniele/annnet/annnet/core/_Ops.py",
+        "target": "annnet.core._records"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "dataframe_columns",
+          "dataframe_to_rows",
+          "dataframe_filter_eq"
+        ],
+        "lazy_kind": "eager",
+        "line": 8,
+        "source": "annnet.core._Slices",
+        "source_file": "/home/daniele/annnet/annnet/core/_Slices.py",
+        "target": "annnet._support.dataframe_backend"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "SliceRecord"
+        ],
+        "lazy_kind": "eager",
+        "line": 7,
+        "source": "annnet.core._Slices",
+        "source_file": "/home/daniele/annnet/annnet/core/_Slices.py",
+        "target": "annnet.core._records"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "_df_filter_not_equal"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 129,
+        "source": "annnet.core._Slices",
+        "source_file": "/home/daniele/annnet/annnet/core/_Slices.py",
+        "target": "annnet.core._records"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "clone_dataframe",
+          "empty_dataframe",
+          "dataframe_columns",
+          "dataframe_to_rows",
+          "dataframe_filter_in",
+          "dataframe_from_rows"
+        ],
+        "lazy_kind": "eager",
+        "line": 3,
+        "source": "annnet.core._Views",
+        "source_file": "/home/daniele/annnet/annnet/core/_Views.py",
+        "target": "annnet._support.dataframe_backend"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "dataframe_filter_ne",
+          "dataframe_from_rows"
+        ],
+        "lazy_kind": "eager",
+        "line": 8,
+        "source": "annnet.core._records",
+        "source_file": "/home/daniele/annnet/annnet/core/_records.py",
+        "target": "annnet._support.dataframe_backend"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "dataframe_columns",
+          "dataframe_to_rows",
+          "dataframe_filter_eq"
+        ],
+        "lazy_kind": "eager",
+        "line": 7,
+        "source": "annnet.core.backend_accessors._base",
+        "source_file": "/home/daniele/annnet/annnet/core/backend_accessors/_base.py",
+        "target": "annnet._support.dataframe_backend"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "_BackendAccessorBase"
+        ],
+        "lazy_kind": "eager",
+        "line": 6,
+        "source": "annnet.core.backend_accessors.gt_accessor",
+        "source_file": "/home/daniele/annnet/annnet/core/backend_accessors/gt_accessor.py",
+        "target": "annnet.core.backend_accessors._base"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "_BackendAccessorBase"
+        ],
+        "lazy_kind": "eager",
+        "line": 6,
+        "source": "annnet.core.backend_accessors.ig_accessor",
+        "source_file": "/home/daniele/annnet/annnet/core/backend_accessors/ig_accessor.py",
+        "target": "annnet.core.backend_accessors._base"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "_BackendAccessorBase"
+        ],
+        "lazy_kind": "eager",
+        "line": 6,
+        "source": "annnet.core.backend_accessors.nx_accessor",
+        "source_file": "/home/daniele/annnet/annnet/core/backend_accessors/nx_accessor.py",
+        "target": "annnet.core.backend_accessors._base"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "write"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 3291,
+        "source": "annnet.core.graph",
+        "source_file": "/home/daniele/annnet/annnet/core/graph.py",
+        "target": "annnet"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "read"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 3315,
+        "source": "annnet.core.graph",
+        "source_file": "/home/daniele/annnet/annnet/core/graph.py",
+        "target": "annnet"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "empty_dataframe",
+          "dataframe_height",
+          "dataframe_columns",
+          "dataframe_to_rows",
+          "dataframe_drop_rows",
+          "is_polars_dataframe",
+          "dataframe_upsert_rows",
+          "polars_upsert_vertices",
+          "select_dataframe_backend"
+        ],
+        "lazy_kind": "eager",
+        "line": 33,
+        "source": "annnet.core.graph",
+        "source_file": "/home/daniele/annnet/annnet/core/graph.py",
+        "target": "annnet._support.dataframe_backend"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Traversal"
+        ],
+        "lazy_kind": "eager",
+        "line": 32,
+        "source": "annnet.core.graph",
+        "source_file": "/home/daniele/annnet/annnet/core/graph.py",
+        "target": "annnet.algorithms.traversal"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "AttributesClass",
+          "AttributesAccessor"
+        ],
+        "lazy_kind": "eager",
+        "line": 31,
+        "source": "annnet.core.graph",
+        "source_file": "/home/daniele/annnet/annnet/core/graph.py",
+        "target": "annnet.core._Annotation"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "History",
+          "HistoryAccessor"
+        ],
+        "lazy_kind": "eager",
+        "line": 18,
+        "source": "annnet.core.graph",
+        "source_file": "/home/daniele/annnet/annnet/core/graph.py",
+        "target": "annnet.core._History"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "LayerAccessor"
+        ],
+        "lazy_kind": "eager",
+        "line": 15,
+        "source": "annnet.core.graph",
+        "source_file": "/home/daniele/annnet/annnet/core/graph.py",
+        "target": "annnet.core._Layers"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "CacheManager",
+          "IndexManager",
+          "IndexMapping"
+        ],
+        "lazy_kind": "eager",
+        "line": 16,
+        "source": "annnet.core.graph",
+        "source_file": "/home/daniele/annnet/annnet/core/graph.py",
+        "target": "annnet.core._Matrix"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Operations",
+          "OperationsAccessor"
+        ],
+        "lazy_kind": "eager",
+        "line": 13,
+        "source": "annnet.core.graph",
+        "source_file": "/home/daniele/annnet/annnet/core/graph.py",
+        "target": "annnet.core._Ops"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "SliceManager"
+        ],
+        "lazy_kind": "eager",
+        "line": 17,
+        "source": "annnet.core.graph",
+        "source_file": "/home/daniele/annnet/annnet/core/graph.py",
+        "target": "annnet.core._Slices"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "GraphView",
+          "ViewsClass",
+          "ViewsAccessor"
+        ],
+        "lazy_kind": "eager",
+        "line": 14,
+        "source": "annnet.core.graph",
+        "source_file": "/home/daniele/annnet/annnet/core/graph.py",
+        "target": "annnet.core._Views"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "_EDGE_RESERVED",
+          "EdgeView",
+          "EdgeRecord",
+          "SliceRecord",
+          "EntityRecord",
+          "_slice_RESERVED",
+          "_vertex_RESERVED",
+          "_df_filter_not_equal",
+          "_external_entity_kind",
+          "_internal_entity_kind"
+        ],
+        "lazy_kind": "eager",
+        "line": 19,
+        "source": "annnet.core.graph",
+        "source_file": "/home/daniele/annnet/annnet/core/graph.py",
+        "target": "annnet.core._records"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "_GTBackendAccessor"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 3041,
+        "source": "annnet.core.graph",
+        "source_file": "/home/daniele/annnet/annnet/core/graph.py",
+        "target": "annnet.core.backend_accessors.gt_accessor"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "_IGBackendAccessor"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 3024,
+        "source": "annnet.core.graph",
+        "source_file": "/home/daniele/annnet/annnet/core/graph.py",
+        "target": "annnet.core.backend_accessors.ig_accessor"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "_NXBackendAccessor"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 3007,
+        "source": "annnet.core.graph",
+        "source_file": "/home/daniele/annnet/annnet/core/graph.py",
+        "target": "annnet.core.backend_accessors.nx_accessor"
+      }
+    ],
+    "module_roots": [
+      "/home/daniele/annnet"
+    ],
+    "modules": {
+      "annnet": {
+        "definitions": [
+          "__all__",
+          "__dir__",
+          "__getattr__",
+          "_lazy_functions",
+          "_lazy_objects",
+          "_lazy_submodules",
+          "_metadata_exports"
+        ],
+        "is_package": true,
+        "module": "annnet",
+        "path": "/home/daniele/annnet/annnet/__init__.py"
+      },
+      "annnet._support": {
+        "definitions": [],
+        "is_package": true,
+        "module": "annnet._support",
+        "path": "/home/daniele/annnet/annnet/_support/__init__.py"
+      },
+      "annnet._support.dataframe_backend": {
+        "definitions": [
+          "_BOOL",
+          "_DEFAULT_DATAFRAME_BACKEND",
+          "_FLOAT",
+          "_INT",
+          "_LIST_TEXT",
+          "_TEXT",
+          "_build_nw_from_columns",
+          "_build_nw_from_rows",
+          "_cast_nw_to_schema",
+          "_empty_like",
+          "_fallback_dataframe",
+          "_filter_column",
+          "_filter_in",
+          "_from_nw",
+          "_has_column",
+          "_kind_for_value",
+          "_kind_from_dtype",
+          "_merge_kind",
+          "_narwhals_dtype",
+          "_narwhals_schema",
+          "_normalize_schema",
+          "_pl_align_schemas",
+          "_pl_numeric_supertype",
+          "_rebuild_dataframe",
+          "_schema_spec",
+          "_to_nw",
+          "available_dataframe_backends",
+          "clone_dataframe",
+          "dataframe_append_rows",
+          "dataframe_backend",
+          "dataframe_column_is_numeric",
+          "dataframe_column_values",
+          "dataframe_columns",
+          "dataframe_drop_rows",
+          "dataframe_filter_eq",
+          "dataframe_filter_in",
+          "dataframe_filter_ne",
+          "dataframe_filter_not_in",
+          "dataframe_from_columns",
+          "dataframe_from_rows",
+          "dataframe_height",
+          "dataframe_memory_usage",
+          "dataframe_read_delimited",
+          "dataframe_read_excel",
+          "dataframe_read_parquet",
+          "dataframe_read_tsv",
+          "dataframe_select_to_numpy",
+          "dataframe_to_rows",
+          "dataframe_upsert_rows",
+          "dataframe_width",
+          "dataframe_write_csv",
+          "dataframe_write_parquet",
+          "empty_dataframe",
+          "get_default_dataframe_backend",
+          "is_polars_dataframe",
+          "polars_upsert_vertices",
+          "rename_dataframe_columns",
+          "select_dataframe_backend",
+          "set_default_dataframe_backend"
+        ],
+        "is_package": false,
+        "module": "annnet._support.dataframe_backend",
+        "path": "/home/daniele/annnet/annnet/_support/dataframe_backend.py"
+      },
+      "annnet._support.graph_records": {
+        "definitions": [
+          "_attrs_to_dict",
+          "_is_directed_eid",
+          "_iter_edge_records",
+          "_iter_vertex_ids",
+          "_rows_like",
+          "_rows_to_df",
+          "_serialize_value"
+        ],
+        "is_package": false,
+        "module": "annnet._support.graph_records",
+        "path": "/home/daniele/annnet/annnet/_support/graph_records.py"
+      },
+      "annnet._support.lazy_exports": {
+        "definitions": [
+          "export_dir",
+          "make_lazy_function",
+          "resolve_lazy_export"
+        ],
+        "is_package": false,
+        "module": "annnet._support.lazy_exports",
+        "path": "/home/daniele/annnet/annnet/_support/lazy_exports.py"
+      },
+      "annnet._support.metadata": {
+        "definitions": [
+          "AnnNetInfo",
+          "_CHIP_STYLE",
+          "_FALLBACK_VERSION",
+          "_OPTIONAL_BUNDLES",
+          "_PROJECT_ROOT",
+          "_PYPROJECT_PATH",
+          "__all__",
+          "__author__",
+          "__authors__",
+          "__license__",
+          "__maintainers__",
+          "__title__",
+          "__version__",
+          "_author_links",
+          "_chips",
+          "_component_message",
+          "_default_available",
+          "_drop_none",
+          "_get_metadata",
+          "_link",
+          "_metadata_from_installed_package",
+          "_metadata_from_pyproject",
+          "_normalize_license",
+          "_normalize_people",
+          "_optional_dependency_bundles",
+          "get_latest_version",
+          "info",
+          "metadata"
+        ],
+        "is_package": false,
+        "module": "annnet._support.metadata",
+        "path": "/home/daniele/annnet/annnet/_support/metadata.py"
+      },
+      "annnet._support.optional_components": {
+        "definitions": [
+          "DATAFRAME_BACKENDS",
+          "GRAPH_BACKENDS",
+          "IO_MODULES",
+          "OptionalComponent",
+          "PLOT_BACKENDS",
+          "_is_component_available",
+          "available_optional_components",
+          "component_names",
+          "component_status",
+          "select_component"
+        ],
+        "is_package": false,
+        "module": "annnet._support.optional_components",
+        "path": "/home/daniele/annnet/annnet/_support/optional_components.py"
+      },
+      "annnet._support.plotting_backend": {
+        "definitions": [
+          "PLOT_BACKEND_PRIORITY",
+          "_DEFAULT_PLOT_BACKEND",
+          "available_plot_backends",
+          "get_default_plot_backend",
+          "select_plot_backend",
+          "set_default_plot_backend"
+        ],
+        "is_package": false,
+        "module": "annnet._support.plotting_backend",
+        "path": "/home/daniele/annnet/annnet/_support/plotting_backend.py"
+      },
+      "annnet._support.serialization": {
+        "definitions": [
+          "coerce_coeff_mapping",
+          "collect_slice_manifest",
+          "deserialize_edge_layers",
+          "deserialize_endpoint",
+          "endpoint_coeff_map",
+          "restore_multilayer_manifest",
+          "restore_slice_manifest",
+          "serialize_edge_layers",
+          "serialize_endpoint",
+          "serialize_multilayer_manifest"
+        ],
+        "is_package": false,
+        "module": "annnet._support.serialization",
+        "path": "/home/daniele/annnet/annnet/_support/serialization.py"
+      },
+      "annnet.algorithms": {
+        "definitions": [
+          "__all__",
+          "__dir__",
+          "__getattr__",
+          "_lazy_symbols"
+        ],
+        "is_package": true,
+        "module": "annnet.algorithms",
+        "path": "/home/daniele/annnet/annnet/algorithms/__init__.py"
+      },
+      "annnet.algorithms.traversal": {
+        "definitions": [
+          "Traversal",
+          "_hyper_meta"
+        ],
+        "is_package": false,
+        "module": "annnet.algorithms.traversal",
+        "path": "/home/daniele/annnet/annnet/algorithms/traversal.py"
+      },
+      "annnet.core": {
+        "definitions": [
+          "Graph",
+          "__all__"
+        ],
+        "is_package": true,
+        "module": "annnet.core",
+        "path": "/home/daniele/annnet/annnet/core/__init__.py"
+      },
+      "annnet.core._Annotation": {
+        "definitions": [
+          "AttributesAccessor",
+          "AttributesClass",
+          "_NUMERIC_DTYPES",
+          "_NUMERIC_NW_DTYPES",
+          "_check_reserved_collision"
+        ],
+        "is_package": false,
+        "module": "annnet.core._Annotation",
+        "path": "/home/daniele/annnet/annnet/core/_Annotation.py"
+      },
+      "annnet.core._History": {
+        "definitions": [
+          "GraphDiff",
+          "History",
+          "HistoryAccessor"
+        ],
+        "is_package": false,
+        "module": "annnet.core._History",
+        "path": "/home/daniele/annnet/annnet/core/_History.py"
+      },
+      "annnet.core._Layers": {
+        "definitions": [
+          "LayerAccessor"
+        ],
+        "is_package": false,
+        "module": "annnet.core._Layers",
+        "path": "/home/daniele/annnet/annnet/core/_Layers.py"
+      },
+      "annnet.core._Matrix": {
+        "definitions": [
+          "CacheManager",
+          "IndexManager",
+          "IndexMapping",
+          "_entity_kind"
+        ],
+        "is_package": false,
+        "module": "annnet.core._Matrix",
+        "path": "/home/daniele/annnet/annnet/core/_Matrix.py"
+      },
+      "annnet.core._Ops": {
+        "definitions": [
+          "Operations",
+          "OperationsAccessor",
+          "_clone_edge_record",
+          "_hyper_def",
+          "_is_hyper",
+          "_share_or_clone_table"
+        ],
+        "is_package": false,
+        "module": "annnet.core._Ops",
+        "path": "/home/daniele/annnet/annnet/core/_Ops.py"
+      },
+      "annnet.core._Slices": {
+        "definitions": [
+          "SliceInfo",
+          "SliceManager",
+          "SliceMembership",
+          "SliceStats",
+          "TemporalChange"
+        ],
+        "is_package": false,
+        "module": "annnet.core._Slices",
+        "path": "/home/daniele/annnet/annnet/core/_Slices.py"
+      },
+      "annnet.core._Views": {
+        "definitions": [
+          "GraphView",
+          "ViewsAccessor",
+          "ViewsClass"
+        ],
+        "is_package": false,
+        "module": "annnet.core._Views",
+        "path": "/home/daniele/annnet/annnet/core/_Views.py"
+      },
+      "annnet.core._records": {
+        "definitions": [
+          "EdgeRecord",
+          "EdgeType",
+          "EdgeView",
+          "EntityRecord",
+          "SliceRecord",
+          "_EDGE_RESERVED",
+          "_df_filter_not_equal",
+          "_external_entity_kind",
+          "_get_numeric_supertype",
+          "_internal_entity_kind",
+          "_slice_RESERVED",
+          "_vertex_RESERVED",
+          "build_dataframe_from_rows"
+        ],
+        "is_package": false,
+        "module": "annnet.core._records",
+        "path": "/home/daniele/annnet/annnet/core/_records.py"
+      },
+      "annnet.core.backend_accessors": {
+        "definitions": [],
+        "is_package": true,
+        "module": "annnet.core.backend_accessors",
+        "path": "/home/daniele/annnet/annnet/core/backend_accessors/__init__.py"
+      },
+      "annnet.core.backend_accessors._base": {
+        "definitions": [
+          "_BackendAccessorBase"
+        ],
+        "is_package": false,
+        "module": "annnet.core.backend_accessors._base",
+        "path": "/home/daniele/annnet/annnet/core/backend_accessors/_base.py"
+      },
+      "annnet.core.backend_accessors.gt_accessor": {
+        "definitions": [
+          "_GTBackendAccessor",
+          "_GTNamespaceProxy"
+        ],
+        "is_package": false,
+        "module": "annnet.core.backend_accessors.gt_accessor",
+        "path": "/home/daniele/annnet/annnet/core/backend_accessors/gt_accessor.py"
+      },
+      "annnet.core.backend_accessors.ig_accessor": {
+        "definitions": [
+          "_IGBackendAccessor"
+        ],
+        "is_package": false,
+        "module": "annnet.core.backend_accessors.ig_accessor",
+        "path": "/home/daniele/annnet/annnet/core/backend_accessors/ig_accessor.py"
+      },
+      "annnet.core.backend_accessors.nx_accessor": {
+        "definitions": [
+          "_NXBackendAccessor"
+        ],
+        "is_package": false,
+        "module": "annnet.core.backend_accessors.nx_accessor",
+        "path": "/home/daniele/annnet/annnet/core/backend_accessors/nx_accessor.py"
+      },
+      "annnet.core.graph": {
+        "definitions": [
+          "AnnNet",
+          "AnnNetMeta",
+          "_BINARY_BATCH_RESERVED_KEYS",
+          "_BlockedLegacyAttribute",
+          "_EdgeRecordFieldMap",
+          "_HYPER_BATCH_RESERVED_KEYS",
+          "_sanitize"
+        ],
+        "is_package": false,
+        "module": "annnet.core.graph",
+        "path": "/home/daniele/annnet/annnet/core/graph.py"
+      }
+    },
+    "repo": "/home/daniele/annnet"
+  },
+  "config": {
+    "discovery": {
+      "exclude": [
+        ".venv/**",
+        "venv/**",
+        ".tox/**",
+        "build/**",
+        "dist/**",
+        ".git/**",
+        "docs/**",
+        "tests/**",
+        "benchmarks/**",
+        "notebooks/**",
+        "tools/**",
+        "annnet/adapters/**",
+        "annnet/io/**",
+        "annnet/utils/**"
+      ],
+      "include": []
+    },
+    "outputs": {
+      "profiles": {
+        "all": {
+          "description": "All graph families and reports.",
+          "formats": [
+            "svg",
+            "md"
+          ],
+          "graphs": [
+            {
+              "id": "module-layout",
+              "kind": "inventory",
+              "stem": "module_layout_graph"
+            },
+            {
+              "id": "package-dependency",
+              "kind": "module",
+              "labeled": false,
+              "package_level": true,
+              "stem": "group_dependency_graph"
+            },
+            {
+              "id": "module-dependency",
+              "kind": "module",
+              "labeled": false,
+              "package_level": false,
+              "stem": "module_dependency_graph"
+            },
+            {
+              "id": "symbol-labeled-module-dependency",
+              "kind": "module",
+              "labeled": true,
+              "package_level": false,
+              "stem": "module_dependency_with_symbols"
+            },
+            {
+              "filter": "boundary_helper",
+              "id": "boundary-helper",
+              "kind": "module",
+              "labeled": true,
+              "package_level": false,
+              "stem": "boundary_helper_candidates"
+            },
+            {
+              "id": "symbol-import",
+              "kind": "symbol",
+              "stem": "symbol_import_graph"
+            }
+          ],
+          "summary": "full"
+        },
+        "overview": {
+          "description": "Repo overview with grouped dependency graphs and summary report.",
+          "formats": [
+            "svg",
+            "md"
+          ],
+          "graphs": [
+            {
+              "id": "module-layout",
+              "kind": "inventory",
+              "stem": "module_layout_graph"
+            },
+            {
+              "id": "package-dependency",
+              "kind": "module",
+              "labeled": false,
+              "package_level": true,
+              "stem": "group_dependency_graph"
+            },
+            {
+              "id": "module-dependency",
+              "kind": "module",
+              "labeled": false,
+              "package_level": false,
+              "stem": "module_dependency_graph"
+            }
+          ],
+          "summary": "full"
+        },
+        "policy": {
+          "description": "Policy-focused violation and helper cleanup outputs.",
+          "formats": [
+            "svg",
+            "md"
+          ],
+          "graphs": [
+            {
+              "filter": "policy",
+              "id": "policy-violations",
+              "kind": "module",
+              "labeled": true,
+              "package_level": false,
+              "stem": "policy_violation_graph"
+            },
+            {
+              "filter": "boundary_helper",
+              "id": "boundary-helper",
+              "kind": "module",
+              "labeled": true,
+              "package_level": false,
+              "stem": "boundary_helper_candidates"
+            }
+          ],
+          "summary": "full"
+        },
+        "symbols": {
+          "description": "Comprehensive symbol import graph plus summary.",
+          "formats": [
+            "svg",
+            "md"
+          ],
+          "graphs": [
+            {
+              "id": "symbol-import",
+              "kind": "symbol",
+              "stem": "symbol_import_graph"
+            }
+          ],
+          "summary": "short"
+        }
+      },
+      "snapshot_artifact": "analysis_snapshot.json",
+      "summary_artifact": "architecture_report.md",
+      "tables": {
+        "cycles": "module_cycles.csv",
+        "edges": "internal_import_edges.csv",
+        "findings": "policy_findings.csv",
+        "module_symbols": "module_definitions.csv",
+        "private_imports": "private_import_edges.csv"
+      }
+    },
+    "package": "annnet",
+    "policy": {
+      "allowed_import_pairs": [],
+      "allowed_private_target_prefixes": [
+        "annnet.core._",
+        "annnet._support"
+      ],
+      "boundary_helper_symbols": [],
+      "boundary_helper_target_prefixes": [],
+      "display_groups": [
+        {
+          "class": "package",
+          "fill": "#f8fafc",
+          "label": "package",
+          "match_prefixes": [],
+          "name": "package",
+          "stroke": "#334155"
+        },
+        {
+          "class": "other",
+          "fill": "#f8fafc",
+          "label": "other",
+          "match_prefixes": [],
+          "name": "other",
+          "stroke": "#64748b"
+        }
+      ],
+      "enabled": true,
+      "forbidden_imports": [
+        {
+          "source_prefixes": [
+            "annnet.core.graph"
+          ],
+          "target_prefixes": [
+            "annnet._support.dataframe_backend"
+          ]
+        },
+        {
+          "source_prefixes": [
+            "annnet.core.graph"
+          ],
+          "target_prefixes": [
+            "annnet.algorithms.traversal"
+          ]
+        }
+      ],
+      "module_group_depth": 3,
+      "policy_areas": []
+    },
+    "tool": {
+      "default_profile": "overview",
+      "name": "importscope"
+    }
+  },
+  "finding_counts": {
+    "boundary_helper": 2,
+    "forbidden_import": 2
+  },
+  "findings": [
+    {
+      "finding_type": "forbidden_import",
+      "imported": [
+        "empty_dataframe",
+        "dataframe_height",
+        "dataframe_columns",
+        "dataframe_to_rows",
+        "dataframe_drop_rows",
+        "is_polars_dataframe",
+        "dataframe_upsert_rows",
+        "polars_upsert_vertices",
+        "select_dataframe_backend"
+      ],
+      "line": 33,
+      "message": "Import violates configured architectural direction.",
+      "severity": "error",
+      "source": "annnet.core.graph",
+      "source_file": "/home/daniele/annnet/annnet/core/graph.py",
+      "target": "annnet._support.dataframe_backend"
+    },
+    {
+      "finding_type": "boundary_helper",
+      "imported": [
+        "empty_dataframe",
+        "dataframe_height",
+        "dataframe_columns",
+        "dataframe_to_rows",
+        "dataframe_drop_rows",
+        "is_polars_dataframe",
+        "dataframe_upsert_rows",
+        "polars_upsert_vertices",
+        "select_dataframe_backend"
+      ],
+      "line": 33,
+      "message": "Boundary/helper candidate edge for cleanup review.",
+      "severity": "warning",
+      "source": "annnet.core.graph",
+      "source_file": "/home/daniele/annnet/annnet/core/graph.py",
+      "target": "annnet._support.dataframe_backend"
+    },
+    {
+      "finding_type": "forbidden_import",
+      "imported": [
+        "Traversal"
+      ],
+      "line": 32,
+      "message": "Import violates configured architectural direction.",
+      "severity": "error",
+      "source": "annnet.core.graph",
+      "source_file": "/home/daniele/annnet/annnet/core/graph.py",
+      "target": "annnet.algorithms.traversal"
+    },
+    {
+      "finding_type": "boundary_helper",
+      "imported": [
+        "Traversal"
+      ],
+      "line": 32,
+      "message": "Boundary/helper candidate edge for cleanup review.",
+      "severity": "warning",
+      "source": "annnet.core.graph",
+      "source_file": "/home/daniele/annnet/annnet/core/graph.py",
+      "target": "annnet.algorithms.traversal"
+    }
+  ],
+  "profile": "all"
+}

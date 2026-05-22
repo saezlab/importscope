@@ -1,0 +1,1 @@
+"""Optional plugin namespace."""

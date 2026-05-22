@@ -1,0 +1,1066 @@
+{
+  "analysis": {
+    "coverage_gaps": [],
+    "cycles": [
+      [
+        "corneto",
+        "corneto.backend",
+        "corneto.backend._base",
+        "corneto.backend._cvxpy_backend",
+        "corneto.backend._picos_backend",
+        "corneto.methods",
+        "corneto.methods.carnival",
+        "corneto.methods.shortest_path",
+        "corneto.methods.signaling"
+      ]
+    ],
+    "edges": [
+      {
+        "import_type": "from",
+        "imported": [
+          "*"
+        ],
+        "lazy_kind": "eager",
+        "line": 6,
+        "source": "corneto",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/__init__.py",
+        "target": "corneto._constants"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "DEFAULT_BACKEND",
+          "DEFAULT_SOLVER",
+          "available_backends"
+        ],
+        "lazy_kind": "eager",
+        "line": 10,
+        "source": "corneto",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/__init__.py",
+        "target": "corneto.backend"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "DEFAULT_BACKEND"
+        ],
+        "lazy_kind": "eager",
+        "line": 14,
+        "source": "corneto",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/__init__.py",
+        "target": "corneto.backend"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "HammingLoss"
+        ],
+        "lazy_kind": "eager",
+        "line": 15,
+        "source": "corneto",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/__init__.py",
+        "target": "corneto.backend._base"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Indicator",
+          "NonZeroIndicator"
+        ],
+        "lazy_kind": "eager",
+        "line": 16,
+        "source": "corneto",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/__init__.py",
+        "target": "corneto.backend._base"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "create_flow_graph",
+          "default_sign_loss",
+          "signaling",
+          "signflow_constraints"
+        ],
+        "lazy_kind": "eager",
+        "line": 23,
+        "source": "corneto",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/__init__.py",
+        "target": "corneto.methods"
+      },
+      {
+        "import_type": "import",
+        "imported": [],
+        "lazy_kind": "eager",
+        "line": 1,
+        "source": "corneto.backend",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/backend/__init__.py",
+        "target": "corneto._settings"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Backend",
+          "NoBackend",
+          "VarType"
+        ],
+        "lazy_kind": "eager",
+        "line": 2,
+        "source": "corneto.backend",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/backend/__init__.py",
+        "target": "corneto.backend._base"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "CvxpyBackend"
+        ],
+        "lazy_kind": "eager",
+        "line": 7,
+        "source": "corneto.backend",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/backend/__init__.py",
+        "target": "corneto.backend._cvxpy_backend"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "PicosBackend"
+        ],
+        "lazy_kind": "eager",
+        "line": 8,
+        "source": "corneto.backend",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/backend/__init__.py",
+        "target": "corneto.backend._picos_backend"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "_delegate"
+        ],
+        "lazy_kind": "eager",
+        "line": 11,
+        "source": "corneto.backend._base",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/backend/_base.py",
+        "target": "corneto"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "BaseGraph"
+        ],
+        "lazy_kind": "eager",
+        "line": 12,
+        "source": "corneto.backend._base",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/backend/_base.py",
+        "target": "corneto"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Attributes"
+        ],
+        "lazy_kind": "eager",
+        "line": 14,
+        "source": "corneto.backend._base",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/backend/_base.py",
+        "target": "corneto"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "*"
+        ],
+        "lazy_kind": "eager",
+        "line": 10,
+        "source": "corneto.backend._base",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/backend/_base.py",
+        "target": "corneto._constants"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "LOGGER",
+          "_get_matrix_builder"
+        ],
+        "lazy_kind": "eager",
+        "line": 13,
+        "source": "corneto.backend._base",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/backend/_base.py",
+        "target": "corneto._settings"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "DEFAULT_SOLVER"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 839,
+        "source": "corneto.backend._base",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/backend/_base.py",
+        "target": "corneto.backend"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "*"
+        ],
+        "lazy_kind": "eager",
+        "line": 6,
+        "source": "corneto.backend._cvxpy_backend",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/backend/_cvxpy_backend.py",
+        "target": "corneto._constants"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "LOGGER"
+        ],
+        "lazy_kind": "eager",
+        "line": 7,
+        "source": "corneto.backend._cvxpy_backend",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/backend/_cvxpy_backend.py",
+        "target": "corneto._settings"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Backend",
+          "CExpression",
+          "CSymbol",
+          "ProblemDef",
+          "_get_unique_name"
+        ],
+        "lazy_kind": "eager",
+        "line": 8,
+        "source": "corneto.backend._cvxpy_backend",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/backend/_cvxpy_backend.py",
+        "target": "corneto.backend._base"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "*"
+        ],
+        "lazy_kind": "eager",
+        "line": 6,
+        "source": "corneto.backend._picos_backend",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/backend/_picos_backend.py",
+        "target": "corneto._constants"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "_numpy_array"
+        ],
+        "lazy_kind": "eager",
+        "line": 7,
+        "source": "corneto.backend._picos_backend",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/backend/_picos_backend.py",
+        "target": "corneto._settings"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "LOGGER"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 145,
+        "source": "corneto.backend._picos_backend",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/backend/_picos_backend.py",
+        "target": "corneto._settings"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "LOGGER"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 233,
+        "source": "corneto.backend._picos_backend",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/backend/_picos_backend.py",
+        "target": "corneto._settings"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Backend",
+          "CExpression",
+          "CSymbol",
+          "ProblemDef",
+          "_get_unique_name"
+        ],
+        "lazy_kind": "eager",
+        "line": 8,
+        "source": "corneto.backend._picos_backend",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/backend/_picos_backend.py",
+        "target": "corneto.backend._base"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "heuristic_carnival"
+        ],
+        "lazy_kind": "eager",
+        "line": 12,
+        "source": "corneto.methods",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/methods/__init__.py",
+        "target": "corneto.methods.carnival"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "runCARNIVAL_AcyclicFlow",
+          "runCARNIVAL_Flow_Acyclic",
+          "runCARNIVAL_Flow_Acyclic_Signal",
+          "runInverseCarnival",
+          "runVanillaCarnival"
+        ],
+        "lazy_kind": "eager",
+        "line": 13,
+        "source": "corneto.methods",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/methods/__init__.py",
+        "target": "corneto.methods.carnival"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "shortest_path",
+          "solve_shortest_path"
+        ],
+        "lazy_kind": "eager",
+        "line": 22,
+        "source": "corneto.methods",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/methods/__init__.py",
+        "target": "corneto.methods.shortest_path"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "create_flow_graph",
+          "default_sign_loss",
+          "expand_graph_for_flows",
+          "signflow_constraints"
+        ],
+        "lazy_kind": "eager",
+        "line": 25,
+        "source": "corneto.methods",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/methods/__init__.py",
+        "target": "corneto.methods.signaling"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "create_flow_graph"
+        ],
+        "lazy_kind": "eager",
+        "line": 33,
+        "source": "corneto.methods",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/methods/__init__.py",
+        "target": "corneto.methods.signaling"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "default_sign_loss"
+        ],
+        "lazy_kind": "eager",
+        "line": 34,
+        "source": "corneto.methods",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/methods/__init__.py",
+        "target": "corneto.methods.signaling"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "signflow_constraints"
+        ],
+        "lazy_kind": "eager",
+        "line": 35,
+        "source": "corneto.methods",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/methods/__init__.py",
+        "target": "corneto.methods.signaling"
+      },
+      {
+        "import_type": "import",
+        "imported": [],
+        "lazy_kind": "eager",
+        "line": 7,
+        "source": "corneto.methods.carnival",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/methods/carnival.py",
+        "target": "corneto"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "BaseGraph",
+          "Graph"
+        ],
+        "lazy_kind": "eager",
+        "line": 8,
+        "source": "corneto.methods.carnival",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/methods/carnival.py",
+        "target": "corneto"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Graph"
+        ],
+        "lazy_kind": "lazy_local",
+        "line": 59,
+        "source": "corneto.methods.carnival",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/methods/carnival.py",
+        "target": "corneto"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "LOGGER",
+          "sparsify"
+        ],
+        "lazy_kind": "eager",
+        "line": 9,
+        "source": "corneto.methods.carnival",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/methods/carnival.py",
+        "target": "corneto._settings"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "get_incidence_matrices_of_edges",
+          "get_interactions"
+        ],
+        "lazy_kind": "eager",
+        "line": 10,
+        "source": "corneto.methods.carnival",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/methods/carnival.py",
+        "target": "corneto.methods"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "create_flow_graph",
+          "signflow"
+        ],
+        "lazy_kind": "eager",
+        "line": 14,
+        "source": "corneto.methods.carnival",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/methods/carnival.py",
+        "target": "corneto.methods.signaling"
+      },
+      {
+        "import_type": "import",
+        "imported": [],
+        "lazy_kind": "eager",
+        "line": 6,
+        "source": "corneto.methods.method",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/methods/method.py",
+        "target": "corneto"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "DEFAULT_BACKEND"
+        ],
+        "lazy_kind": "eager",
+        "line": 7,
+        "source": "corneto.methods.method",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/methods/method.py",
+        "target": "corneto"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "BaseGraph"
+        ],
+        "lazy_kind": "eager",
+        "line": 9,
+        "source": "corneto.methods.method",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/methods/method.py",
+        "target": "corneto"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "DEFAULT_LB",
+          "DEFAULT_UB"
+        ],
+        "lazy_kind": "eager",
+        "line": 8,
+        "source": "corneto.methods.method",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/methods/method.py",
+        "target": "corneto._constants"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "sparsify"
+        ],
+        "lazy_kind": "eager",
+        "line": 10,
+        "source": "corneto.methods.method",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/methods/method.py",
+        "target": "corneto._settings"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Backend"
+        ],
+        "lazy_kind": "eager",
+        "line": 11,
+        "source": "corneto.methods.method",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/methods/method.py",
+        "target": "corneto.backend._base"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "get_incidence_matrices_of_edges",
+          "get_interactions"
+        ],
+        "lazy_kind": "eager",
+        "line": 12,
+        "source": "corneto.methods.method",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/methods/method.py",
+        "target": "corneto.methods"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "BaseGraph"
+        ],
+        "lazy_kind": "eager",
+        "line": 5,
+        "source": "corneto.methods.shortest_path",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/methods/shortest_path.py",
+        "target": "corneto"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "LOGGER"
+        ],
+        "lazy_kind": "eager",
+        "line": 6,
+        "source": "corneto.methods.shortest_path",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/methods/shortest_path.py",
+        "target": "corneto._settings"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "DEFAULT_BACKEND",
+          "Backend"
+        ],
+        "lazy_kind": "eager",
+        "line": 7,
+        "source": "corneto.methods.shortest_path",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/methods/shortest_path.py",
+        "target": "corneto.backend"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "DEFAULT_UB",
+          "Indicator"
+        ],
+        "lazy_kind": "eager",
+        "line": 8,
+        "source": "corneto.methods.shortest_path",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/methods/shortest_path.py",
+        "target": "corneto.backend._base"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "DEFAULT_BACKEND"
+        ],
+        "lazy_kind": "eager",
+        "line": 5,
+        "source": "corneto.methods.signaling",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/methods/signaling.py",
+        "target": "corneto"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "BaseGraph"
+        ],
+        "lazy_kind": "eager",
+        "line": 9,
+        "source": "corneto.methods.signaling",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/methods/signaling.py",
+        "target": "corneto"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "*"
+        ],
+        "lazy_kind": "eager",
+        "line": 6,
+        "source": "corneto.methods.signaling",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/methods/signaling.py",
+        "target": "corneto._constants"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "sparsify"
+        ],
+        "lazy_kind": "eager",
+        "line": 10,
+        "source": "corneto.methods.signaling",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/methods/signaling.py",
+        "target": "corneto._settings"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Backend"
+        ],
+        "lazy_kind": "eager",
+        "line": 11,
+        "source": "corneto.methods.signaling",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/methods/signaling.py",
+        "target": "corneto.backend"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Indicators",
+          "ProblemDef"
+        ],
+        "lazy_kind": "eager",
+        "line": 12,
+        "source": "corneto.methods.signaling",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/methods/signaling.py",
+        "target": "corneto.backend._base"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "Attr",
+          "BaseGraph",
+          "EdgeType"
+        ],
+        "lazy_kind": "eager",
+        "line": 4,
+        "source": "corneto.methods.steiner",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/methods/steiner.py",
+        "target": "corneto"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "VAR_FLOW"
+        ],
+        "lazy_kind": "eager",
+        "line": 3,
+        "source": "corneto.methods.steiner",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/methods/steiner.py",
+        "target": "corneto._constants"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "DEFAULT_BACKEND",
+          "Backend"
+        ],
+        "lazy_kind": "eager",
+        "line": 5,
+        "source": "corneto.methods.steiner",
+        "source_file": "/tmp/importscope-example-repos/corneto/corneto/methods/steiner.py",
+        "target": "corneto.backend"
+      }
+    ],
+    "module_roots": [
+      "/tmp/importscope-example-repos/corneto"
+    ],
+    "modules": {
+      "corneto": {
+        "definitions": [
+          "DeprecatedBackend",
+          "K",
+          "__all__",
+          "get_version",
+          "import_sif",
+          "ops"
+        ],
+        "is_package": true,
+        "module": "corneto",
+        "path": "/tmp/importscope-example-repos/corneto/corneto/__init__.py"
+      },
+      "corneto._constants": {
+        "definitions": [
+          "Backends",
+          "DEFAULT_LB",
+          "DEFAULT_UB",
+          "Direction",
+          "EXPR_NAME_FLOW",
+          "EXPR_NAME_FLOW_INEG",
+          "EXPR_NAME_FLOW_IPOS",
+          "EXPR_NAME_FLOW_NZI",
+          "GLOBAL_SOLVER_PARAMS",
+          "Solver",
+          "VAR_DAG",
+          "VAR_FLOW",
+          "VarType"
+        ],
+        "is_package": false,
+        "module": "corneto._constants",
+        "path": "/tmp/importscope-example-repos/corneto/corneto/_constants.py"
+      },
+      "corneto._settings": {
+        "definitions": [
+          "LOGGER",
+          "USE_NUMBA",
+          "_get_matrix_builder",
+          "_numpy_array",
+          "_stream_handler"
+        ],
+        "is_package": false,
+        "module": "corneto._settings",
+        "path": "/tmp/importscope-example-repos/corneto/corneto/_settings.py"
+      },
+      "corneto.backend": {
+        "definitions": [
+          "DEFAULT_BACKEND",
+          "DEFAULT_SOLVER",
+          "__all__",
+          "_cvxpy_mip_solvers",
+          "_picos_mip_solvers",
+          "available_backends",
+          "supported_backends"
+        ],
+        "is_package": true,
+        "module": "corneto.backend",
+        "path": "/tmp/importscope-example-repos/corneto/corneto/backend/__init__.py"
+      },
+      "corneto.backend._base": {
+        "definitions": [
+          "Backend",
+          "CExpression",
+          "CSymbol",
+          "HammingLoss",
+          "Indicator",
+          "Indicators",
+          "NoBackend",
+          "NonZeroIndicator",
+          "ProblemBuilder",
+          "ProblemDef",
+          "_eq_shape",
+          "_find_continuous_var",
+          "_get_unique_name",
+          "_identical_columns"
+        ],
+        "is_package": false,
+        "module": "corneto.backend._base",
+        "path": "/tmp/importscope-example-repos/corneto/corneto/backend/_base.py"
+      },
+      "corneto.backend._cvxpy_backend": {
+        "definitions": [
+          "CvxpyBackend",
+          "CvxpyExpression",
+          "CvxpySymbol"
+        ],
+        "is_package": false,
+        "module": "corneto.backend._cvxpy_backend",
+        "path": "/tmp/importscope-example-repos/corneto/corneto/backend/_cvxpy_backend.py"
+      },
+      "corneto.backend._picos_backend": {
+        "definitions": [
+          "PicosBackend",
+          "PicosExpression",
+          "PicosSymbol",
+          "_get_shape",
+          "_infer_shape"
+        ],
+        "is_package": false,
+        "module": "corneto.backend._picos_backend",
+        "path": "/tmp/importscope-example-repos/corneto/corneto/backend/_picos_backend.py"
+      },
+      "corneto.methods": {
+        "definitions": [],
+        "is_package": true,
+        "module": "corneto.methods",
+        "path": "/tmp/importscope-example-repos/corneto/corneto/methods/__init__.py"
+      },
+      "corneto.methods.carnival": {
+        "definitions": [
+          "_extract_nodes",
+          "_info",
+          "_path_conflict",
+          "_str_path_nodes",
+          "_str_state",
+          "bfs_search",
+          "create_flow_carnival",
+          "create_flow_carnival_v2",
+          "create_flow_carnival_v3",
+          "create_flow_carnival_v4",
+          "get_result",
+          "get_selected_edges",
+          "heuristic_carnival",
+          "milp_carnival",
+          "preprocess_graph",
+          "reachability_graph",
+          "read_dataset",
+          "runCARNIVAL_AcyclicFlow",
+          "runCARNIVAL_Flow_Acyclic",
+          "runCARNIVAL_Flow_Acyclic_Signal",
+          "runInverseCarnival",
+          "runVanillaCarnival"
+        ],
+        "is_package": false,
+        "module": "corneto.methods.carnival",
+        "path": "/tmp/importscope-example-repos/corneto/corneto/methods/carnival.py"
+      },
+      "corneto.methods.method": {
+        "definitions": [
+          "Carnival",
+          "FlowMethod",
+          "GraphData"
+        ],
+        "is_package": false,
+        "module": "corneto.methods.method",
+        "path": "/tmp/importscope-example-repos/corneto/corneto/methods/method.py"
+      },
+      "corneto.methods.sampler": {
+        "definitions": [
+          "logger",
+          "sample_alternative_solutions"
+        ],
+        "is_package": false,
+        "module": "corneto.methods.sampler",
+        "path": "/tmp/importscope-example-repos/corneto/corneto/methods/sampler.py"
+      },
+      "corneto.methods.shortest_path": {
+        "definitions": [
+          "create_multisample_shortest_path",
+          "shortest_path",
+          "solve_shortest_path"
+        ],
+        "is_package": false,
+        "module": "corneto.methods.shortest_path",
+        "path": "/tmp/importscope-example-repos/corneto/corneto/methods/shortest_path.py"
+      },
+      "corneto.methods.signaling": {
+        "definitions": [
+          "create_flow_graph",
+          "default_sign_loss",
+          "expand_graph_for_flows",
+          "signflow",
+          "signflow_constraints"
+        ],
+        "is_package": false,
+        "module": "corneto.methods.signaling",
+        "path": "/tmp/importscope-example-repos/corneto/corneto/methods/signaling.py"
+      },
+      "corneto.methods.steiner": {
+        "definitions": [
+          "_exact_multi_steiner_tree",
+          "_exact_steiner_tree",
+          "create_exact_multi_steiner_tree",
+          "exact_steiner_tree"
+        ],
+        "is_package": false,
+        "module": "corneto.methods.steiner",
+        "path": "/tmp/importscope-example-repos/corneto/corneto/methods/steiner.py"
+      }
+    },
+    "repo": "/tmp/importscope-example-repos/corneto"
+  },
+  "config": {
+    "discovery": {
+      "exclude": [
+        ".venv/**",
+        "venv/**",
+        ".tox/**",
+        "build/**",
+        "dist/**",
+        ".git/**",
+        "docs/**",
+        "tests/**",
+        "scripts/**"
+      ],
+      "include": [
+        "corneto/__init__.py",
+        "corneto/_constants.py",
+        "corneto/_settings.py",
+        "corneto/backend/**",
+        "corneto/methods/**"
+      ]
+    },
+    "outputs": {
+      "profiles": {
+        "all": {
+          "description": "All graph families and reports.",
+          "formats": [
+            "svg",
+            "md"
+          ],
+          "graphs": [
+            {
+              "id": "module-layout",
+              "kind": "inventory",
+              "stem": "module_layout_graph"
+            },
+            {
+              "id": "package-dependency",
+              "kind": "module",
+              "labeled": false,
+              "package_level": true,
+              "stem": "group_dependency_graph"
+            },
+            {
+              "id": "module-dependency",
+              "kind": "module",
+              "labeled": false,
+              "package_level": false,
+              "stem": "module_dependency_graph"
+            },
+            {
+              "id": "symbol-labeled-module-dependency",
+              "kind": "module",
+              "labeled": true,
+              "package_level": false,
+              "stem": "module_dependency_with_symbols"
+            },
+            {
+              "filter": "boundary_helper",
+              "id": "boundary-helper",
+              "kind": "module",
+              "labeled": true,
+              "package_level": false,
+              "stem": "boundary_helper_candidates"
+            },
+            {
+              "id": "symbol-import",
+              "kind": "symbol",
+              "stem": "symbol_import_graph"
+            }
+          ],
+          "summary": "full"
+        },
+        "overview": {
+          "description": "Repo overview with grouped dependency graphs and summary report.",
+          "formats": [
+            "svg",
+            "md"
+          ],
+          "graphs": [
+            {
+              "id": "module-layout",
+              "kind": "inventory",
+              "stem": "module_layout_graph"
+            },
+            {
+              "id": "package-dependency",
+              "kind": "module",
+              "labeled": false,
+              "package_level": true,
+              "stem": "group_dependency_graph"
+            },
+            {
+              "id": "module-dependency",
+              "kind": "module",
+              "labeled": false,
+              "package_level": false,
+              "stem": "module_dependency_graph"
+            }
+          ],
+          "summary": "full"
+        },
+        "policy": {
+          "description": "Policy-focused violation and helper cleanup outputs.",
+          "formats": [
+            "svg",
+            "md"
+          ],
+          "graphs": [
+            {
+              "filter": "policy",
+              "id": "policy-violations",
+              "kind": "module",
+              "labeled": true,
+              "package_level": false,
+              "stem": "policy_violation_graph"
+            },
+            {
+              "filter": "boundary_helper",
+              "id": "boundary-helper",
+              "kind": "module",
+              "labeled": true,
+              "package_level": false,
+              "stem": "boundary_helper_candidates"
+            }
+          ],
+          "summary": "full"
+        },
+        "symbols": {
+          "description": "Comprehensive symbol import graph plus summary.",
+          "formats": [
+            "svg",
+            "md"
+          ],
+          "graphs": [
+            {
+              "id": "symbol-import",
+              "kind": "symbol",
+              "stem": "symbol_import_graph"
+            }
+          ],
+          "summary": "short"
+        }
+      },
+      "snapshot_artifact": "analysis_snapshot.json",
+      "summary_artifact": "architecture_report.md",
+      "tables": {
+        "cycles": "module_cycles.csv",
+        "edges": "internal_import_edges.csv",
+        "findings": "policy_findings.csv",
+        "module_symbols": "module_definitions.csv",
+        "private_imports": "private_import_edges.csv"
+      }
+    },
+    "package": "corneto",
+    "policy": {
+      "allowed_import_pairs": [],
+      "allowed_private_target_prefixes": [
+        "corneto._constants",
+        "corneto._settings"
+      ],
+      "boundary_helper_symbols": [],
+      "boundary_helper_target_prefixes": [],
+      "display_groups": [
+        {
+          "class": "package",
+          "fill": "#f8fafc",
+          "label": "package",
+          "match_prefixes": [],
+          "name": "package",
+          "stroke": "#334155"
+        },
+        {
+          "class": "other",
+          "fill": "#f8fafc",
+          "label": "other",
+          "match_prefixes": [],
+          "name": "other",
+          "stroke": "#64748b"
+        }
+      ],
+      "enabled": false,
+      "forbidden_imports": [],
+      "module_group_depth": 2,
+      "policy_areas": []
+    },
+    "tool": {
+      "default_profile": "overview",
+      "name": "importscope"
+    }
+  },
+  "finding_counts": {},
+  "findings": [],
+  "profile": "all"
+}

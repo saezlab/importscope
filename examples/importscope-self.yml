@@ -1,0 +1,15 @@
+package: importscope
+
+discovery:
+  exclude:
+    - ".git/**"
+    - ".venv/**"
+    - "venv/**"
+    - ".tox/**"
+    - "build/**"
+    - "dist/**"
+    - "docs/**"
+    - "tests/**"
+
+policy:
+  enabled: false

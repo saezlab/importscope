@@ -1,0 +1,709 @@
+{
+  "analysis": {
+    "coverage_gaps": [],
+    "cycles": [],
+    "edges": [
+      {
+        "import_type": "from",
+        "imported": [
+          "*"
+        ],
+        "lazy_kind": "eager",
+        "line": 6,
+        "source": "networkx.readwrite",
+        "source_file": "/tmp/importscope-example-repos/networkx/networkx/readwrite/__init__.py",
+        "target": "networkx.readwrite.adjlist"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "*"
+        ],
+        "lazy_kind": "eager",
+        "line": 8,
+        "source": "networkx.readwrite",
+        "source_file": "/tmp/importscope-example-repos/networkx/networkx/readwrite/__init__.py",
+        "target": "networkx.readwrite.edgelist"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "*"
+        ],
+        "lazy_kind": "eager",
+        "line": 15,
+        "source": "networkx.readwrite",
+        "source_file": "/tmp/importscope-example-repos/networkx/networkx/readwrite/__init__.py",
+        "target": "networkx.readwrite.gexf"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "*"
+        ],
+        "lazy_kind": "eager",
+        "line": 13,
+        "source": "networkx.readwrite",
+        "source_file": "/tmp/importscope-example-repos/networkx/networkx/readwrite/__init__.py",
+        "target": "networkx.readwrite.gml"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "*"
+        ],
+        "lazy_kind": "eager",
+        "line": 12,
+        "source": "networkx.readwrite",
+        "source_file": "/tmp/importscope-example-repos/networkx/networkx/readwrite/__init__.py",
+        "target": "networkx.readwrite.graph6"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "*"
+        ],
+        "lazy_kind": "eager",
+        "line": 14,
+        "source": "networkx.readwrite",
+        "source_file": "/tmp/importscope-example-repos/networkx/networkx/readwrite/__init__.py",
+        "target": "networkx.readwrite.graphml"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "*"
+        ],
+        "lazy_kind": "eager",
+        "line": 16,
+        "source": "networkx.readwrite",
+        "source_file": "/tmp/importscope-example-repos/networkx/networkx/readwrite/__init__.py",
+        "target": "networkx.readwrite.json_graph"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "*"
+        ],
+        "lazy_kind": "eager",
+        "line": 10,
+        "source": "networkx.readwrite",
+        "source_file": "/tmp/importscope-example-repos/networkx/networkx/readwrite/__init__.py",
+        "target": "networkx.readwrite.leda"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "*"
+        ],
+        "lazy_kind": "eager",
+        "line": 7,
+        "source": "networkx.readwrite",
+        "source_file": "/tmp/importscope-example-repos/networkx/networkx/readwrite/__init__.py",
+        "target": "networkx.readwrite.multiline_adjlist"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "*"
+        ],
+        "lazy_kind": "eager",
+        "line": 9,
+        "source": "networkx.readwrite",
+        "source_file": "/tmp/importscope-example-repos/networkx/networkx/readwrite/__init__.py",
+        "target": "networkx.readwrite.pajek"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "*"
+        ],
+        "lazy_kind": "eager",
+        "line": 11,
+        "source": "networkx.readwrite",
+        "source_file": "/tmp/importscope-example-repos/networkx/networkx/readwrite/__init__.py",
+        "target": "networkx.readwrite.sparse6"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "*"
+        ],
+        "lazy_kind": "eager",
+        "line": 17,
+        "source": "networkx.readwrite",
+        "source_file": "/tmp/importscope-example-repos/networkx/networkx/readwrite/__init__.py",
+        "target": "networkx.readwrite.text"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "*"
+        ],
+        "lazy_kind": "eager",
+        "line": 17,
+        "source": "networkx.readwrite.json_graph",
+        "source_file": "/tmp/importscope-example-repos/networkx/networkx/readwrite/json_graph/__init__.py",
+        "target": "networkx.readwrite.json_graph.adjacency"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "*"
+        ],
+        "lazy_kind": "eager",
+        "line": 19,
+        "source": "networkx.readwrite.json_graph",
+        "source_file": "/tmp/importscope-example-repos/networkx/networkx/readwrite/json_graph/__init__.py",
+        "target": "networkx.readwrite.json_graph.cytoscape"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "*"
+        ],
+        "lazy_kind": "eager",
+        "line": 16,
+        "source": "networkx.readwrite.json_graph",
+        "source_file": "/tmp/importscope-example-repos/networkx/networkx/readwrite/json_graph/__init__.py",
+        "target": "networkx.readwrite.json_graph.node_link"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "*"
+        ],
+        "lazy_kind": "eager",
+        "line": 18,
+        "source": "networkx.readwrite.json_graph",
+        "source_file": "/tmp/importscope-example-repos/networkx/networkx/readwrite/json_graph/__init__.py",
+        "target": "networkx.readwrite.json_graph.tree"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "adjacency_data",
+          "adjacency_graph"
+        ],
+        "lazy_kind": "eager",
+        "line": 7,
+        "source": "networkx.readwrite.json_graph.tests.test_adjacency",
+        "source_file": "/tmp/importscope-example-repos/networkx/networkx/readwrite/json_graph/tests/test_adjacency.py",
+        "target": "networkx.readwrite.json_graph"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "cytoscape_data",
+          "cytoscape_graph"
+        ],
+        "lazy_kind": "eager",
+        "line": 7,
+        "source": "networkx.readwrite.json_graph.tests.test_cytoscape",
+        "source_file": "/tmp/importscope-example-repos/networkx/networkx/readwrite/json_graph/tests/test_cytoscape.py",
+        "target": "networkx.readwrite.json_graph"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "node_link_data",
+          "node_link_graph"
+        ],
+        "lazy_kind": "eager",
+        "line": 6,
+        "source": "networkx.readwrite.json_graph.tests.test_node_link",
+        "source_file": "/tmp/importscope-example-repos/networkx/networkx/readwrite/json_graph/tests/test_node_link.py",
+        "target": "networkx.readwrite.json_graph"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "tree_data",
+          "tree_graph"
+        ],
+        "lazy_kind": "eager",
+        "line": 6,
+        "source": "networkx.readwrite.json_graph.tests.test_tree",
+        "source_file": "/tmp/importscope-example-repos/networkx/networkx/readwrite/json_graph/tests/test_tree.py",
+        "target": "networkx.readwrite.json_graph"
+      },
+      {
+        "import_type": "from",
+        "imported": [
+          "data_to_n",
+          "n_to_data"
+        ],
+        "lazy_kind": "eager",
+        "line": 16,
+        "source": "networkx.readwrite.sparse6",
+        "source_file": "/tmp/importscope-example-repos/networkx/networkx/readwrite/sparse6.py",
+        "target": "networkx.readwrite.graph6"
+      }
+    ],
+    "module_roots": [
+      "/tmp/importscope-example-repos/networkx"
+    ],
+    "modules": {
+      "networkx.readwrite": {
+        "definitions": [],
+        "is_package": true,
+        "module": "networkx.readwrite",
+        "path": "/tmp/importscope-example-repos/networkx/networkx/readwrite/__init__.py"
+      },
+      "networkx.readwrite.adjlist": {
+        "definitions": [
+          "__all__",
+          "generate_adjlist",
+          "parse_adjlist",
+          "read_adjlist",
+          "write_adjlist"
+        ],
+        "is_package": false,
+        "module": "networkx.readwrite.adjlist",
+        "path": "/tmp/importscope-example-repos/networkx/networkx/readwrite/adjlist.py"
+      },
+      "networkx.readwrite.edgelist": {
+        "definitions": [
+          "__all__",
+          "generate_edgelist",
+          "parse_edgelist",
+          "read_edgelist",
+          "read_weighted_edgelist",
+          "write_edgelist",
+          "write_weighted_edgelist"
+        ],
+        "is_package": false,
+        "module": "networkx.readwrite.edgelist",
+        "path": "/tmp/importscope-example-repos/networkx/networkx/readwrite/edgelist.py"
+      },
+      "networkx.readwrite.gexf": {
+        "definitions": [
+          "GEXF",
+          "GEXFReader",
+          "GEXFWriter",
+          "__all__",
+          "generate_gexf",
+          "read_gexf",
+          "relabel_gexf_graph",
+          "write_gexf"
+        ],
+        "is_package": false,
+        "module": "networkx.readwrite.gexf",
+        "path": "/tmp/importscope-example-repos/networkx/networkx/readwrite/gexf.py"
+      },
+      "networkx.readwrite.gml": {
+        "definitions": [
+          "LIST_START_VALUE",
+          "Pattern",
+          "Token",
+          "__all__",
+          "escape",
+          "generate_gml",
+          "literal_destringizer",
+          "literal_stringizer",
+          "parse_gml",
+          "parse_gml_lines",
+          "read_gml",
+          "unescape",
+          "write_gml"
+        ],
+        "is_package": false,
+        "module": "networkx.readwrite.gml",
+        "path": "/tmp/importscope-example-repos/networkx/networkx/readwrite/gml.py"
+      },
+      "networkx.readwrite.graph6": {
+        "definitions": [
+          "__all__",
+          "_generate_graph6_bytes",
+          "data_to_n",
+          "from_graph6_bytes",
+          "n_to_data",
+          "read_graph6",
+          "to_graph6_bytes",
+          "write_graph6",
+          "write_graph6_file"
+        ],
+        "is_package": false,
+        "module": "networkx.readwrite.graph6",
+        "path": "/tmp/importscope-example-repos/networkx/networkx/readwrite/graph6.py"
+      },
+      "networkx.readwrite.graphml": {
+        "definitions": [
+          "GraphML",
+          "GraphMLReader",
+          "GraphMLWriter",
+          "GraphMLWriterLxml",
+          "IncrementalElement",
+          "__all__",
+          "generate_graphml",
+          "parse_graphml",
+          "read_graphml",
+          "write_graphml",
+          "write_graphml_lxml",
+          "write_graphml_xml"
+        ],
+        "is_package": false,
+        "module": "networkx.readwrite.graphml",
+        "path": "/tmp/importscope-example-repos/networkx/networkx/readwrite/graphml.py"
+      },
+      "networkx.readwrite.json_graph": {
+        "definitions": [],
+        "is_package": true,
+        "module": "networkx.readwrite.json_graph",
+        "path": "/tmp/importscope-example-repos/networkx/networkx/readwrite/json_graph/__init__.py"
+      },
+      "networkx.readwrite.json_graph.adjacency": {
+        "definitions": [
+          "__all__",
+          "_attrs",
+          "adjacency_data",
+          "adjacency_graph"
+        ],
+        "is_package": false,
+        "module": "networkx.readwrite.json_graph.adjacency",
+        "path": "/tmp/importscope-example-repos/networkx/networkx/readwrite/json_graph/adjacency.py"
+      },
+      "networkx.readwrite.json_graph.cytoscape": {
+        "definitions": [
+          "__all__",
+          "cytoscape_data",
+          "cytoscape_graph"
+        ],
+        "is_package": false,
+        "module": "networkx.readwrite.json_graph.cytoscape",
+        "path": "/tmp/importscope-example-repos/networkx/networkx/readwrite/json_graph/cytoscape.py"
+      },
+      "networkx.readwrite.json_graph.node_link": {
+        "definitions": [
+          "__all__",
+          "_to_tuple",
+          "node_link_data",
+          "node_link_graph"
+        ],
+        "is_package": false,
+        "module": "networkx.readwrite.json_graph.node_link",
+        "path": "/tmp/importscope-example-repos/networkx/networkx/readwrite/json_graph/node_link.py"
+      },
+      "networkx.readwrite.json_graph.tests": {
+        "definitions": [],
+        "is_package": true,
+        "module": "networkx.readwrite.json_graph.tests",
+        "path": "/tmp/importscope-example-repos/networkx/networkx/readwrite/json_graph/tests/__init__.py"
+      },
+      "networkx.readwrite.json_graph.tests.test_adjacency": {
+        "definitions": [
+          "TestAdjacency"
+        ],
+        "is_package": false,
+        "module": "networkx.readwrite.json_graph.tests.test_adjacency",
+        "path": "/tmp/importscope-example-repos/networkx/networkx/readwrite/json_graph/tests/test_adjacency.py"
+      },
+      "networkx.readwrite.json_graph.tests.test_cytoscape": {
+        "definitions": [
+          "test_digraph",
+          "test_exception",
+          "test_graph",
+          "test_graph_attributes",
+          "test_input_data_is_not_modified_when_building_graph",
+          "test_multidigraph",
+          "test_multigraph"
+        ],
+        "is_package": false,
+        "module": "networkx.readwrite.json_graph.tests.test_cytoscape",
+        "path": "/tmp/importscope-example-repos/networkx/networkx/readwrite/json_graph/tests/test_cytoscape.py"
+      },
+      "networkx.readwrite.json_graph.tests.test_node_link": {
+        "definitions": [
+          "TestNodeLink"
+        ],
+        "is_package": false,
+        "module": "networkx.readwrite.json_graph.tests.test_node_link",
+        "path": "/tmp/importscope-example-repos/networkx/networkx/readwrite/json_graph/tests/test_node_link.py"
+      },
+      "networkx.readwrite.json_graph.tests.test_tree": {
+        "definitions": [
+          "test_exceptions",
+          "test_graph",
+          "test_graph_attributes"
+        ],
+        "is_package": false,
+        "module": "networkx.readwrite.json_graph.tests.test_tree",
+        "path": "/tmp/importscope-example-repos/networkx/networkx/readwrite/json_graph/tests/test_tree.py"
+      },
+      "networkx.readwrite.json_graph.tree": {
+        "definitions": [
+          "__all__",
+          "tree_data",
+          "tree_graph"
+        ],
+        "is_package": false,
+        "module": "networkx.readwrite.json_graph.tree",
+        "path": "/tmp/importscope-example-repos/networkx/networkx/readwrite/json_graph/tree.py"
+      },
+      "networkx.readwrite.leda": {
+        "definitions": [
+          "__all__",
+          "parse_leda",
+          "read_leda"
+        ],
+        "is_package": false,
+        "module": "networkx.readwrite.leda",
+        "path": "/tmp/importscope-example-repos/networkx/networkx/readwrite/leda.py"
+      },
+      "networkx.readwrite.multiline_adjlist": {
+        "definitions": [
+          "__all__",
+          "generate_multiline_adjlist",
+          "parse_multiline_adjlist",
+          "read_multiline_adjlist",
+          "write_multiline_adjlist"
+        ],
+        "is_package": false,
+        "module": "networkx.readwrite.multiline_adjlist",
+        "path": "/tmp/importscope-example-repos/networkx/networkx/readwrite/multiline_adjlist.py"
+      },
+      "networkx.readwrite.p2g": {
+        "definitions": [
+          "parse_p2g",
+          "read_p2g",
+          "write_p2g"
+        ],
+        "is_package": false,
+        "module": "networkx.readwrite.p2g",
+        "path": "/tmp/importscope-example-repos/networkx/networkx/readwrite/p2g.py"
+      },
+      "networkx.readwrite.pajek": {
+        "definitions": [
+          "__all__",
+          "generate_pajek",
+          "make_qstr",
+          "parse_pajek",
+          "read_pajek",
+          "write_pajek"
+        ],
+        "is_package": false,
+        "module": "networkx.readwrite.pajek",
+        "path": "/tmp/importscope-example-repos/networkx/networkx/readwrite/pajek.py"
+      },
+      "networkx.readwrite.sparse6": {
+        "definitions": [
+          "__all__",
+          "_generate_sparse6_bytes",
+          "from_sparse6_bytes",
+          "read_sparse6",
+          "to_sparse6_bytes",
+          "write_sparse6"
+        ],
+        "is_package": false,
+        "module": "networkx.readwrite.sparse6",
+        "path": "/tmp/importscope-example-repos/networkx/networkx/readwrite/sparse6.py"
+      },
+      "networkx.readwrite.text": {
+        "definitions": [
+          "AsciiBaseGlyphs",
+          "AsciiDirectedGlyphs",
+          "AsciiUndirectedGlyphs",
+          "BaseGlyphs",
+          "UtfBaseGlyphs",
+          "UtfDirectedGlyphs",
+          "UtfUndirectedGlyphs",
+          "__all__",
+          "_find_sources",
+          "_parse_network_text",
+          "generate_network_text",
+          "write_network_text"
+        ],
+        "is_package": false,
+        "module": "networkx.readwrite.text",
+        "path": "/tmp/importscope-example-repos/networkx/networkx/readwrite/text.py"
+      }
+    },
+    "repo": "/tmp/importscope-example-repos/networkx"
+  },
+  "config": {
+    "discovery": {
+      "exclude": [
+        ".venv/**",
+        "venv/**",
+        ".tox/**",
+        "build/**",
+        "dist/**",
+        ".git/**",
+        "doc/**",
+        "examples/**",
+        "benchmarks/**",
+        "tools/**",
+        "networkx/**/tests/**"
+      ],
+      "include": []
+    },
+    "outputs": {
+      "profiles": {
+        "all": {
+          "description": "All graph families and reports.",
+          "formats": [
+            "svg",
+            "md"
+          ],
+          "graphs": [
+            {
+              "id": "module-layout",
+              "kind": "inventory",
+              "stem": "module_layout_graph"
+            },
+            {
+              "id": "package-dependency",
+              "kind": "module",
+              "labeled": false,
+              "package_level": true,
+              "stem": "group_dependency_graph"
+            },
+            {
+              "id": "module-dependency",
+              "kind": "module",
+              "labeled": false,
+              "package_level": false,
+              "stem": "module_dependency_graph"
+            },
+            {
+              "id": "symbol-labeled-module-dependency",
+              "kind": "module",
+              "labeled": true,
+              "package_level": false,
+              "stem": "module_dependency_with_symbols"
+            },
+            {
+              "filter": "boundary_helper",
+              "id": "boundary-helper",
+              "kind": "module",
+              "labeled": true,
+              "package_level": false,
+              "stem": "boundary_helper_candidates"
+            },
+            {
+              "id": "symbol-import",
+              "kind": "symbol",
+              "stem": "symbol_import_graph"
+            }
+          ],
+          "summary": "full"
+        },
+        "overview": {
+          "description": "Repo overview with grouped dependency graphs and summary report.",
+          "formats": [
+            "svg",
+            "md"
+          ],
+          "graphs": [
+            {
+              "id": "module-layout",
+              "kind": "inventory",
+              "stem": "module_layout_graph"
+            },
+            {
+              "id": "package-dependency",
+              "kind": "module",
+              "labeled": false,
+              "package_level": true,
+              "stem": "group_dependency_graph"
+            },
+            {
+              "id": "module-dependency",
+              "kind": "module",
+              "labeled": false,
+              "package_level": false,
+              "stem": "module_dependency_graph"
+            }
+          ],
+          "summary": "full"
+        },
+        "policy": {
+          "description": "Policy-focused violation and helper cleanup outputs.",
+          "formats": [
+            "svg",
+            "md"
+          ],
+          "graphs": [
+            {
+              "filter": "policy",
+              "id": "policy-violations",
+              "kind": "module",
+              "labeled": true,
+              "package_level": false,
+              "stem": "policy_violation_graph"
+            },
+            {
+              "filter": "boundary_helper",
+              "id": "boundary-helper",
+              "kind": "module",
+              "labeled": true,
+              "package_level": false,
+              "stem": "boundary_helper_candidates"
+            }
+          ],
+          "summary": "full"
+        },
+        "symbols": {
+          "description": "Comprehensive symbol import graph plus summary.",
+          "formats": [
+            "svg",
+            "md"
+          ],
+          "graphs": [
+            {
+              "id": "symbol-import",
+              "kind": "symbol",
+              "stem": "symbol_import_graph"
+            }
+          ],
+          "summary": "short"
+        }
+      },
+      "snapshot_artifact": "analysis_snapshot.json",
+      "summary_artifact": "architecture_report.md",
+      "tables": {
+        "cycles": "module_cycles.csv",
+        "edges": "internal_import_edges.csv",
+        "findings": "policy_findings.csv",
+        "module_symbols": "module_definitions.csv",
+        "private_imports": "private_import_edges.csv"
+      }
+    },
+    "package": "networkx",
+    "policy": {
+      "allowed_import_pairs": [],
+      "allowed_private_target_prefixes": [],
+      "boundary_helper_symbols": [],
+      "boundary_helper_target_prefixes": [],
+      "display_groups": [
+        {
+          "class": "package",
+          "fill": "#f8fafc",
+          "label": "package",
+          "match_prefixes": [],
+          "name": "package",
+          "stroke": "#334155"
+        },
+        {
+          "class": "other",
+          "fill": "#f8fafc",
+          "label": "other",
+          "match_prefixes": [],
+          "name": "other",
+          "stroke": "#64748b"
+        }
+      ],
+      "enabled": false,
+      "forbidden_imports": [],
+      "module_group_depth": 3,
+      "policy_areas": []
+    },
+    "tool": {
+      "default_profile": "overview",
+      "name": "importscope"
+    }
+  },
+  "finding_counts": {},
+  "findings": [],
+  "profile": "all"
+}
